@@ -1,0 +1,29 @@
+@import "../../../assets/scss/variables.scss";
+
+.account-contacts {
+  .contact {
+    margin: 20px 0;
+    .type {
+      text-transform: uppercase;
+      font-size: 12px;
+      line-height: 30px;
+      font-weight: 500;
+      color: $cadet-grey;
+    }
+    .names,
+    .email {
+      .mdi-account-outline,
+      .mdi-email-outline {
+        &:before {
+          font-size: 1.125rem;
+          color: $cadet-grey;
+          margin-right: 10px;
+        }
+      }
+      span {
+        color: $black-coral;
+        font-size: 0.875rem;
+      }
+    }
+  }
+}

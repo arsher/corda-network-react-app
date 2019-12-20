@@ -1,0 +1,58 @@
+@import "../../../../assets/scss/variables.scss";
+
+.terms {
+  border: 1px solid $ghost-white;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  &__wrapper {
+    padding: 30px 24px 5px;
+    em {
+      font-style: normal;
+      text-decoration: underline;
+    }
+    overflow-y: scroll;
+    max-height: 630px;
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: $ghost-white;
+      border-radius: 5px;
+      height: 50px;
+    }
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: $black-coral;
+    }
+    p {
+      margin-bottom: 25px;
+      font-size: 0.8125rem;
+      line-height: 23px;
+    }
+    h3 {
+      font-family: $ff-base;
+      font-weight: $fw-bold;
+      color: $onyx;
+      &:first-of-type {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+    a {
+      color: $red !important;
+    }
+    .download-pdf {
+      margin: 0 auto;
+      display: block;
+      color: $black-coral !important;
+      width: 170px;
+      margin-bottom: 35px;
+    }
+  }
+}

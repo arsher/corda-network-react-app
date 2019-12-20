@@ -1,0 +1,178 @@
+@import "../../../assets/scss/variables.scss";
+
+.legal-entity {
+  margin-bottom: 30px;
+  .h-splitter {
+    width: 100%;
+    height: 1px;
+    background-color: $ghost-white;
+    margin: 20px 0 24px 0;
+  }
+  h1 {
+    font-weight: $fw-bold;
+  }
+  .form-wrapper {
+    padding: 36px 30px 40px;
+    .form-group.nearest-city,
+    .form-group.reg-number,
+    .form-group.country,
+    .form-group.state {
+      flex: 0 1 48%;
+    }
+    .btn-search {
+      margin: 16px 0 20px;
+      i {
+        color: $black-coral;
+        font-size: 1.375rem;
+        margin-right: 10px;
+      }
+      span {
+        color: $black-coral;
+        font-size: $p-sm-fs;
+      }
+    }
+    form {
+      margin-top: 0;
+    }
+    .form-group.nearest-city,
+    .form-group.reg-number,
+    .form-group.country,
+    .form-group.state {
+      flex: 0 1 48%;
+    }
+    .over-results {
+      margin: 20px 0;
+      border-radius: 4px;
+      background-color: $cadet-grey;
+      padding: 30px 30px 30px 20px;
+      color: $white;
+      .mdi {
+        &:before {
+          font-size: 2rem;
+          margin-right: 3rem;
+        }
+      }
+      div {
+        min-height: 2rem;
+        font-size: 0.875rem;
+      }
+    }
+    .hidden-ref {
+      height: 0;
+      opacity: 0;
+    }
+    .search-result {
+      margin-top: 16px;
+      padding: 0 0 30px;
+      .result {
+        position: relative;
+        padding: 28px 45px 28px 20px;
+        border-radius: 5px;
+        border: 2px solid rgba(259, 259, 259, 0.01);
+        cursor: pointer;
+        &:nth-child(odd) {
+          background-color: $ghost-white;
+        }
+        &:nth-child(even) {
+          background-color: transparent;
+        }
+        .company-name,
+        .company-number,
+        .company-incorporated,
+        .company-address {
+          font-size: 0.875rem;
+          color: $black-coral;
+          line-height: 26px;
+        }
+        .company-name {
+          color: $black-coral;
+          font-size: 1rem;
+          font-weight: $fw-bold;
+          text-transform: uppercase;
+          margin-bottom: 10px;
+        }
+        .company-number {
+          color: $cadet-grey;
+          font-weight: $fw-bold;
+        }
+        .mdi-circle-outline {
+          position: absolute;
+          right: 15px;
+          top: 9px;
+          color: $lavander-grey;
+          font-size: 30px;
+          display: none;
+        }
+        .mdi-check-circle {
+          position: absolute;
+          right: 15px;
+          top: 9px;
+          color: $green;
+          font-size: 30px;
+        }
+        &:hover {
+          border: 2px solid $lavander-grey;
+          color: $black-coral;
+          .mdi-circle-outline {
+            display: initial;
+          }
+        }
+      }
+    }
+    .showed-chunk {
+      color: $cadet-grey;
+      font-size: 0.8125rem;
+      margin: 20px 0 25px;
+    }
+    .no-search-results {
+      .primary-text {
+        color: $cadet-grey;
+        font-size: 1.25rem;
+        margin-bottom: 25px;
+      }
+      .secondary-text {
+        color: $black-coral;
+        font-size: 1rem;
+      }
+    }
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+      li {
+        padding-left: 0;
+        width: 35px;
+        background-color: transparent;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+        &:before {
+          content: none;
+        }
+        a {
+          color: $cadet-grey;
+          font-size: 0.875rem;
+        }
+      }
+      .active {
+        background-color: $ghost-white;
+        a {
+          color: $black-coral;
+        }
+      }
+    }
+    .feature-to-come {
+      position: absolute;
+      bottom: -20px;
+      font-size: 11px;
+      left: 5%;
+      background-color: $white;
+      padding-left: 5px;
+      padding-right: 5px;
+      color: $lavander-grey;
+    }
+  }
+}

@@ -1,0 +1,155 @@
+@import "./../../../../assets/scss/variables.scss";
+@import "./../../../../industria-ui/scss/mixins/media-queries";
+
+.participant-types-section {
+  background: $ghost-white;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  @include respond-below(sm) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .participant-types-content {
+    > div {
+      display: flex;
+      flex-wrap: wrap;
+      h2 {
+        width: 100%;
+        margin-bottom: 50px;
+        &:before {
+          content: "";
+          display: block;
+          height: 3px;
+          width: 72px;
+          background: $red;
+          margin: 4px 0 40px;
+        }
+        @include respond-below(sm) {
+          margin-bottom: 30px;
+        }
+      }
+      ul {
+        margin: 0;
+        li {
+          padding-left: 0;
+          &:before {
+            display: none;
+          }
+          p {
+            color: $onyx;
+          }
+        }
+        &:nth-of-type(1),
+        &:nth-of-type(2) {
+          width: 50%;
+          li {
+            margin-bottom: 25px;
+            @include respond-below(sm) {
+              margin-bottom: 20px;
+            }
+          }
+          p {
+            font-size: 1.125rem;
+            line-height: 30px;
+            margin-top: -10px;
+          }
+          @include respond-below(sm) {
+            width: 100%;
+          }
+        }
+        &:nth-of-type(1) {
+          padding-right: 15px;
+          @include respond-below(sm) {
+            padding-right: 0;
+          }
+          li {
+            &:first-of-type {
+              padding-top: 16px;
+            }
+          }
+          svg {
+            width: 70px;
+            height: 70px;
+          }
+        }
+        &:nth-of-type(2) {
+          padding-left: 15px;
+          @include respond-below(sm) {
+            padding-left: 0;
+          }
+          svg {
+            width: 86px;
+            height: 86px;
+          }
+        }
+        &:last-of-type {
+          background: $white;
+          padding: 58px 30px 20px;
+          box-shadow: 0 0 20px 0 rgba(92, 98, 117, 0.1);
+          margin-top: 65px;
+          display: flex;
+          flex-wrap: wrap;
+          @include respond-below(sm) {
+            margin-top: 35px;
+            display: block;
+          }
+          li:nth-of-type(1),
+          li:nth-of-type(2) {
+            width: 70%;
+            padding-right: 15px;
+            @include respond-below(sm) {
+              width: 100%;
+              padding-right: 0;
+            }
+          }
+          li:nth-of-type(3) {
+            width: 30%;
+            text-align: right;
+            padding-left: 15px;
+            @include respond-below(sm) {
+              width: 100%;
+              padding-left: 0;
+            }
+            p {
+              display: flex;
+              flex-direction: column;
+              position: relative;
+              top: -50%;
+            }
+          }
+          a[href*="register"] {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            font-weight: $fw-bold;
+            line-height: 1.1;
+            padding: 0.875rem 1.75rem;
+            margin-top: 20px;
+            text-align: center;
+            vertical-align: middle;
+            white-space: nowrap;
+            border: 2px solid $primary;
+            outline: 0;
+            cursor: pointer;
+            border-radius: 0.3125rem;
+            background: $primary;
+            color: $white;
+            box-shadow: 0 0 10px 0 rgba(224, 16, 23, 0.3);
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+              box-shadow 0.15s ease-in-out;
+            &:focus {
+              box-shadow: 0 0 10px 0 rgba(224, 16, 23, 0.3);
+            }
+            &:hover {
+              background: #ff383f;
+              border-color: #ff383f;
+              box-shadow: 0 0 10px 0 rgba(224, 16, 23, 0.3);
+            }
+            @include respond-between(sm, md) {
+              width: min-content;
+            }
+          }
+        }
+      }
+    }
+  }
+}

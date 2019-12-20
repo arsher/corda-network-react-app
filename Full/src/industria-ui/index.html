@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='shortcut icon' type='image/x-icon' href='./images/ids-favicon.ico' />
+    <title>Style Guide</title>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <!-- CSS Added Libraries -->
+    <link rel="stylesheet" type="text/css" href="./icons/material-design-iconic-font/material-css/material-design-iconic-font.min.css">
+
+    <!--Floating Labels-->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/tonystar/float-label-css/v1.0.2/dist/float-label.min.css" />
+
+    <!--Global CSS-->
+    <link rel="stylesheet" href="./css/main.css" type="text/css">
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <script src="./js/webcomponents.js"></script>
+
+
+    <link rel="import" href="./components/typography/typography.html">
+    <link rel="import" href="./components/colors/colors.html">
+    <link rel="import" href="./components/buttons/buttons.html">
+    <link rel="import" href="./components/grid/grid.html">
+    <link rel="import" href="./components/forms/forms.html">
+    <link rel="import" href="./components/about/about.html">
+    <link rel="import" href="./components/cards/cards.html">
+    <link rel="import" href="./components/accordion/accordion.html">
+    <link rel="import" href="./components/logos/logos.html">
+    <link rel="import" href="./components/section-tabs/section-tabs.html">
+    <link rel="import" href="./components/bottom-bar/bottom-bar.html">
+    <link rel="import" href="./components/carousel-controls/carousel-controls.html">
+    <link rel="import" href="./components/locations/locations.html">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="style-guide-nav">
+            <nav class="nav-main">
+                <div class="logo">
+                    <img class="svg" src="./images/logo.svg" alt="Logo">
+                    <p>design system</p>
+                </div>
+                <div class="menu">
+                    <div class="tab-slider-nav">
+                        <ul class="tab-slider-tabs">
+                            <li class="tab-slider-trigger" rel="brand">brand</li>
+                            <li class="tab-slider-trigger active" rel="interface">interface</li>
+                        </ul>
+                    </div>
+                    <div class="tab-slider-container">
+                        <div id="brand" class="tab-slider-body">
+                            <h2>BRAND</h2>
+                        </div>
+
+                        <div id="interface" class="tab-slider-body">
+
+                            <p>Environment</p>
+
+                            <ul class="interface-menu">
+                                <li class="about-system">
+                                    <a href="#about-system-page" class="scroll-link">About This System <i class="zmdi zmdi-circle"></i></a>
+                                    <ul class="dd-menu">
+                                        <li class="about-1"><a href="#about-1-section" class="scroll-link">The need of
+                                                design system</a></li>
+                                        <li class="about-2"><a href="#about-2-section" class="scroll-link">Why not a
+                                                framework</a></li>
+                                        <li class="about-3"><a href="#about-3-section" class="scroll-link">The
+                                                methodology behind the system</a></li>
+                                        <li class="about-4"><a href="#about-4-section" class="scroll-link">Minor
+                                                modification</a></li>
+                                        <li class="about-5"><a href="#about-5-section" class="scroll-link">Further
+                                                reading</a></li>
+                                    </ul>
+                                </li>
+                                <li class="color-palette">
+                                    <a href="#colors-page" class="scroll-link">Color Palette <i class="zmdi zmdi-circle"></i></a>
+                                    <ul class="dd-menu">
+                                        <li class="general-colors"><a href="#general-colors-section" class="scroll-link">General
+                                                colors</a></li>
+                                        <li class="backgrounds"><a href="#backgrounds-section" class="scroll-link">Backgrounds</a></li>
+                                        <li class="overlays"><a href="#overlays-section" class="scroll-link">Overlays</a></li>
+                                        <li class="borders"><a href="#borders-section" class="scroll-link">Borders</a></li>
+                                        <li class="system"><a href="#system-section" class="scroll-link">System</a></li>
+                                    </ul>
+                                </li>
+                                <li class="typography">
+                                    <a href="#typography-page" class="scroll-link">Typography <i class="zmdi zmdi-circle"></i></a>
+                                    <ul class="dd-menu">
+                                        <li class="overview"><a href="#overview-section" class="scroll-link">Overview</a></li>
+                                        <li class="headings"><a href="#headings-section" class="scroll-link">Headings</a></li>
+                                        <li class="paragraphs"><a href="#paragraphs-section" class="scroll-link">Paragraphs</a></li>
+                                        <li class="labels"><a href="#labels-section" class="scroll-link">Labels</a></li>
+                                        <li class="lists"><a href="#lists-section" class="scroll-link">Lists</a></li>
+                                        <li class="quotations"><a href="#quotations-section" class="scroll-link">Quotations</a></li>
+                                        <li class="links"><a href="#links-section" class="scroll-link">Links</a></li>
+                                    </ul>
+                                </li>
+                                <li class="iconography"><a href="#">Iconography <i class="zmdi zmdi-circle"></i></a></li>
+                                <li class="grid">
+                                    <a href="#grid-page" class="scroll-link">Grid and Layout<i class="zmdi zmdi-circle"></i></a>
+                                    <ul class="dd-menu">
+                                        <li class="basic-structure"><a href="#basic-structure-section" class="scroll-link">Basic
+                                                structure</a></li>
+                                        <li class="layout"><a href="#layout-section" class="scroll-link">Layout</a></li>
+                                    </ul>
+                                </li>
+                                <li class="breakpoints"><a href="#">Breakpoints <i class="zmdi zmdi-circle"></i></a></li>
+                            </ul>
+
+                            <p>Atoms</p>
+
+                            <ul class="interface-menu">
+                                <li class="badges"><a href="#">Badges <i class="zmdi zmdi-circle"></i></a></li>
+                                <li class="buttons">
+                                    <a href="#buttons-page" class="scroll-link">Buttons <i class="zmdi zmdi-circle"></i></a>
+                                    <ul class="dd-menu">
+                                        <li class="white-bg-btn"><a href="#white-bg-btn-section" class="scroll-link">White
+                                                BG</a></li>
+                                        <li class="air-bg-btn"><a href="#air-bg-btn-section" class="scroll-link">Air BG</a></li>
+                                        <li class="ocean-bg-btn"><a href="#ocean-bg-btn-section" class="scroll-link">Ocean
+                                                BG</a></li>
+                                        <li class="night-bg-btn"><a href="#night-bg-btn-section" class="scroll-link">Night
+                                                BG</a></li>
+                                    </ul>
+                                </li>
+                                <li class="cards">
+                                    <a href="#cards-page" class="scroll-link">Cards <i class="zmdi zmdi-circle"></i></a>
+                                    <ul class="dd-menu">
+                                        <li class="read-only-cards"><a href="#read-only-cards-section" class="scroll-link">Read-only
+                                                cards</a></li>
+                                        <li class="interactive-cards"><a href="#interactive-cards-section" class="scroll-link">Interactive
+                                                Cards</a></li>
+                                    </ul>
+                                </li>
+                                <li class="forms">
+                                    <a href="#forms-page" class="scroll-link">Forms <i class="zmdi zmdi-circle"></i></a>
+                                    <ul class="dd-menu">
+                                        <li class="form-text-field"><a href="#text-field-section" class="scroll-link">Text
+                                                field</a></li>
+                                        <li class="form-text-area"><a href="#text-area-section" class="scroll-link">Text
+                                                area</a></li>
+                                        <li class="form-select"><a href="#select-section" class="scroll-link">Select</a></li>
+                                        <li class="form-checkbox"><a href="#checkbox-section" class="scroll-link">Checkbox</a></li>
+                                        <li class="form-radio"><a href="#radio-section" class="scroll-link">Radio</a></li>
+                                        <li class="form-toggle"><a href="#toggle-section" class="scroll-link">Toggle
+                                                (on/off)</a></li>
+                                        <li class="form-feedback"><a href="#form-feedback-section" class="scroll-link">Form
+                                                feedback</a></li>
+                                        <li class="form-examples"><a href="#form-examples-section" class="scroll-link">Examples</a></li>
+                                    </ul>
+                                </li>
+                                <li class="images"><a href="#">Images <i class="zmdi zmdi-circle"></i></a></li>
+                                <li class="loaders"><a href="#">Loaders <i class="zmdi zmdi-circle"></i></a></li>
+                                <li class="tooltips"><a href="#">Tooltips <i class="zmdi zmdi-circle"></i></a></li>
+                            </ul>
+
+                            <p>Molecules</p>
+
+                            <ul class="interface-menu">
+                                <li class="accordion-links">
+                                    <a href="#accordion-page" class="scroll-link">Accordion <i class="zmdi zmdi-circle"></i></a>
+                                    <ul class="dd-menu">
+                                        <li class="accordion-overview"><a href="#accordion-overview-section" class="scroll-link">Overview</a></li>
+                                        <li class="accordion-example"><a href="#accordion-example-section" class="scroll-link">Example</a></li>
+                                        <li class="accordion-colors"><a href="#accordion-colors-section" class="scroll-link">Colors</a></li>
+                                    </ul>
+                                </li>
+                                <li class="bottom-bar-links">
+                                    <a href="#bottom-bar-page">Bottom bar <i class="zmdi zmdi-circle"></i></a>
+                                    <ul class="dd-menu">
+                                        <li class="simple-onsite-bar-link"><a href="#simple-onsite-bar-section" class="scroll-link">Simple
+                                                onsite bar</a></li>
+                                        <li class="social-media-onsite-bar-link"><a href="#social-media-onsite-bar-section"
+                                                class="scroll-link">Social media onsite bar</a></li>
+                                        <li class="campaign-landing-page-bar-link"><a href="#campaign-landing-page-bar-section"
+                                                class="scroll-link">Campaign landing page bar</a></li>
+                                    </ul>
+                                </li>
+                                <li class="carousel-controls-links">
+                                    <a href="#carousel-controls-page" class="scroll-link">Carousel controls <i class="zmdi zmdi-circle"></i></a>
+                                    <ul class="dd-menu">
+                                        <li class="white-bg-carousel"><a href="#white-bg-carousel-section" class="scroll-link">White
+                                                BG</a></li>
+                                        <li class="air-bg-carousel"><a href="#air-bg-carousel-section" class="scroll-link">Air
+                                                BG</a></li>
+                                        <li class="ocean-bg-carousel"><a href="#ocean-bg-carousel-section" class="scroll-link">Ocean
+                                                BG</a></li>
+                                        <li class="night-bg-carousel"><a href="#night-bg-carousel-section" class="scroll-link">Night
+                                                BG</a></li>
+                                    </ul>
+                                </li>
+                                <li class="footer-links"><a href="#">Footer <i class="zmdi zmdi-circle"></i></a></li>
+                                <li class="locations-links">
+                                    <a href="#locations-page" class="scroll-link">Locations <i class="zmdi zmdi-circle"></i></a>
+                                    <ul class="dd-menu">
+                                        <li class="3-locations"><a href="#locations-3-section" class="scroll-link">3
+                                                Locations</a></li>
+                                        <li class="2-locations"><a href="#locations-2-section" class="scroll-link">2
+                                                Locations</a></li>
+                                    </ul>
+                                </li>
+                                <li class="logos">
+                                    <a href="#logos-page" class="scroll-link">Logos <i class="zmdi zmdi-circle"></i></a>
+                                    <ul class="dd-menu">
+                                        <li class="monochrome-logos"><a href="#monochrome-logos-section" class="scroll-link">Monochrome
+                                                logos</a></li>
+                                        <li class="color-logos"><a href="#color-logos-section" class="scroll-link">Color
+                                                logos</a></li>
+                                    </ul>
+                                </li>
+                                <li class="pagination-links"><a href="#">Pagination <i class="zmdi zmdi-circle"></i></a></li>
+                                <li class="section-tabs-links">
+                                    <a href="#section-tabs-page">Section tabs <i class="zmdi zmdi-circle"></i></a>
+                                    <ul class="dd-menu">
+                                        <li class="section-tabs-white-bg"><a href="#section-tabs-white-bg-section"
+                                                class="scroll-link">White BG</a></li>
+                                        <li class="section-tabs-air-bg"><a href="#section-tabs-air-bg-section" class="scroll-link">Air
+                                                BG</a></li>
+                                        <li class="section-tabs-ocean-bg"><a href="#section-tabs-ocean-bg-section"
+                                                class="scroll-link">Ocean BG</a></li>
+                                        <li class="section-tabs-night-bg"><a href="#section-tabs-night-bg-section"
+                                                class="scroll-link">Night BG</a></li>
+                                    </ul>
+                                </li>
+                                <li class="tables"><a href="#">Tables <i class="zmdi zmdi-circle"></i></a></li>
+                                <li class="top-nav-links"><a href="#">Top nav <i class="zmdi zmdi-circle"></i></a></li>
+                                <li class="video-links"><a href="#">Video <i class="zmdi zmdi-circle"></i></a></li>
+                            </ul>
+
+                            <p>Cells</p>
+
+                            <ul class="interface-menu">
+                                <li class="blocks"><a href="#">Blocks <i class="zmdi zmdi-circle"></i></a></li>
+                                <li class="cta-sections"><a href="#">CTA sections <i class="zmdi zmdi-circle"></i></a></li>
+                                <li class="gallery-links"><a href="#">Gallery <i class="zmdi zmdi-circle"></i></a></li>
+                                <li class="headers"><a href="#">Headers <i class="zmdi zmdi-circle"></i></a></li>
+                                <li class="large-carousels"><a href="#">Large carousels <i class="zmdi zmdi-circle"></i></a></li>
+                                <li class="modal-links"><a href="#">Modal <i class="zmdi zmdi-circle"></i></a></li>
+                                <li class="standard-content-sections"><a href="#">Standard content sections <i class="zmdi zmdi-circle"></i></a></li>
+                                <li class="subscribe-to-newsletter"><a href="#">Subscribe to newsletter <i class="zmdi zmdi-circle"></i></a></li>
+                            </ul>
+
+                            <p>Organisms</p>
+
+                            <ul class="interface-menu">
+                                <li class="home-page-links"><a href="#">Home page <i class="zmdi zmdi-circle"></i></a></li>
+                                <li class="rich-content-pages"><a href="#">Rich content pages <i class="zmdi zmdi-circle"></i></a></li>
+                                <li class="blog-links"><a href="#">Blog <i class="zmdi zmdi-circle"></i></a></li>
+                                <li class="privacy-terms-page"><a href="#">Privacy/terms pages <i class="zmdi zmdi-circle"></i></a></li>
+                                <li class="contact-page-links"><a href="#">Contact page <i class="zmdi zmdi-circle"></i></a></li>
+                                <li class="error-pages"><a href="#">Error pages <i class="zmdi zmdi-circle"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="content-wrapper">
+            <div class="container-fluid">
+
+                <div id="about-system-page">
+                    <about-element></about-element>
+                </div>
+
+                <div id="typography-page">
+                    <typography-element></typography-element>
+                </div>
+
+                <div id="colors-page">
+                    <colors-element></colors-element>
+                </div>
+
+                <div id="buttons-page">
+                    <buttons-element></buttons-element>
+                </div>
+
+                <div id="grid-page">
+                    <grid-element></grid-element>
+                </div>
+
+                <div id="forms-page">
+                    <forms-element></forms-element>
+                </div>
+
+                <div id="cards-page">
+                    <cards-element></cards-element>
+                </div>
+
+                <div id="accordion-page">
+                    <accordion-element></accordion-element>
+                </div>
+
+                <div id="logos-page">
+                    <logos-element></logos-element>
+                </div>
+
+                <div id="section-tabs-page">
+                    <section-tabs-element></section-tabs-element>
+                </div>
+
+                <div id="bottom-bar-page">
+                    <bottom-bar-element></bottom-bar-element>
+                </div>
+
+                <div id="carousel-controls-page">
+                    <carousel-controls-element></carousel-controls-element>
+                </div>
+
+                <div id="locations-page">
+                    <locations-element></locations-element>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/tab-slider.js"></script>
+    <script src="js/dropdown-toggle.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/svg.js"></script>
+    <script src="js/section-tabs.js"></script>
+
+    <script>
+        var locations = [
+            {
+                lattitude: 51.525765,
+                longitude: -0.083604,
+                name: "London",
+                phone: "+44 203 870 2445"
+            },
+            {
+                lattitude: 1.278711,
+                longitude: 103.848486,
+                name: "Singapore",
+                phone: "+65 755 237 4083"
+            },
+            {
+                lattitude: 42.692450,
+                longitude: 23.319161,
+                name: "Sofia",
+                phone: "+359 2 980 37 19"
+            }
+        ];
+        var locationsTwo = [
+            {
+                lattitude: 51.525765,
+                longitude: -0.083604,
+                name: "London2",
+                phone: "+44 203 870 2445"
+            },
+            {
+                lattitude: 42.692450,
+                longitude: 23.319161,
+                name: "Sofia2",
+                phone: "+359 2 980 37 19"
+            }
+        ];
+        var markerImage = './components/locations/map-pin.svg';
+    </script>
+    <script src="js/carousels.js"></script>
+    <script src="js/contact-map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAkOvgxWbxR14VpiPoglpJMxgorfttvOI&callback=initMap"
+        async defer></script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+.accordion {
+  background-color: $air;
+  margin: 20px 0 0 0;
+  cursor: pointer;
+  padding: 30px 20px;
+  text-align: left;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  p.link-wrapper {
+    padding: 0;
+    margin: 0;
+    a {
+      max-width: calc(100% - 50px);
+      line-height: 25px;
+      color: $ocean;
+      text-transform: uppercase;
+      font-weight: $fw-bold;
+      letter-spacing: -0.015rem;
+    }
+  }
+  .zmdi {
+    font-size: 20px;
+    color: $ocean;
+  }
+  &:first-of-type {
+    margin-top: 0;
+  }
+  &.active {
+    box-shadow: 0 -10px 10px -10px rgba(56, 140, 196, 0.15), 10px 0 10px -10px rgba(56, 140, 196, 0.15),
+      -10px 0 10px -10px rgba(56, 140, 196, 0.15);
+    + .panel {
+      box-shadow: -10px 0 10px -10px rgba(56, 140, 196, 0.15), 10px 0 10px -10px rgba(56, 140, 196, 0.15),
+        0 10px 10px -10px rgba(56, 140, 196, 0.15);
+    }
+  }
+  &:not(.active):hover {
+    box-shadow: 0 0 10px 0 rgba(56, 140, 196, 0.15);
+  }
+}
+
+.panel {
+  border-top: 1px solid $white;
+  background-color: $air;
+  margin: 0 0 20px 0;
+  overflow: hidden;
+  height: auto;
+  p {
+    padding: 20px 20px 0;
+    color: $stone;
+    margin-bottom: 0;
+    &:last-of-type {
+      padding-bottom: 20px;
+    }
+  }
+  &.first-panel {
+    height: auto;
+  }
+}

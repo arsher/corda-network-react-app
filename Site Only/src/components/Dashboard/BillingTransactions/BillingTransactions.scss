@@ -1,0 +1,30 @@
+@import "../../../assets/scss/variables.scss";
+
+.billing-transactions {
+  padding: 0 30px 30px 30px;
+  opacity: 0.5;
+  .h-splitter {
+    margin: 5px 0 30px 0;
+  }
+  .total {
+    color: $onyx;
+    font-size: 40px;
+    font-weight: $fw-bold;
+  }
+  .from-to {
+    color: $black-coral;
+    font-size: 14px;
+  }
+  .under-construction {
+    color: $lavander-grey;
+    .mdi-monitor-dashboard {
+      &:before {
+        font-size: 2.5rem;
+      }
+    }
+    p {
+      color: $cadet-grey;
+      font-size: 14px;
+    }
+  }
+}

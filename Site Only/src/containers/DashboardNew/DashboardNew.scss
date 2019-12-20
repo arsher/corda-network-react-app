@@ -1,0 +1,122 @@
+@import "../../assets/scss/variables.scss";
+
+.dashboard {
+  min-height: calc(100vh - 120px);
+  &-links {
+    position: relative;
+    bottom: 48px;
+    margin: 0;
+    li {
+      padding: 0;
+      margin: 0;
+      &::before {
+        content: none;
+      }
+      .nav-link {
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        color: $black-coral;
+        margin-right: 30px;
+        padding-bottom: 26px;
+        background-image: linear-gradient(180deg, transparent 92%, $red 0);
+        background-size: 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 0.4s ease, color 0.2s ease-in-out;
+        transition: color 0.2s ease-in-out;
+        &:hover {
+          color: $red;
+        }
+        &.active {
+          color: $red;
+          background-image: linear-gradient(180deg, transparent 92%, $red 0);
+          background-size: 100% 100%;
+          transition: background-size 0.5s ease;
+        }
+      }
+    }
+  }
+  &-tabs {
+    margin-top: -43px;
+  }
+  .status-message {
+    height: 60px;
+    background: transparent;
+    font-size: 0.8125rem;
+    color: $cadet-grey;
+    a {
+      color: $red;
+    }
+  }
+  .h-splitter {
+    width: 100%;
+    height: 1px;
+    background-color: $ghost-white;
+  }
+  .label {
+    &--success {
+      background-color: $success;
+    }
+    &--warning {
+      background-color: $cadet-grey;
+    }
+  }
+  .label--success,
+  .label--warning,
+  .label--error {
+    text-transform: uppercase;
+    color: $white;
+    font-size: 0.6875rem;
+    border-radius: 15px;
+    padding: 6px 14px;
+    display: inline-block;
+    font-weight: $fw-bold;
+  }
+  .membership-status,
+  .active-networks,
+  .nodes-details,
+  .company-details,
+  .billing-details-dashboard,
+  .billing-invoice-history,
+  .billing-transactions {
+    box-shadow: 0 0 20px 0 rgba(92, 98, 117, 0.1);
+    margin-bottom: 30px;
+    padding: 0 30px 10px 30px;
+    .dsh-header {
+      padding: 25px 0;
+      .heading {
+        line-height: 1.5rem;
+        color: $cadet-grey;
+        i {
+          font-size: 1.4375rem;
+        }
+        span {
+          margin-left: 15px;
+          font-size: $fs-lg;
+        }
+      }
+    }
+    .field {
+      padding: 20px 0;
+      color: $black-coral;
+      font-size: 0.875rem;
+      .value {
+        font-weight: $fw-bold;
+      }
+    }
+  }
+  .active-networks {
+    padding: 0 30px 30px 30px;
+  }
+  .nodes-details,
+  .certificate-details {
+    .btn-download,
+    .btn-upload {
+      border-radius: 5px;
+    }
+  }
+  .billing-details-dashboard,
+  .billing-invoice-history,
+  .billing-transactions {
+    padding: 0 30px 30px 30px;
+  }
+}

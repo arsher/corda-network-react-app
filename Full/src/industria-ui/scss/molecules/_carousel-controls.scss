@@ -1,0 +1,156 @@
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  .carousel-controls-label + .carousel-nav {
+    padding-left: 20px;
+  }
+  .carousel-controls-label {
+    color: $asphalt;
+    &::before {
+      background: $asphalt;
+    }
+  }
+  .carousel-nav {
+    display: flex;
+    .prev,
+    .next,
+    .counter-items {
+      color: $ocean;
+      span {
+        color: $ocean;
+      }
+    }
+
+    .prev,
+    .next {
+      height: 45px;
+      width: 45px;
+      padding: 0;
+      background-color: $air;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      span i {
+        font-weight: $fw-bolder;
+      }
+      &:hover {
+        box-shadow: 0 0 10px 0 rgba(121, 166, 196, 0.4);
+      }
+      &:focus {
+        outline: 0;
+      }
+    }
+    .counter-items {
+      display: flex;
+      align-items: center;
+      font-weight: $fw-bold;
+      padding: 0 15px;
+      font-size: 20px;
+    }
+  }
+}
+
+.bg-white,
+.bg-air {
+  .carousel-controls {
+    .carousel-controls-label {
+      color: $asphalt;
+      &::before {
+        background: $asphalt;
+      }
+    }
+    .carousel-nav {
+      .prev,
+      .next,
+      .counter-items {
+        color: $ocean;
+        span {
+          color: $ocean;
+        }
+      }
+      .prev,
+      .next {
+        &:hover {
+          box-shadow: 0 0 10px 0 rgba(121, 166, 196, 0.4);
+        }
+      }
+    }
+  }
+}
+
+.bg-white {
+  .carousel-nav {
+    .prev,
+    .next {
+      background-color: $air;
+    }
+  }
+}
+
+.bg-air {
+  .carousel-nav {
+    .prev,
+    .next {
+      background-color: $white;
+    }
+  }
+}
+
+.bg-ocean,
+.bg-night {
+  .carousel-nav {
+    .carousel-controls-label {
+      color: $air;
+      &::before {
+        background: $air;
+      }
+    }
+    .prev,
+    .next,
+    .counter-items {
+      color: $white;
+      span {
+        color: $white;
+      }
+    }
+    .prev,
+    .next {
+      background-color: $sky;
+    }
+  }
+}
+
+.bg-ocean {
+  .carousel-controls {
+    .carousel-controls-label {
+      color: $air;
+      &::before {
+        background: $air;
+      }
+    }
+    .prev,
+    .next {
+      &:hover {
+        box-shadow: 0 0 10px 0 rgba(28,98,145,0.4);
+      }
+    }
+  }
+}
+
+.bg-night {
+  .carousel-controls {
+    .carousel-controls-label {
+      color: $mist;
+      &::before {
+        background: $mist;
+      }
+    }
+    .prev,
+    .next {
+      &:hover {
+        box-shadow: 0 0 10px 0 rgba(2, 10, 15, 0.4);
+      }
+    }
+  }
+}

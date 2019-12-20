@@ -1,0 +1,126 @@
+.btn {
+  border-radius: 0.3125rem;
+  line-height: 1.1;
+  padding: 0.875rem 1.75rem;
+  &[disabled="disabled"],
+  &:disabled,
+  &.disabled {
+    cursor: not-allowed;
+    background: transparent !important;
+    box-shadow: unset !important;
+  }
+}
+
+.btn-lg {
+  border-radius: 0.3125rem;
+}
+
+.btn-primary,
+.bg-ghost-white .btn-primary,
+.bg-white .btn-primary {
+  background: $primary;
+  color: $white;
+  border-color: $primary;
+  box-shadow: 0 0 10px 0 rgba(224, 16, 23, 0.3);
+  &:focus {
+    box-shadow: 0 0 10px 0 rgba(224, 16, 23, 0.3);
+  }
+  &:hover {
+    background: #ff383f;
+    border-color: #ff383f;
+    box-shadow: 0 0 10px 0 rgba(224, 16, 23, 0.3);
+  }
+
+  &[disabled="disabled"],
+  &:disabled,
+  &.disabled {
+    background: $red !important;
+    color: $white;
+    border-color: $red;
+    opacity: 0.5;
+  }
+}
+
+.btn-secondary,
+.bg-white .btn-secondary {
+  color: $black-coral;
+  background: $ghost-white;
+  border-color: $ghost-white;
+  &:focus {
+    box-shadow: none;
+  }
+  &:hover {
+    box-shadow: none;
+  }
+  &:active {
+    box-shadow: none;
+  }
+  &[disabled="disabled"],
+  &:disabled,
+  &.disabled {
+    color: rgba(92, 98, 117, 0.6);
+    background: $ghost-white !important;
+    border-color: $ghost-white;
+  }
+}
+
+.link-secondary {
+  color: $cadet-grey;
+  background: transparent;
+  border-color: transparent;
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    color: $red;
+  }
+}
+
+.btn-download,
+.bg-white .btn-download {
+  text-transform: uppercase;
+  background: transparent;
+  color: $red;
+  border: 2px dashed $lavander-grey;
+  .file-size {
+    font-weight: $fw-normal;
+    color: $cadet-grey;
+    margin-left: 1.25rem;
+  }
+  i {
+    vertical-align: middle;
+    font-size: 1rem;
+    margin-right: 0.625rem;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+  &:hover {
+    background: transparent;
+    .file-size {
+      color: $onyx;
+    }
+  }
+  &:active {
+    background: transparent;
+    box-shadow: none;
+    .file-size {
+      color: $onyx;
+    }
+  }
+  &[disabled="disabled"],
+  &:disabled,
+  &.disabled {
+    opacity: 1;
+    color: rgba(236, 29, 36, 0.6);
+  }
+}
+
+.btn-link {
+  background: transparent !important;
+  border-color: transparent !important;
+  color: $cadet-grey;
+  padding: 0;
+  &:hover {
+    color: $red;
+  }
+}

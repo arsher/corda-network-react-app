@@ -1,0 +1,231 @@
+@import "./../../scss/variables";
+
+.wrapper {
+  padding-left: 330px;
+}
+
+.content-wrapper {
+  width: 100%;
+}
+
+.style-guide-header {
+  background-color: $air;
+  height: 110px;
+  display: flex;
+  align-items: center;
+}
+
+pre {
+  font-family: $ff-monospace;
+  font-size: 14px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.ds-hr {
+  margin-bottom: 3.125rem;
+  margin-top: 3.125rem;
+}
+
+.color-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  height: 55px;
+  max-height: inherit;
+  overflow: visible;
+  background: $ocean;
+  text-align: center;
+  h2,
+  p {
+    margin-bottom: 1px;
+  }
+  .section-label {
+    font-size: $h2-font-size;
+    padding-left: 0;
+    display: inline-block;
+    &::before {
+      content: none;
+    }
+  }
+  .standard-label {
+    font-size: $h2-font-size;
+  }
+  .subtitle {
+    font-size: $h2-font-size;
+  }
+  ul {
+    margin-bottom: 0;
+    li {
+      padding-left: 0;
+      &::before {
+        width: 20px;
+        top: 26px;
+        @include respond-below(sm) {
+          top: 22px;
+        }
+      }
+    }
+  }
+  .description {
+    font-size: $h2-font-size;
+  }
+  .stand-alone-quote {
+    margin: 0;
+    padding: 0;
+    &::before {
+      top: -1px;
+      font-size: 40px;
+      line-height: 18px;
+      text-align: center;
+      @include respond-below(sm) {
+        top: -4px;
+      }
+    }
+  }
+  .paragraph-quote {
+    padding: 1px 0;
+    margin: 0;
+    height: 100%;
+    @include respond-below(sm) {
+      padding: 0;
+      h2 {
+        line-height: 2;
+      }
+    }
+  }
+  & + p {
+    margin-bottom: 0;
+  }
+}
+
+.color-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  height: 120px;
+  max-height: inherit;
+  margin-top: 1.125rem;
+  margin-bottom: 1.125rem;
+  overflow: hidden;
+  &-inner {
+    height: 100%;
+    margin: 20px;
+  }
+  &.cb-cards {
+    height: 220px;
+    .color-block-inner {
+      width: auto;
+      height: 100%;
+      margin: 30px;
+    }
+  }
+  &.cb-accordion {
+    height: 215px;
+    padding: 30px;
+    .acc-example {
+      padding: 5px 20px;
+      margin: 10px 0;
+      p {
+        margin-bottom: 0;
+        color: $asphalt;
+      }
+    }
+    &.bg-white .acc-example {
+      background: $air;
+    }
+    &.bg-air .acc-example,
+    &.bg-ocean .acc-example,
+    &.bg-night .acc-example {
+      background: $white;
+    }
+  }
+}
+
+#logos-page {
+  .block-with-svg {
+    .svg,
+    svg {
+      width: 120px !important;
+    }
+  }
+}
+
+.border-left-2--white {
+  border-left: 2px solid $white;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.vw-100 {
+  width: 100vw;
+}
+
+.vh-100 {
+  height: 100vh;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+$spaceamounts: (0, 4, 5, 8, 10, 15, 16, 20, 24, 25, 30, 40, 48, 50, 100);
+$sides: (top, bottom, left, right, horizontal, vertical, all);
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    @if $side == "all" {
+      .m-#{$space} {
+        margin: #{$space}px !important;
+      }
+
+      .p-#{$space} {
+        padding: #{$space}px !important;
+      }
+    } @else if $side == "horizontal" {
+      .mx-#{$space} {
+        margin-left: #{$space}px !important;
+        margin-right: #{$space}px !important;
+      }
+
+      .px-#{$space} {
+        padding-left: #{$space}px !important;
+        padding-right: #{$space}px !important;
+      }
+    } @else if $side == "vertical" {
+      .my-#{$space} {
+        margin-top: #{$space}px !important;
+        margin-bottom: #{$space}px !important;
+      }
+
+      .py-#{$space} {
+        padding-top: #{$space}px !important;
+        padding-bottom: #{$space}px !important;
+      }
+    } @else {
+      .m#{str-slice($side, 0, 1)}-#{$space} {
+        margin-#{$side}: #{$space}px !important;
+      }
+
+      .p#{str-slice($side, 0, 1)}-#{$space} {
+        padding-#{$side}: #{$space}px !important;
+      }
+    }
+  }
+}

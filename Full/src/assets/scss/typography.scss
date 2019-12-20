@@ -1,0 +1,163 @@
+//--HEADINGS STYLES
+.h1-hero,
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: $ff-base;
+  font-weight: $fw-bolder;
+  color: $onyx;
+}
+
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  font-weight: $fw-bold;
+}
+
+//--PARAGRAPHS STYLES
+p,
+.p-standard,
+.p-standard p {
+  color: $black-coral;
+}
+
+p.p-big,
+.p-big p {
+  color: $black-coral;
+}
+
+p.p-big,
+.p-big p {
+  font-size: $p-big-fs;
+  line-height: $p-big-lh;
+  letter-spacing: $ls-base;
+  font-weight: $fw-normal;
+  color: $black-coral;
+}
+
+p.p-small,
+.p-small p {
+  font-size: $fs-sm;
+  line-height: 1.625rem;
+  font-weight: $fw-normal;
+  color: $black-coral;
+}
+
+//--SUBTITLE STYLES
+.subtitle,
+.subtitle p {
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  color: $cadet-grey;
+}
+
+//--STANDARD LABEL STYLE
+.standard-label {
+  color: $cadet-grey;
+}
+
+//--ANCHORS STYLES
+a {
+  color: $black-coral;
+  background-image: none;
+  &:hover {
+    background-image: none;
+  }
+}
+
+p a,
+span a,
+li a,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+.solo-link {
+  padding-bottom: 0;
+  background-image: none;
+  &:hover {
+    background-image: none;
+    background-size: 0% 0%;
+  }
+}
+
+//--SOLO LINK STYLE
+.solo-link {
+  font-size: 0.875rem;
+  font-weight: $fw-bold;
+}
+
+.fs-13,
+.fs-13 p {
+  font-size: 0.8125rem;
+  line-height: 1.5rem;
+}
+
+.bg-onyx {
+  .h1-hero,
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5 {
+    color: $cadet-grey;
+  }
+
+  p {
+    color: $lavander-grey;
+  }
+  a,
+  p a,
+  span a,
+  li a,
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  .solo-link {
+    color: $white;
+  }
+}
+
+.bg-white {
+  .h1-hero,
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5 {
+    color: $onyx;
+  }
+
+  p {
+    color: $black-coral;
+  }
+  .subtitle,
+  .subtitle p {
+    color: $cadet-grey;
+  }
+}

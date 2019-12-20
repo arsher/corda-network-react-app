@@ -1,0 +1,25 @@
+@import "../../../assets/scss/variables.scss";
+
+.billing-details-dashboard {
+  padding: 0 30px 30px 30px;
+  .dsh-header {
+    .edit {
+      font-size: 1.375rem;
+      color: $cadet-grey;
+    }
+  }
+  .field {
+    padding: 20px !important;
+    line-height: 1.5rem;
+    border-radius: 5px;
+    div {
+      flex: 0 1 50%;
+    }
+  }
+  .field.odd {
+    background-color: $ghost-white;
+  }
+  .h-splitter {
+    margin: 0 !important;
+  }
+}

@@ -1,0 +1,123 @@
+@import "./../../../assets/scss/variables.scss";
+
+.participant-type-container {
+  .card-body {
+    padding: 36px 30px 40px;
+    h1.h3 {
+      font-weight: $fw-bold;
+    }
+    .encourage-msg {
+      font-size: 0.875rem;
+      line-height: 0.875rem;
+      margin-bottom: 25px;
+    }
+    .participant-types {
+      .type {
+        position: relative;
+        flex: 0 1 48%;
+        cursor: pointer;
+        &-wrapper {
+          display: block;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 30px;
+          border: 2px dashed #bac2d6;
+          border-radius: 5px;
+          cursor: pointer;
+          .radio {
+            display: none;
+          }
+          &::after {
+            content: "\F5E1";
+            display: inline-block;
+            font-family: "Material Design Icons";
+            color: $cadet-grey;
+            font-size: 28px;
+            position: absolute;
+            right: 13px;
+            top: 5px;
+            opacity: 0;
+            transition: opacity 0.2s ease-in;
+          }
+          svg {
+            margin-bottom: 0;
+            max-width: 70px;
+            max-height: 70px;
+          }
+          &:hover {
+            svg {
+              path {
+                fill: $black-coral;
+              }
+            }
+            .standard-label {
+              color: $black-coral;
+            }
+          }
+          &.selected {
+            border-style: solid;
+            svg {
+              path {
+                fill: $black-coral;
+              }
+            }
+            .standard-label {
+              color: $black-coral;
+            }
+            &::after {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    .learn-more {
+      border-radius: 5px;
+      padding: 18px;
+      p {
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+        &.standard-label {
+          font-weight: $fw-bold;
+        }
+        a {
+          color: $red;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .customer-agreement {
+      background-color: $ghost-white;
+      padding: 5px 18px;
+      margin-top: 20px;
+      border-radius: 5px;
+      p {
+        font-size: 0.75rem;
+        color: $cadet-grey;
+        span.text-red {
+          cursor: pointer;
+          background-image: linear-gradient(180deg, transparent 93%, #ec1d24 0);
+          background-size: 0 100%;
+          background-repeat: no-repeat;
+          transition: background-size 0.4s ease;
+          &:hover {
+            background-image: linear-gradient(180deg, transparent 93%, #ec1d24 0);
+            background-size: 100% 100%;
+          }
+        }
+      }
+    }
+  }
+  .h-splitter {
+    width: 100%;
+    height: 1px;
+    background: $ghost-white;
+    margin: 20px 0 40px 0;
+  }
+}

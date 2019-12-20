@@ -1,0 +1,24 @@
+@import "./../../assets/scss/variables.scss";
+@import "./../../industria-ui/scss/mixins/media-queries";
+
+.bottom-bar {
+  height: 50px;
+  border-top: 1px solid #d5dceb;
+  background: $ghost-white;
+  color: $cadet-grey;
+  font-size: 0.8125rem;
+  @include respond-below(sm) {
+    height: 60px;
+    .row > div {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  .privacy .link-secondary {
+    font-size: 0.8125rem;
+  }
+  &.dark {
+    background: $onyx-dark;
+    border-top-color: $onyx-dark;
+  }
+}

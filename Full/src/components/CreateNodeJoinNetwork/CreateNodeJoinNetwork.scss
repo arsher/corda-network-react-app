@@ -1,0 +1,141 @@
+@import "../../assets/scss/variables.scss";
+
+.create-node-join-network {
+  min-height: calc(100vh - 120px);
+  margin-top: -40px;
+  .how-to-create-node-container {
+    box-shadow: 0 0 20px 0 rgba(92, 98, 117, 0.1);
+  }
+  .h3 {
+    margin: 10px 0 40px 0;
+  }
+  .h-splitter {
+    width: 100%;
+    height: 1px;
+    margin: 30px 0;
+    background-color: $ghost-white;
+    &--big {
+      margin: 35px 0 40px;
+    }
+  }
+  .h-splitter + p {
+    margin-top: 40px;
+  }
+  .h-splitter + .h6 {
+    margin-top: 40px;
+  }
+  .btn-download {
+    padding: 15px;
+    margin: 30px 0 20px;
+    line-height: $fs-sm;
+    &:nth-child(2) {
+      margin-bottom: 50px;
+    }
+    i {
+      color: $red;
+      font-size: $fs-base;
+    }
+    .template-name {
+      text-transform: uppercase;
+      color: $red;
+      font-size: $fs-sm;
+      font-weight: $fw-bold;
+      margin-left: 5px;
+      font-family: $ff-sans-serif;
+    }
+    .size {
+      color: $cadet-grey;
+      font-size: $fs-sm;
+      font-weight: $fw-normal;
+      font-family: $ff-sans-serif;
+      text-transform: none;
+      margin-left: 30px;
+    }
+  }
+  ul > li {
+    &:before,
+    &:after {
+      content: none;
+    }
+    text-indent: 0;
+    padding-top: 20px;
+    padding-left: 0;
+    margin-left: 40px;
+    list-style-type: disc;
+    font-weight: $fw-normal;
+  }
+  ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+  }
+  ol > li {
+    &:before,
+    &:after {
+      content: none;
+    }
+    &:nth-of-type(odd) {
+      background-color: $ghost-white;
+      border-radius: 5px;
+      line-height: 1rem;
+    }
+    margin-bottom: 0;
+    text-indent: 0;
+    padding: 20px;
+    font-weight: $fw-normal;
+    color: $black-coral;
+  }
+  h6 {
+    text-transform: uppercase;
+    color: $black-coral;
+    font-weight: $fw-bold;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  h5 + h6 {
+    margin-top: 20px;
+  }
+  .code-snippet {
+    font-size: 1.2rem;
+    background-color: $onyx;
+    border-radius: 5px;
+    padding: 30px 20px;
+    color: $white;
+    code {
+      display: block;
+    }
+    .pl-60 {
+      padding-left: 60px;
+    }
+    .break-word {
+      word-break: break-word;
+    }
+  }
+  .code-snippet + h-splitter {
+    margin-top: 40px;
+  }
+  p + .btn-secondary {
+    margin-top: -14px !important;
+  }
+  a {
+    color: $red !important;
+  }
+  a.hovered {
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
+  .btn-back {
+    padding-top: 38px;
+    padding-bottom: 8px;
+    border-top: 1px solid $ghost-white;
+    text-align: center;
+    .btn.btn-link {
+      margin: 0;
+      color: $cadet-grey;
+      transition: color 0.2s ease-in-out;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@import "./../../../../assets/scss/variables.scss";
+@import "./../../../../industria-ui/scss/mixins/media-queries";
+
+.about-section {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background: $ghost-white;
+  @include respond-below(sm) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  &-content {
+    display: flex;
+    flex-wrap: wrap;
+    h2 {
+      width: 40%;
+      padding-right: 15px;
+      &:before {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 72px;
+        background: $red;
+        margin: 4px 0 40px;
+      }
+      @include respond-below(sm) {
+        width: 100%;
+        padding-right: 0;
+      }
+    }
+    p {
+      margin-left: auto;
+      width: 60%;
+      padding-left: 15px;
+      font-size: 1.125rem;
+      color: $onyx;
+      line-height: 1.75rem;
+      margin-bottom: 20px;
+      &:last-of-type {
+        margin-bottom: 0;
+        a {
+          text-transform: uppercase;
+          font-size: 0.875rem;
+          font-weight: $fw-bold;
+          background-image: none;
+          &:hover {
+            background-image: none;
+          }
+        }
+      }
+      a {
+        color: $red;
+        background-image: linear-gradient(180deg, transparent 93%, $red 0);
+        background-size: 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 0.4s ease;
+        &:hover {
+          background-image: linear-gradient(180deg, transparent 93%, $red 0);
+          background-size: 100% 100%;
+        }
+      }
+      @include respond-below(sm) {
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+  }
+}

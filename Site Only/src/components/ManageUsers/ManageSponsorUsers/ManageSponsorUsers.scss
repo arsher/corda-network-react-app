@@ -1,0 +1,252 @@
+@import "./../../../assets/scss/variables.scss";
+
+.manage-direct-users-container {
+  min-height: calc(100vh - 120px);
+  padding: 60px 0 30px;
+  .card {
+    header {
+      padding: 30px;
+      h1 {
+        font-weight: $fw-bold;
+        margin-bottom: 0;
+      }
+      .tab-slider {
+        &-tabs {
+          display: inline-flex;
+          width: 233px;
+          height: 45px;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          position: relative;
+          border-radius: 5px;
+          user-select: none;
+          border: 2px solid $lavander-grey;
+          &::after {
+            content: "";
+            font-weight: $fw-bold;
+            width: 51%;
+            height: 107%;
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            border: 0;
+            border-radius: 5px;
+            height: inherit;
+            background-color: $red;
+            box-shadow: 0 0 10px 0 rgba(224, 16, 23, 0.3);
+            transition: all 250ms ease-in-out;
+          }
+          &.slide::after {
+            left: 50%;
+          }
+        }
+        &-trigger {
+          font-size: 0.875rem;
+          font-weight: $fw-bold;
+          width: 50%;
+          text-transform: uppercase;
+          text-align: center;
+          padding: 9px;
+          position: relative;
+          z-index: 2;
+          margin: 0;
+          color: $cadet-grey;
+          transition: color 250ms ease-in-out;
+          cursor: pointer;
+          display: inline-block;
+          user-select: none;
+          &.active {
+            color: $white;
+          }
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+    .papprticipants {
+      width: 100%;
+      color: $black-coral;
+      font-size: $fs-sm;
+      &-header {
+        font-size: $fs-sm;
+        text-transform: uppercase;
+        padding: 23px 15px;
+        width: calc(100% + 1px);
+        .company,
+        .country {
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        & > div {
+          font-weight: $fw-bold;
+          color: $cadet-grey;
+          white-space: nowrap;
+          &:last-of-type {
+            padding-right: 35px;
+          }
+        }
+      }
+      &-body {
+        line-height: 26px;
+        min-height: 280px;
+        .no-participants {
+          width: 100%;
+          min-height: inherit;
+          color: $cadet-grey;
+          .icon i {
+            &:before {
+              font-size: 2.5rem;
+            }
+          }
+          .text {
+            font-size: 20px;
+            margin-top: 20px;
+          }
+        }
+        .participant-row {
+          position: relative;
+          border-bottom: 1px solid $ghost-white;
+          &--content {
+            position: relative;
+            cursor: pointer;
+            padding: 18px 15px 15px;
+            font-weight: $fw-bold;
+            .country,
+            .tou,
+            .date,
+            .submitted-on {
+              font-weight: $fw-normal;
+            }
+            .submitted-on {
+              text-align: right;
+              padding-right: 35px;
+            }
+            .tou {
+              text-transform: uppercase;
+            }
+            .date {
+              padding-right: 35px;
+            }
+            .company-number,
+            .user-email {
+              color: $cadet-grey;
+              padding-top: 5px;
+            }
+            .open-row {
+              position: absolute;
+              right: 0px;
+              top: 0;
+              cursor: pointer;
+              width: 20px;
+              height: 100%;
+              background-color: $ghost-white;
+              opacity: 0;
+              transition: opacity 0.15s ease-in-out;
+              i {
+                font-size: 1.5rem;
+                font-weight: $fw-bolder;
+                color: $cadet-grey;
+              }
+              &:hover {
+                opacity: 1;
+              }
+            }
+            &:hover {
+              .open-row {
+                opacity: 1;
+              }
+            }
+          }
+          &--details {
+            border-top: 1px dashed #edf0f7;
+            margin: 0 30px;
+            opacity: 0;
+            height: 0;
+            padding: 0;
+            transition: all 0.15s ease-in-out;
+            & > div {
+              span {
+                color: $cadet-grey;
+                margin-right: 5px;
+              }
+            }
+            .close-details {
+              position: absolute;
+              right: 0px;
+              top: 0;
+              cursor: pointer;
+              width: 20px;
+              height: 100%;
+              pointer-events: none;
+              background-color: $cadet-grey;
+              opacity: 0;
+              transition: all 0.15s ease-in-out;
+              i {
+                font-size: 1.5rem;
+                font-weight: $fw-bolder;
+                color: $ghost-white;
+                cursor: pointer;
+              }
+              &:hover {
+                pointer-events: none;
+              }
+            }
+            .btn {
+              pointer-events: all;
+            }
+          }
+          &.open {
+            .participant-row--details {
+              opacity: 1;
+              height: 100%;
+              padding: 16px 0;
+              & > * {
+                pointer-events: none;
+              }
+              .close-details {
+                pointer-events: all;
+                opacity: 1;
+              }
+            }
+          }
+          .label {
+            min-width: auto;
+            max-width: 172px;
+            text-align: center;
+          }
+        }
+      }
+      .btn-download {
+        padding: 15px 20px 15px 15px;
+        line-height: 0.875rem;
+        width: 300px;
+        i {
+          margin-right: 0;
+        }
+        .template-name,
+        .size {
+          font-size: 0.875rem;
+        }
+        .size {
+          font-size: 0.875rem;
+          color: $cadet-grey;
+          text-transform: none;
+          font-weight: $fw-normal;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  ._loading_overlay_overlay {
+    z-index: 1;
+  }
+
+  ._loading_overlay_content.css-42igfv {
+    margin: 110px auto !important;
+  }
+}

@@ -1,0 +1,487 @@
+@import "./../../assets/scss/variables.scss";
+@import "./../../industria-ui/scss/mixins/media-queries";
+
+.navigation {
+  width: 150px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  padding-right: 0;
+  background: rgba(49, 56, 71, 0.85);
+  transition: width 0.3s ease-out, padding-right 0.3s ease-out, background 0.3s ease-out 0.3s;
+  @include respond-below(md) {
+    height: 0;
+  }
+  &-wrapper {
+    background: $white;
+    box-shadow: 0 0 20px 0 rgba(92, 98, 117, 0.1);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    .navbar {
+      padding-top: 30px;
+      text-align: center;
+      width: 150px;
+      height: 100%;
+      position: relative;
+      @include respond-below(md) {
+        padding-top: 0;
+        text-align: left;
+        width: 100%;
+        height: 65px;
+        position: fixed;
+        background: $white;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 3px 20px 0 rgba(92, 98, 117, 0.1);
+      }
+      .logo {
+        background-image: none;
+        @include respond-below(md) {
+          min-width: 70px;
+          padding-left: 15px;
+          padding-top: 6px;
+        }
+        color: $black-coral !important;
+        text-transform: uppercase !important;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+        font-weight: $fw-bold;
+        text-align: left;
+        padding-left: 25px;
+        padding-right: 10px;
+        transition: color 0.2s ease-in-out;
+        &:hover {
+          color: $onyx-dark !important;
+        }
+      }
+      .hamburger-menu {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include respond-below(md) {
+          left: inherit;
+          right: 0;
+        }
+        .line {
+          width: 30px;
+          height: 3px;
+          pointer-events: none;
+          background-color: $black-coral;
+          display: block;
+          margin: 5px auto;
+          transition: all 0.3s ease-in-out;
+          @include respond-below(md) {
+            width: 25px;
+          }
+        }
+      }
+    }
+    .inner-nav {
+      position: absolute;
+      left: 150px;
+      right: 0;
+      top: 0;
+      @include respond-below(md) {
+        position: fixed;
+        left: 0;
+        right: 0;
+        height: 0;
+        visibility: hidden;
+        top: 65px;
+        transition: height 0.2s ease;
+        height: 100vh;
+      }
+      .searchfield {
+        position: relative;
+        height: 100px;
+        background-color: $ghost-white;
+        & * {
+          background-color: $ghost-white;
+        }
+        @include respond-below(md) {
+          height: 70px;
+        }
+        .search-form {
+          display: flex;
+          align-items: center;
+          .form-group {
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            .form-control {
+              border: 0;
+              margin-top: 0;
+              caret-color: $black-coral;
+              color: $black-coral;
+              padding: 0.6875rem 0;
+              line-height: 1rem !important;
+              &::placeholder {
+                color: $cadet-grey;
+                text-transform: uppercase;
+                font-size: $fs-sm;
+              }
+              &:focus {
+                &::placeholder {
+                  visibility: hidden;
+                }
+              }
+            }
+            .btn-search {
+              position: absolute;
+              right: -7px;
+              margin: 0;
+              padding: 0;
+              background: transparent;
+              display: none;
+              &:after {
+                content: "\F349";
+                display: inline-block;
+                font-family: "Material Design Icons";
+                font-size: 2.1875rem;
+                font-weight: $fw-normal;
+                color: $cadet-grey;
+                transition: color 0.2s ease-in-out;
+                @include respond-below(md) {
+                  font-size: 2rem;
+                }
+              }
+              &:hover {
+                &::after {
+                  color: $red;
+                }
+              }
+            }
+          }
+        }
+      }
+      .nav-main {
+        height: calc(100% - 100px);
+        ul {
+          margin-bottom: 0;
+          li {
+            padding-left: 0;
+            font-size: 0.875rem;
+            &::before {
+              display: none;
+            }
+            a {
+              background-image: none;
+              text-transform: uppercase;
+              padding-bottom: 0;
+            }
+          }
+        }
+        .menu-not-authenticated {
+          height: 90px;
+          width: 100%;
+          border-bottom: 1px solid $ghost-white;
+          margin-bottom: 20px;
+          opacity: 0;
+          @include respond-below(md) {
+            height: 60px;
+            margin-bottom: 0;
+            // display: none;
+          }
+          ul .nav-item {
+            margin-bottom: 0;
+            font-size: $fs-sm;
+            .nav-link {
+              color: $cadet-grey;
+              transition: color 0.2s ease-in-out;
+            }
+            &:hover {
+              .nav-link {
+                color: $red;
+              }
+            }
+          }
+        }
+        .menu {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          min-height: calc(100vh - 280px);
+          margin-bottom: 20px;
+          // height: calc(100% - 90px);
+          @include respond-below(md) {
+            // height: auto;
+            // margin-top: 16px;
+            // margin-bottom: 16px;
+            margin: 20px 0;
+          }
+          @include respond-below(sm) {
+            // margin-top: 50px;
+          }
+          &.user-authorized {
+            min-height: calc(100vh - 230px);
+            margin: 30px 0;
+          }
+        }
+        .main-menu {
+          // justify-self: center;
+          // margin-top: -70px;
+          @include respond-below(md) {
+            height: 100%;
+          }
+          ul {
+            width: max-content;
+            position: relative;
+            z-index: 597;
+            @include respond-below(md) {
+              width: 100%;
+            }
+            .nav-item {
+              margin-bottom: 0;
+              position: static;
+              text-transform: uppercase;
+              cursor: pointer;
+              &.has-sub > .nav-link::after {
+                content: "\F142";
+                display: inline-block;
+                font-family: "Material Design Icons";
+                font-size: 1.4375rem;
+                vertical-align: bottom;
+                padding-left: 0;
+                font-weight: normal;
+                color: $onyx;
+                cursor: pointer;
+                opacity: 0;
+                transition: padding-left 0.2s ease, color 0.2s ease-in-out;
+                @include respond-below(md) {
+                  content: "\F140";
+                }
+              }
+              &.sub {
+                padding-left: 50px;
+                @include respond-below(md) {
+                  padding-left: 1rem;
+                }
+                .nav-link.active {
+                  color: $red;
+                }
+              }
+              .submenu {
+                margin: 0;
+                width: 100%;
+                white-space: nowrap;
+                display: none;
+                opacity: 0;
+                position: absolute;
+                top: 3px;
+                left: 100%;
+                z-index: 598;
+                width: 100%;
+                transition: opacity 0.3s ease-in-out;
+                @include respond-below(md) {
+                  position: static;
+                  opacity: 1;
+                  display: none;
+                  top: 0;
+                  height: 0;
+                  transition: unset;
+                  white-space: pre-wrap;
+                }
+                @include respond-between(md, lg) {
+                  white-space: pre-wrap;
+                }
+                .nav-link {
+                  padding: 4px 10px 4px 0;
+                  font-weight: $fw-normal;
+                  color: $black-coral;
+                  font-size: 0.875rem;
+                }
+                .onboarding-item {
+                  display: inline-block;
+                  padding-top: 4px;
+                  width: 49%;
+                  white-space: initial;
+                  cursor: default;
+                  span {
+                    font-size: 0.875rem;
+                    line-height: 1.75;
+                    font-weight: $fw-normal;
+                    text-transform: none;
+                    color: $cadet-grey;
+                  }
+                  .nav-link {
+                    display: block;
+                    width: max-content;
+                    line-height: 1.1;
+                    font-weight: $fw-bold;
+                    padding: 0.875rem 1.75rem;
+                    margin-top: 25px;
+                    background: $ghost-white;
+                    color: $black-coral;
+                    border-radius: 0.3125rem;
+                  }
+                }
+              }
+              .nav-link {
+                display: inline-block;
+                color: $onyx;
+                padding: 10px 10px 10px 0;
+                transition: color 0.2s ease-in-out;
+                &:hover {
+                  color: $red;
+                }
+              }
+              &.has-sub {
+                &.active {
+                  & > .nav-link {
+                    color: $red;
+                  }
+                  .nav-link::after {
+                    padding-left: 4px;
+                    color: $red;
+                    opacity: 1;
+                    @include respond-below(md) {
+                      padding-left: 0;
+                    }
+                  }
+                  .submenu {
+                    display: inline-block;
+                    opacity: 1;
+                    margin-bottom: 50px;
+                    @include respond-below(md) {
+                      height: 100%;
+                      margin-bottom: 0;
+                    }
+                    @include respond-above(md) {
+                      width: max-content;
+                    }
+                  }
+                }
+              }
+              #account-link::before {
+                content: "\F013";
+                display: inline-block;
+                font-family: "Material Design Icons";
+                color: $red;
+                font-size: 1.4375rem;
+                margin-right: 5px;
+                vertical-align: top;
+              }
+              #users-link::before {
+                content: "\FB34";
+                display: inline-block;
+                font-family: "Material Design Icons";
+                color: $red;
+                font-size: 1.4375rem;
+                margin-right: 5px;
+                vertical-align: top;
+              }
+            }
+          }
+        }
+        .social-networks {
+          display: none;
+          border-left: 1px solid $ghost-white;
+          @include respond-below(md) {
+            display: none;
+          }
+          ul {
+            @include respond-below(md) {
+              display: flex;
+              width: 100%;
+              justify-content: space-evenly;
+              padding-top: 25px;
+            }
+            li {
+              margin-bottom: 50px;
+              i {
+                font-size: 1.875rem;
+                color: $lavander-grey;
+                transition: color 0.2s ease-in-out;
+                &:hover {
+                  color: $red;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.open {
+    width: 100%;
+    padding-right: 22%;
+    @include respond-below(md) {
+      width: 100%;
+      padding-right: 0;
+    }
+    .navbar {
+      border-right: 1px solid $ghost-white;
+      .logo {
+        color: $black-coral !important;
+        text-transform: uppercase !important;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+        font-weight: $fw-bold;
+        text-align: left;
+        padding-left: 25px;
+        padding-right: 10px;
+        transition: color 0.2s ease-in-out;
+        &:hover {
+          color: $onyx-dark !important;
+        }
+      }
+      .hamburger-menu {
+        .line.top,
+        .line.bottom {
+          width: 20px;
+        }
+        .line.top {
+          transform: translateX(-6px) rotate(-45deg);
+        }
+        .line.bottom {
+          transform: translateX(-6px) rotate(45deg);
+        }
+        @include respond-below(md) {
+          .line.top,
+          .line.bottom {
+            width: 25px;
+          }
+          .line.top {
+            position: absolute;
+            transform: rotate(45deg);
+            top: 6px;
+          }
+
+          .line.middle {
+            width: 0%;
+            opacity: 0;
+          }
+
+          .line.bottom {
+            position: absolute;
+            transform: rotate(-45deg);
+            top: 6px;
+          }
+        }
+      }
+    }
+    .inner-nav {
+      height: 100%;
+      visibility: visible;
+      background: $white;
+      overflow-y: auto;
+      @include respond-below(md) {
+        height: calc(100% - 65px);
+      }
+      .menu-not-authenticated {
+        opacity: 1;
+      }
+    }
+    .btn-search {
+      display: block !important;
+    }
+  }
+}

@@ -1,0 +1,180 @@
+@import "./../../assets/scss/variables.scss";
+
+.sponsored-participants {
+  // min-height: calc(100vh - 120px);
+  margin-top: -19px;
+  // padding-bottom: 60px;
+  &-container {
+    min-height: calc(100vh - 120px);
+    padding-bottom: 60px;
+    .add-participant {
+      padding-bottom: 24px;
+      padding-top: 24px;
+      .btn.btn-set-up {
+        border: 3px solid $lavander-grey;
+        color: $cadet-grey;
+      }
+    }
+    .card {
+      margin-bottom: 0;
+      header {
+        padding: 20px 30px;
+        h1 {
+          font-size: 1.75rem;
+          font-weight: $fw-bold;
+          margin-bottom: 0;
+        }
+      }
+      .table {
+        width: 100%;
+        color: $black-coral;
+        font-size: $fs-sm;
+        &-header {
+          font-size: $fs-sm;
+          text-transform: uppercase;
+          padding: 23px 15px 20px;
+          width: calc(100% + 1px);
+          & > div {
+            font-weight: $fw-bold;
+            color: $cadet-grey;
+            white-space: nowrap;
+            &:last-of-type {
+              padding-right: 35px;
+            }
+          }
+        }
+        &-body {
+          line-height: 26px;
+          .no-participants {
+            text-align: center;
+            padding: 80px 30px;
+            i {
+              font-size: 2.5rem;
+              color: $cadet-grey;
+            }
+            .subtitle {
+              margin: 13px 0 20px;
+            }
+          }
+          .table-row {
+            position: relative;
+            border-bottom: 1px solid $ghost-white;
+            &--content {
+              position: relative;
+              cursor: pointer;
+              padding: 18px 15px 15px;
+              font-weight: $fw-bold;
+              .country,
+              .date {
+                font-weight: $fw-normal;
+              }
+              .date {
+                padding-right: 35px;
+              }
+              .company-number {
+                color: $cadet-grey;
+                padding-top: 5px;
+              }
+              .open-row {
+                position: absolute;
+                right: 0px;
+                top: 0;
+                cursor: pointer;
+                width: 20px;
+                height: 101%;
+                background-color: $ghost-white;
+                opacity: 0;
+                transition: opacity 0.15s ease-in-out;
+                i {
+                  font-size: 1.5rem;
+                  font-weight: $fw-bolder;
+                  color: $cadet-grey;
+                }
+                &:hover {
+                  opacity: 1;
+                }
+              }
+              &:hover {
+                .open-row {
+                  opacity: 1;
+                }
+              }
+            }
+            &--details {
+              border-top: 1px dashed $ghost-white;
+              margin: 0 30px;
+              opacity: 0;
+              height: 0;
+              padding: 0;
+              transition: all 0.15s ease-in-out;
+              & > div {
+                span {
+                  color: $cadet-grey;
+                  margin-right: 5px;
+                }
+              }
+              .close-details {
+                position: absolute;
+                right: 0px;
+                top: 0;
+                cursor: pointer;
+                width: 20px;
+                height: 100%;
+                pointer-events: none;
+                background-color: $cadet-grey;
+                opacity: 0;
+                transition: all 0.15s ease-in-out;
+                i {
+                  font-size: 1.5rem;
+                  font-weight: $fw-bolder;
+                  color: $ghost-white;
+                  cursor: pointer;
+                }
+                &:hover {
+                  pointer-events: none;
+                }
+              }
+              .btn {
+                pointer-events: all;
+                margin-right: 30px;
+                &.btn-set-up {
+                  border-color: $lavander-grey;
+                  background: $white;
+                  color: $cadet-grey;
+                }
+              }
+            }
+            &.open {
+              .table-row--details {
+                opacity: 1;
+                height: 100%;
+                padding: 16px 0;
+                & > * {
+                  pointer-events: none;
+                }
+                .close-details {
+                  pointer-events: all;
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &-table {
+    ._loading_overlay_wrapper {
+      &--active {
+        position: absolute;
+        left: calc(-8.33333% - 16px);
+        right: calc(-8.33333% - 16px);
+        min-height: calc(100vh - 120px);
+      }
+    }
+  }
+}
+
+.set-up-link {
+  pointer-events: all;
+}

@@ -1,0 +1,8 @@
+@import "./industria-ui/scss/mixins/media-queries";
+
+.App {
+  padding-left: 150px;
+  @include respond-below(md) {
+    padding-left: 0;
+  }
+}

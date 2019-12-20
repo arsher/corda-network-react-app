@@ -1,0 +1,266 @@
+.form-group {
+  margin-bottom: 14px;
+  position: relative;
+  .valid-feedback,
+  .invalid-feedback {
+    margin: 0 0 0 1rem;
+    font-size: 0.875rem;
+    position: absolute;
+    top: 3.1875rem;
+    padding: 0px 3px;
+    background: $white;
+  }
+  .form-control {
+    font-family: $ff-base;
+    font-size: 0.875rem;
+    padding: 0.6875rem 1rem;
+    font-weight: $fw-bold;
+    background-color: transparent;
+    border: 2px solid $lavander-grey;
+    line-height: 0;
+    border-radius: 0.3125rem;
+    &:focus {
+      border-color: $lavander-grey;
+    }
+    &.disabled,
+    &:disabled {
+      border-color: #d1d9f0;
+      color: $lavander-grey;
+    }
+  }
+  .has-float-label {
+    .form-control:placeholder-shown:not(:focus) + * {
+      font-size: 0.875rem;
+      color: $cadet-grey;
+      top: 5px;
+      z-index: 0;
+      @include respond-below(sm) {
+        top: 2px;
+      }
+    }
+    .form-control.disabled,
+    .form-control:disabled {
+      &:placeholder-shown:not(:focus) + * {
+        color: $lavander-grey;
+      }
+      + span {
+        color: $lavander-grey;
+      }
+    }
+    label,
+    > span {
+      font-size: 0.75rem;
+      color: $cadet-grey;
+      left: 1rem;
+      top: -18px;
+      background-color: $white;
+      pointer-events: none;
+      z-index: 0;
+      @include respond-below(sm) {
+        top: -20px;
+      }
+    }
+    .is-valid {
+      border-color: $green;
+      & + span {
+        color: $green;
+        & + i {
+          top: 1px;
+        }
+      }
+    }
+    .is-invalid {
+      border-color: $red;
+      & + span {
+        color: $red;
+        & + i {
+          top: 1px;
+        }
+      }
+    }
+    &.with-tooltip {
+      input {
+        margin-top: 0;
+      }
+      &::after {
+        content: "\F625";
+        display: block;
+        font-family: "Material Design Icons";
+        font-size: 1.25rem;
+        position: absolute;
+        right: 19px;
+        top: -5px;
+        padding: 0 3px;
+        background: $white;
+        color: $cadet-grey;
+        pointer-events: none;
+        transition: all 0.2s ease-in-out;
+      }
+      &:focus-within {
+        &::after {
+          font-size: 1.125rem;
+          top: -25px;
+        }
+      }
+    }
+  }
+}
+
+.floating-select {
+  .form-control {
+    padding: 0 0 1px;
+    .select__control {
+      border: 0;
+      flex-wrap: nowrap;
+      &--is-focused {
+        border: 0;
+        box-shadow: none;
+      }
+      &--is-focused,
+      &--has-value,
+      &--menu-is-open {
+        .select__placeholder {
+          top: -5px;
+          font-size: 0.75rem;
+          background: #fff;
+          padding: 3px;
+          left: 14px;
+          height: 0.75rem;
+        }
+      }
+    }
+    .select__value-container {
+      padding: 0;
+      overflow: visible;
+      .css-b8ldur-Input {
+        margin-left: 1rem;
+        color: $onyx;
+      }
+      &--has-value {
+        .select__single-value {
+          padding: 20px 1rem 1rem;
+          color: $onyx;
+          margin: 0;
+          max-width: inherit;
+        }
+        .select__placeholder {
+          top: -5px;
+          font-size: 0.75rem;
+          background: #fff;
+          padding: 3px;
+          left: 14px;
+          height: 0.75rem;
+        }
+      }
+    }
+    .select__placeholder {
+      text-transform: uppercase;
+      font-size: 0.875rem;
+      padding-top: 3px;
+      padding-left: 1rem;
+      margin: 0;
+      color: $cadet-grey;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: top 0.2s ease-in-out, font-size 0.2s ease-in-out;
+    }
+    .select__input {
+      input {
+        font-family: $ff-base;
+        font-weight: $fw-bold;
+        color: $onyx;
+        font-size: 0.875rem;
+        width: 100% !important;
+      }
+    }
+    .select__indicator-separator {
+      display: none;
+    }
+    .select__dropdown-indicator {
+      padding-right: 14px;
+      padding-top: 10px;
+      svg {
+        fill: $cadet-grey;
+      }
+    }
+    .select__clear-indicator {
+      padding: 10px 0 8px;
+      svg {
+        fill: $cadet-grey;
+      }
+      &:hover {
+        svg {
+          fill: $red;
+        }
+      }
+    }
+    .select__menu {
+      width: max-content;
+    }
+    .select__option {
+      white-space: nowrap;
+      padding: 1rem;
+      background: $white;
+      color: $onyx;
+      &:not(:last-of-type) {
+        border-bottom: 1px solid $ghost-white;
+      }
+      &:first-of-type {
+        background: none;
+        color: $onyx;
+        &:hover {
+          background: $ghost-white;
+        }
+      }
+      &:hover {
+        background: $ghost-white;
+      }
+    }
+    &.phone-code {
+      border-radius: 5px 0 0 5px;
+      .select__option {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.bg-ghost-white {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px $ghost-white inset !important;
+  }
+  .form-group .valid-feedback,
+  .form-group .invalid-feedback {
+    background-color: $ghost-white !important;
+  }
+  .has-float-label {
+    label,
+    > span {
+      background-color: $ghost-white !important;
+      top: -16px;
+    }
+  }
+}
+
+.bg-white {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px $white inset !important;
+  }
+  .form-group .valid-feedback,
+  .form-group .invalid-feedback {
+    background-color: $white !important;
+  }
+  .has-float-label {
+    label,
+    > span {
+      background-color: $white !important;
+    }
+  }
+}

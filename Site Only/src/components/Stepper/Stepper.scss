@@ -1,0 +1,160 @@
+@import "./../../assets/scss/variables.scss";
+
+.stepper {
+  padding: 36px 0 30px;
+  position: sticky;
+  top: 0;
+  .steps {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #d5dceb;
+    .step {
+      position: relative;
+      padding-bottom: 20px;
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 2px;
+        height: 100%;
+        background: $cadet-grey;
+        left: 9px;
+      }
+      &:last-of-type {
+        &::before {
+          display: none;
+        }
+      }
+      &-label {
+        color: $cadet-grey;
+        display: flex;
+        align-items: center;
+        line-height: 1.3125rem;
+        cursor: pointer;
+        &::before {
+          content: "\F43D";
+          font-family: "Material Design Icons";
+          position: relative;
+          width: 21px;
+          height: 30px;
+          color: $cadet-grey;
+          font-size: 24px;
+          background: $ghost-white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 20px;
+          transition: color 0.2s ease-in-out;
+        }
+        &.identity-checks {
+          &::before {
+            content: "\F995" !important;
+          }
+          &--failed {
+            &::before {
+              content: "\F5D6" !important;
+            }
+          }
+        }
+        &.sign-terms-label {
+          &::before {
+            content: "\FB33" !important;
+          }
+          &-completed {
+            &::before {
+              content: "\FBBE" !important;
+            }
+          }
+        }
+      }
+      &-info {
+        line-height: 1.25rem;
+        margin-left: 22px;
+        margin-top: 5px;
+        margin-bottom: -5px;
+        padding-left: 20px;
+        height: 0;
+        opacity: 0;
+        transition: opacity 0.1s ease;
+        a {
+          color: $red;
+          &:hover {
+            text-decoration: underline !important;
+          }
+        }
+        p {
+          line-height: 1.25rem;
+        }
+      }
+      &.active {
+        .step-label {
+          color: $black-coral;
+          &::before {
+            content: "\F43E";
+            color: $red;
+          }
+        }
+        .step-info {
+          height: 100%;
+          opacity: 1;
+        }
+
+        &.identity-checks {
+          .step-label {
+            &::before {
+              content: "\F995";
+              color: $red;
+            }
+          }
+        }
+
+        &.failed {
+          .step-label {
+            &::before {
+              content: "\FC98";
+              color: $red;
+            }
+          }
+        }
+        &.success {
+          .step-label {
+            &::before {
+              content: "\F5E1";
+              color: $red;
+            }
+          }
+        }
+      }
+      &.passed {
+        .step-label {
+          color: $cadet-grey;
+          &:hover {
+            cursor: initial !important;
+          }
+          &::before {
+            content: "\F43E";
+            color: $cadet-grey;
+          }
+        }
+      }
+    }
+  }
+  .info {
+    color: $cadet-grey;
+    i {
+      margin-right: 20px;
+      font-size: 1.4375rem;
+      line-height: 1.5rem;
+      color: $lavander-grey;
+    }
+    p {
+      color: $cadet-grey;
+      line-height: 1.25rem;
+      a {
+        color: $red;
+        &:hover {
+          text-decoration: underline !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import "./../../../assets/scss/variables.scss";
+
+.login-error {
+  min-height: calc(100vh - 120px);
+  .login-completed {
+    padding: 40px 100px;
+    box-shadow: 0 0 20px 0 rgba(92, 98, 117, 0.1);
+    i {
+      font-size: 2.5rem;
+      color: $cadet-grey;
+    }
+    p a {
+      color: $red;
+      &:hover {
+        text-decoration: underline !important;
+      }
+    }
+  }
+}

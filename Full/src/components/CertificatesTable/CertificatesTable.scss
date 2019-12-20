@@ -1,0 +1,144 @@
+@import "./../../assets/scss/variables.scss";
+
+.certificates-data {
+  header {
+    padding: 18px 30px 16px 30px;
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+  .tab-slider {
+    &-tabs {
+      display: inline-flex;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      position: relative;
+      user-select: none;
+      &::after {
+        content: "";
+        font-weight: $fw-bold;
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        border: 0;
+        border-radius: 5px;
+        height: inherit;
+        transition: all 250ms ease-in-out;
+      }
+      &.slide::after {
+        left: 50%;
+      }
+    }
+    &-trigger {
+      font-size: 0.875rem;
+      font-weight: $fw-bold;
+      text-transform: uppercase;
+      text-align: center;
+      margin-left: 30px;
+      margin-bottom: -4px;
+      padding-left: 0;
+      padding-bottom: 4px;
+      position: relative;
+      z-index: 2;
+      color: $black-coral;
+      transition: color 250ms ease-in-out;
+      cursor: pointer;
+      display: inline-block;
+      user-select: none;
+      background-image: linear-gradient(180deg, transparent 90%, #ec1d24 0);
+      background-size: 0 100%;
+      background-repeat: no-repeat;
+      transition: background-size 0.4s ease;
+      &.active {
+        color: $red;
+        background-size: 100% 100%;
+      }
+      &::before {
+        display: none;
+      }
+    }
+  }
+  .certificates {
+    &-header {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      padding: 20px 15px 17px;
+      > div {
+        font-weight: $fw-bold;
+        color: $cadet-grey;
+      }
+    }
+    &-body {
+      padding: 20px 30px 30px;
+      .certificate-details {
+        .field {
+          padding: 8px 0;
+          .name,
+          .value {
+            font-size: 0.875rem;
+          }
+          .name {
+            color: $cadet-grey;
+          }
+          .value {
+            margin-left: 10px;
+          }
+        }
+        .btn-download {
+          width: auto;
+          .size {
+            margin-left: 30px;
+            color: $cadet-grey;
+            font-weight: $fw-normal;
+            text-transform: lowercase;
+          }
+        }
+        .info {
+          background-color: $ghost-white;
+          padding: 5px 20px;
+          border-radius: 5px;
+          margin-top: 40px;
+          i {
+            font-size: 2.5rem;
+            margin-right: 20px;
+            color: $lavander-grey;
+          }
+          p {
+            font-size: 0.875rem;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .no-certificates {
+      text-align: center;
+      padding: 60px;
+      i {
+        font-size: 2.5rem;
+        color: $cadet-grey;
+      }
+      .subtitle {
+        margin: 13px 0 20px;
+      }
+      &.join-production-network {
+        i {
+          color: $red;
+          &.yellow {
+            color: $yellow !important;
+          }
+        }
+        .btn-link {
+          color: $cadet-grey;
+          transition: color 0.2s ease-in-out;
+          &:hover {
+            color: $red;
+          }
+        }
+      }
+      .text-yellow {
+        color: $yellow;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import "../../industria-ui/scss/variables";
+
+$ff-sans-serif: "Rubik", sans-serif;
+
+$ff-base: $ff-sans-serif;
+$fs-base: 1rem;
+
+// Letter spacing
+$ls-base: 0.3px;
+
+// Font weight
+$fw-bold: 500;
+$fw-bolder: 700;
+
+//Colors
+$onyx: #313847;
+$onyx-dark: #2a3140;
+$black-coral: #5c6275;
+$cadet-grey: #919ebd;
+$lavander-grey: #bac2d6;
+$ghost-white: #edf0f7;
+$ghost-white-light: #fefeff;
+
+$red: #ec1d24;
+$yellow: #ffb400;
+$green: #00bb9a;
+
+$primary: $red;
+$secondary: $ghost-white;
+
+//Headings
+$h1-fs: $fs-base * 2.5;
+$h2-fs: $fs-base * 2.1875;
+$h3-fs: $fs-base * 1.75;
+$h4-fs: $fs-base * 1.5;
+$h5-fs: $fs-base * 1.25;
+
+$h1-lh: 3.4375rem;
+$h2-lh: 2.8125rem;
+$h3-lh: 2.375rem;
+$h4-lh: 2.125rem;
+$h5-lh: 1.875rem;
+
+//Paragraphs
+$p-mb: 1rem;
+$p-sm-fs: $fs-base * 0.875;
+$p-sm-lh: 1.25;
+
+//Standard Label
+$standard-label-fs: $fs-base * 0.875;

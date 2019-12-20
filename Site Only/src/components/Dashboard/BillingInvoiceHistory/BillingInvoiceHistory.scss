@@ -1,0 +1,47 @@
+@import "../../../assets/scss/variables.scss";
+
+.billing-invoice-history {
+  padding: 0 30px 30px 30px;
+  min-height: 380px;
+  opacity: 0.5;
+  .h-splitter {
+    margin: 5px 0 30px 0;
+  }
+  .invoice {
+    padding: 15px 0;
+    .date {
+      color: $black-coral;
+      font-size: 0.875rem;
+    }
+    .sum {
+      color: $cadet-grey;
+      font-size: 0.875rem;
+    }
+    .pdf {
+      color: $red;
+    }
+  }
+  .link-secondary {
+    text-transform: uppercase;
+    color: $cadet-grey;
+    font-size: 0.875rem;
+    font-weight: $fw-bold;
+    background-image: none;
+    &:hover {
+      background-image: none;
+    }
+  }
+  .under-construction {
+    color: $lavander-grey;
+    min-height: 200px;
+    .mdi-monitor-dashboard {
+      &:before {
+        font-size: 2.5rem;
+      }
+    }
+    p {
+      color: $cadet-grey;
+      font-size: 0.875rem;
+    }
+  }
+}

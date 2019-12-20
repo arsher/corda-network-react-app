@@ -1,0 +1,581 @@
+// Remove autofill in google chrome
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: 0;
+}
+
+// Reset Select
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  background: transparent;
+  background-image: none;
+}
+
+.forms-rules {
+  li {
+    padding-left: 58px;
+    text-indent: -58px;
+    &::before {
+      margin-right: 30px;
+    }
+  }
+  li:nth-child(10) {
+    &::before {
+      margin-right: 20px;
+    }
+  }
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  .valid-feedback,
+  .invalid-feedback {
+    margin: 0 0 0 1.375rem;
+    background: transparent;
+    padding: 0;
+    font-size: 13px;
+  }
+  .form-control {
+    position: relative;
+    width: 100%;
+    margin: 1rem 0 0 0;
+    padding: 0.625rem 1.625rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $night;
+    background-color: $white;
+    background-clip: padding-box;
+    border: 2px solid $air;
+    border-radius: 1.625rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    &:focus {
+      border-color: $sky;
+      outline: 0;
+      box-shadow: none;
+    }
+    &.is-valid:focus {
+      border-color: $green;
+    }
+    &.is-invalid:focus {
+      border-color: $red;
+    }
+    &:disabled {
+      border-color: #edf4f8;
+      background: none;
+      cursor: not-allowed;
+      & + span {
+        cursor: not-allowed;
+      }
+    }
+  }
+  .message-control {
+    border-radius: 0.375rem;
+    resize: none;
+    min-height: 90px;
+    &.is-valid + span + i {
+      right: 12px;
+    }
+    &.is-invalid + span + i {
+      right: 12px;
+    }
+  }
+}
+
+.has-float-label {
+  position: relative;
+  width: 100%;
+
+  .form-control:placeholder-shown:not(:focus) + * {
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: $fw-bold;
+    color: $asphalt;
+    opacity: 1;
+    top: 34px;
+  }
+  label,
+  > span {
+    position: absolute;
+    display: flex;
+    cursor: text;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: $fw-bold;
+    color: $sky;
+    opacity: 1;
+    transition: all 0.2s;
+    top: 10px;
+    left: 26px;
+    z-index: 3;
+    line-height: 1;
+    padding: 0 3px;
+    background-color: $white;
+  }
+  span + i {
+    display: none;
+  }
+
+  .is-valid {
+    border-color: $green;
+    & + span {
+      color: $green;
+    }
+  }
+  .is-invalid {
+    border-color: $red;
+    & + span {
+      color: $red;
+    }
+  }
+  .disabled {
+    border-color: $air;
+    & + span {
+      color: $mist !important;
+    }
+  }
+  .is-valid + span + i {
+    display: inline-block;
+    position: absolute;
+    top: 31px;
+    right: 22px;
+    font-size: 20px;
+    color: $green;
+  }
+  .is-invalid + span + i {
+    display: inline-block;
+    position: absolute;
+    top: 31px;
+    right: 22px;
+    font-size: 20px;
+    color: $red;
+  }
+  .disabled + span + i {
+    display: inline-block;
+    position: absolute;
+    top: 31px;
+    right: 22px;
+    font-size: 20px;
+    color: $mist;
+  }
+}
+
+.floating-select {
+  position: relative;
+  & > label {
+    position: absolute;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: $fw-bold;
+    color: $asphalt;
+    opacity: 1;
+    top: 32px;
+    left: 26px;
+    padding: 0 3px;
+    pointer-events: none;
+    transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+  }
+  .select-control {
+    position: relative;
+    background: transparent;
+    text-transform: uppercase;
+    color: $asphalt !important;
+    font-size: 1rem !important;
+    // font-weight: $fw-bold;
+    padding: 0.75rem 1.125rem;
+    &:focus,
+    &:not([value=""]):valid {
+      border-color: $sky;
+      & ~ label {
+        top: 7px;
+        font-size: 13px;
+        color: $sky;
+        background-color: $white;
+      }
+    }
+    & ~ i {
+      color: $asphalt;
+      font-size: 30px;
+      position: absolute;
+      top: 31px;
+      right: 26px;
+      padding: 0 3px;
+      pointer-events: none;
+    }
+  }
+}
+
+.form-check {
+  margin: 5px 0;
+  position: relative;
+  display: block;
+  padding-left: 1.25rem;
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    &:not(:checked),
+    &:checked {
+      position: absolute;
+      left: -9999px;
+    }
+
+    &:not(:checked) + label,
+    &:checked + label {
+      color: $stone;
+      font-size: 16px;
+      padding-left: 5px;
+      cursor: pointer;
+      display: table-cell;
+    }
+    & + label::before {
+      content: "";
+      position: absolute;
+      top: 1px;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      z-index: 0;
+      border: 2px solid $ocean;
+      background-color: transparent;
+      border-radius: 1px;
+      margin-top: 2px;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+    &:not(:checked):focus + label::before {
+      border: 2px solid $sky;
+      box-shadow: 0 0 5px 0 rgba(120, 189, 232, 0.66);
+    }
+    &[disabled] {
+      cursor: not-allowed;
+      & + label {
+        cursor: not-allowed;
+        color: $mist;
+        &:before {
+          cursor: not-allowed;
+          border-color: $mist;
+        }
+      }
+    }
+  }
+
+  //Checkbox styles
+  input[type="checkbox"] {
+    & + label::after {
+      content: "";
+      position: absolute;
+      left: 4.5px;
+      top: 10px;
+      width: 9px;
+      height: 2px;
+      background-color: transparent;
+      transition: background-color 0.2s ease;
+    }
+    &:checked + label::before {
+      content: "";
+      top: 0;
+      left: -5px;
+      width: 12px;
+      height: 17px;
+      border-top: 2px solid transparent;
+      border-left: 2px solid transparent;
+      border-right: 2px solid $ocean;
+      border-bottom: 2px solid $ocean;
+      transform: rotate(40deg);
+      backface-visibility: hidden;
+      transform-origin: 100% 100%;
+      cursor: pointer;
+    }
+    &[disabled] {
+      &:checked + label::before {
+        cursor: not-allowed;
+        border-right-color: $mist;
+        border-bottom-color: $mist;
+        border-top-color: transparent;
+        border-left-color: transparent;
+      }
+    }
+    &:checked:focus + label:before {
+      border-right-color: $sky;
+      border-bottom-color: $sky;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      box-shadow: 0 1px 0 0 rgba(120, 189, 232, 0.66), 0 0px 0 0 transparent, 0px 0 0 0 transparent,
+        1px 0 0 0 rgba(120, 189, 232, 0.66);
+    }
+  }
+
+  //Radio styles
+  input[type="radio"] {
+    &:checked + label::before,
+    &:not(:checked) + label::before {
+      border-radius: 100%;
+    }
+
+    & + label::after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      width: 9px;
+      height: 9px;
+      border-radius: 100%;
+      background-color: transparent;
+      transition: background-color 0.2s ease;
+    }
+    &:checked + label::after {
+      background-color: $ocean;
+      content: "";
+      top: 7px;
+      left: 4px;
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+    }
+    &[disabled] {
+      &:checked + label::after {
+        background-color: $mist;
+      }
+    }
+    &:checked:focus + label::before {
+      border: 2px solid $sky;
+      box-shadow: 0 0 5px 0 rgba(120, 189, 232, 0.66);
+    }
+    &:checked:focus + label::after {
+      background-color: $sky;
+    }
+  }
+}
+
+// On/Off toggle styles
+.on-off-toggle {
+  margin: 5px 0;
+  input,
+  .toggle-input {
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  label,
+  .toggle-label {
+    user-select: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    span {
+      text-transform: uppercase;
+      color: $asphalt;
+    }
+  }
+  &-button {
+    transition-property: background;
+    transition-duration: 0.3s;
+    flex-shrink: 0;
+    position: relative;
+    width: $toggle-btn-width;
+    height: $toggle-btn-height;
+    background: $mist;
+    border-radius: ($toggle-btn-height / 2);
+    margin-left: 1rem;
+    &:before {
+      transition-property: transform;
+      transition-duration: inherit;
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 9px;
+      height: 9px;
+      background: $white;
+      box-shadow: 0 1px 2px rgba(31, 67, 91, 0.3);
+      border-radius: 50%;
+    }
+    input:checked + label > &,
+    .toggle-input:checked + label > & {
+      background: $ocean;
+      &:before {
+        transform: translateX($toggle-btn-width - $toggle-btn-height);
+      }
+    }
+    input:checked:focus + label > &,
+    .toggle-input:checked:focus + label > &,
+    input:not(:checked):focus + label > &,
+    .toggle-input:not(:checked):focus + label > & {
+      box-shadow: 0 0 10px 0 rgba(121, 166, 196, 0.45);
+    }
+    input[disabled]:checked + label > &,
+    input[disabled]:not(:checked) + label > &,
+    .toggle-input[disabled]:checked + label > &,
+    .toggle-input[disabled]:not(:checked) + label > & {
+      cursor: not-allowed;
+      background: $air;
+    }
+  }
+}
+
+// Yes/No toggle styles
+.yes-no-toggle {
+  margin: 5px 0;
+  input,
+  .toggle-input {
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  label,
+  .toggle-label {
+    user-select: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    span {
+      text-transform: uppercase;
+      color: $asphalt;
+    }
+  }
+  &-button {
+    transition-property: background;
+    transition-duration: 0.3s;
+    flex-shrink: 0;
+    position: relative;
+    width: $toggle-btn-width;
+    height: $toggle-btn-height;
+    background: $red;
+    border-radius: ($toggle-btn-height / 2);
+    margin-left: 1rem;
+    &:before {
+      transition-property: transform;
+      transition-duration: inherit;
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 9px;
+      height: 9px;
+      background: $white;
+      box-shadow: 0 1px 2px rgba(31, 67, 91, 0.3);
+      border-radius: 50%;
+    }
+    input:checked + label > &,
+    .toggle-input:checked + label > & {
+      background: $green;
+      &:before {
+        transform: translateX($toggle-btn-width - $toggle-btn-height);
+      }
+    }
+    input:checked:focus + label > &,
+    .toggle-input:checked:focus + label > & {
+      box-shadow: 0 0 10px 0 rgba(0, 187, 154, 0.45);
+    }
+    input:not(:checked):focus + label > &,
+    .toggle-input:not(:checked):focus + label > & {
+      box-shadow: 0 0 10px 0 rgba(244, 54, 89, 0.25);
+    }
+
+    input[disabled]:not(:checked) + label > &,
+    .toggle-input[disabled]:not(:checked) + label > & {
+      cursor: not-allowed;
+      background: rgba($color: $red, $alpha: 0.5);
+    }
+    input[disabled]:checked + label > &,
+    .toggle-input[disabled]:checked + label > & {
+      cursor: not-allowed;
+      background: rgba($color: $green, $alpha: 0.5);
+    }
+  }
+}
+
+.feedback {
+  display: block;
+  padding: 20px;
+  border-radius: 10px;
+  .feedback-msg {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+}
+
+.invalid-feedback {
+  color: $red;
+  background: rgba($color: $red, $alpha: 0.1);
+  .feedback-msg {
+    color: $red;
+  }
+}
+
+.valid-feedback {
+  background: rgba($color: $green, $alpha: 0.1);
+  h4 {
+    color: $green;
+  }
+  .feedback-msg {
+    color: $night;
+  }
+}
+
+//Examples styles
+.contact-form {
+  width: 70%;
+  background-color: $white;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 0 0 30px 0 rgba(31, 67, 91, 0.15);
+  position: relative;
+  .form-group {
+    flex: 0 0 48%;
+    &:nth-of-type(5),
+    &:nth-of-type(6) {
+      flex: 0 0 100%;
+    }
+    a {
+      padding-bottom: 0;
+    }
+  }
+  a[role="button"] {
+    width: 100%;
+  }
+}
+
+.contact-form-1 {
+  width: 70%;
+  background-color: $white;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 30px 0 rgba(31, 67, 91, 0.15);
+  .form-group {
+    a {
+      padding-bottom: 0;
+    }
+  }
+  a[role="button"] {
+    width: 100%;
+  }
+}

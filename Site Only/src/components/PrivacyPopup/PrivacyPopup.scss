@@ -1,0 +1,26 @@
+@import "./../../assets/scss/variables.scss";
+
+.privacy-popup {
+  background: $cadet-grey;
+  color: $white;
+  padding: 28px 20px 30px;
+  border-radius: 5px;
+  .title {
+    font-size: 1.125rem;
+    font-weight: $fw-bold;
+  }
+  .content {
+    font-size: 0.8125rem;
+    line-height: 26px;
+    color: $white;
+    padding: 18px 0 25px;
+  }
+  .btn {
+    background: $lavander-grey;
+    border-color: $lavander-grey;
+    box-shadow: 0 0 10px 0 rgba(92, 98, 117, 0.2);
+    &:hover {
+      box-shadow: unset;
+    }
+  }
+}

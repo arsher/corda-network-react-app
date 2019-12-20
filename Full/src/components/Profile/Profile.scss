@@ -1,0 +1,44 @@
+@import "./../../assets/scss/variables.scss";
+
+.profile {
+  min-height: calc(100vh - 120px);
+  &__wrapper {
+    box-shadow: 0 0 20px rgba(92, 98, 117, 0.1);
+  }
+  &__header {
+    color: $cadet-grey;
+    font-size: 1.25rem;
+    div {
+      margin-left: 20px;
+    }
+    i:before {
+      font-size: 1.4375rem;
+    }
+  }
+  .h-splitter {
+    height: 1px;
+    width: 100%;
+    background-color: $ghost-white;
+    margin: 20px 0;
+  }
+  .field {
+    color: #5c6275;
+    font-size: 0.875rem;
+    .value {
+      font-weight: $fw-bold;
+    }
+  }
+  .delete {
+    background-color: transparent;
+    border: 2px solid $lavander-grey;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 17px 30px;
+    font-size: 0.875rem;
+    color: $lavander-grey;
+    font-weight: $fw-bold;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

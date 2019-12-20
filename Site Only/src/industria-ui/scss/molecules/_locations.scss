@@ -1,0 +1,120 @@
+// Fully centered element. Both horizontal and vertical. Uses flex.
+%fully-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// overflow: hidden;
+#_3-locations {
+  min-height: 600px;
+  height: 65vh;
+  width: 100%;
+  position: relative;
+  .locations {
+    .location {
+      height: 32.7%;
+    }
+  }
+}
+#_2-locations {
+  min-height: 600px;
+  height: 65vh;
+  width: 100%;
+  position: relative;
+  .locations {
+    .location {
+      height: 50%;
+    }
+  }
+}
+.map,
+.mapTwo {
+  width: 100%;
+  height: 100%;
+}
+
+// CLEAR FROM HERE
+.locations {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  z-index: 1;
+  padding-bottom: 4px;
+  @include respond-below(lg) {
+    display: none;
+  }
+  .location {
+    width: 100%;
+    max-width: 490px;
+    background: rgba(255, 255, 255, 0.9);
+    position: relative;
+    left: 0;
+    margin-top: 3px;
+    justify-content: center;
+    cursor: pointer;
+    > div {
+      padding: 0 30px;
+    }
+    &:hover,
+    &.active {
+      background: $white;
+    }
+    &.active {
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: auto;
+        right: 0;
+        bottom: 0;
+        width: 8px;
+        background: $asphalt;
+      }
+    }
+    a {
+      strong {
+        &:hover {
+          color: $ocean;
+        }
+      }
+    }
+    @for $i from 1 through 3 {
+      &.animation-delay-#{$i} {
+        animation: 1s forwards calc(#{$i}s / 2) slide;
+      }
+    }
+    @keyframes slide {
+      from {
+        left: 0;
+      }
+      to {
+        left: 0;
+      }
+    }
+    address p {
+      margin-bottom: 0;
+    }
+  }
+}
+.owl-carousel-subsection {
+  .carousel-controls {
+    height: 85px;
+    @extend %fully-centered;
+    @include respond-below(lg) {
+          align-content: center;
+          align-items: center;
+    }
+  }
+  .owl-item.active > .item > div {
+    padding: 2.1875rem 0;
+    text-align: center;
+    margin: 0 auto;
+  }
+  @include respond-above(lg) {
+    display: none;
+  }
+}
+address {
+  margin-bottom: 0;
+}

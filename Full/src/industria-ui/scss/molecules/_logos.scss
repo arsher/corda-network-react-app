@@ -1,0 +1,53 @@
+.col-12 .block-with-svg {
+  padding: 10% 0;
+}
+.block-with-svg {
+  text-align: center;
+  padding: 1rem 0;
+  margin: 10px 0;
+  &.block-un {
+    margin-top: 8px;
+    margin-bottom: 12px;
+  }
+  svg, .svg {
+    width: 50%;
+    height: 35px;
+    margin: 0.75rem 0.75rem 0;
+    fill: $mist;
+    &.eon {
+      height: 23px;
+      margin-top: 1rem;
+      margin-bottom: 7px;
+    }
+    &.un {
+      height: 40px;
+      margin-bottom: -5px;
+    }
+  }
+}
+
+.svg-block-border--right {
+  border-right: 1px solid $air;
+}
+
+.svg-block-border--bottom {
+  border-bottom: 1px solid $air;
+}
+
+.svg-block--center {
+  margin: 0 auto;
+}
+
+.cards-wrapper {
+  display: flex;
+  .card {
+    width: 50%;
+    margin-top: 30px;
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+    svg.corda-e {
+      max-width: 77px;
+    }
+  }
+}

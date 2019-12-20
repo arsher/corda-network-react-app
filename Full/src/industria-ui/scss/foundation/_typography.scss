@@ -1,0 +1,518 @@
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  margin: 0;
+  font-family: $ff-base;
+  font-size: $fs-base;
+  font-weight: $fw-base;
+  line-height: $lh-base;
+  letter-spacing: $ls-base;
+  text-align: left;
+  @include respond-below(sm) {
+    font-size: $fs-sm;
+  }
+}
+
+//--HEADINGS STYLES
+.h1-hero,
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  font-family: $ff-headings;
+  font-weight: $fw-bold;
+  color: $night;
+  margin-top: $headings-mt;
+  margin-bottom: $headings-mb;
+  letter-spacing: $headings-ls;
+}
+
+h1,
+.h1 {
+  font-size: $h1-fs;
+  line-height: $h1-lh;
+  @include respond-below(sm) {
+    font-size: 2.1875rem;
+    line-height: 2.9375rem;
+  }
+}
+
+h1.h1-hero {
+  font-size: $h1-hero-fs;
+  line-height: $h1-hero-lh;
+  @include respond-below(sm) {
+    font-size: 2.1875rem;
+    line-height: 2.9375rem;
+  }
+}
+
+h2,
+.h2 {
+  font-size: $h2-fs;
+  line-height: $h2-lh;
+  @include respond-below(sm) {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+  }
+}
+
+h3,
+.h3 {
+  font-size: $h3-fs;
+  line-height: $h3-lh;
+  @include respond-below(sm) {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
+}
+
+h4,
+.h4 {
+  font-size: $h4-fs;
+  line-height: $h4-lh;
+  @include respond-below(sm) {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+h5,
+.h5 {
+  font-size: $h5-fs;
+  line-height: $h5-lh;
+  @include respond-below(sm) {
+    font-size: 1.0625rem;
+    line-height: 1.5625rem;
+  }
+}
+
+//--PARAGRAPHS STYLES
+p,
+.p-standard,
+.p-standard p {
+  font-size: $p-fs;
+  line-height: $p-lh;
+  letter-spacing: $ls-base;
+  font-weight: $fw-normal;
+  color: $stone;
+  margin-top: $p-mt;
+  margin-bottom: $p-mb;
+}
+
+p.p-big,
+.p-big p {
+  font-size: $p-big-fs;
+  line-height: $p-big-lh;
+  letter-spacing: $ls-base;
+  font-weight: $fw-normal;
+  color: $stone;
+  @include respond-below(sm) {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+}
+
+//--SUBTITLE STYLES
+.subtitle,
+.subtitle p {
+  font-size: 1.5rem;
+  line-height: 2.625rem;
+  letter-spacing: $ls-base;
+  color: $asphalt;
+  @include respond-below(sm) {
+    font-size: 1.375rem;
+    line-height: 2;
+  }
+}
+
+//--SECTION LABEL STYLE
+.section-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: $section-label-fs;
+  line-height: $section-label-lh;
+  font-weight: $fw-bold;
+  color: $asphalt;
+  text-transform: uppercase;
+  letter-spacing: $ls-base;
+  position: relative;
+  padding-left: 60px;
+  @include respond-below(sm) {
+    font-size: 1.125rem;
+    line-height: 1.375;
+    padding-left: 40px;
+  }
+  &:before {
+    content: "";
+    width: 50px;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    top: 11px;
+    background: $asphalt;
+    @include respond-below(sm) {
+      width: 30px;
+    }
+  }
+}
+
+//--STANDARD LABEL STYLE
+.standard-label {
+  font-size: $standard-label-fs;
+  letter-spacing: $ls-base;
+  font-weight: $fw-bold;
+  color: $asphalt;
+  text-transform: uppercase;
+  line-height: $standard-label-lh;
+}
+
+//--CAPTIONS AND DESCRIPTIONS STYLE
+.description,
+.description p {
+  font-size: $description-fs;
+  line-height: $description-lh;
+  font-weight: $fw-normal;
+  letter-spacing: $ls-base;
+  color: $asphalt;
+}
+
+//--GENERAL STYLES UL
+ul {
+  color: $stone;
+  padding-left: 0;
+  list-style-type: none;
+  margin-top: 0;
+  line-height: 1.625rem;
+  li {
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    margin-bottom: 10px;
+    padding-left: 35px;
+    font-weight: $fw-bold;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: 0;
+      width: 20px;
+      height: 2px;
+      background: $asphalt;
+      @include respond-below(sm) {
+        content: "";
+        width: 10px;
+      }
+    }
+    ul {
+      margin: 10px 0;
+      li {
+        font-size: 0.9375rem;
+        line-height: 1.625rem;
+        padding-left: 20px;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 12px;
+          left: 0;
+          width: 10px;
+          height: 2px;
+          background: $asphalt;
+          @include respond-below(sm) {
+            content: "";
+            width: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//--GENERAL STYLES OL
+ol {
+  color: $stone;
+  padding-left: 0;
+  margin-top: 0;
+  list-style-type: none;
+  counter-reset: li;
+  li {
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    margin-bottom: 10px;
+    padding-left: 36px;
+    text-indent: -36px;
+    font-weight: $fw-bold;
+    &:before {
+      content: counter(li) " ";
+      counter-increment: li;
+      margin-right: 0.5rem;
+      margin-left: 15px;
+      width: auto;
+      height: auto;
+      color: $asphalt;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: 0;
+      width: 10px;
+      height: 2px;
+      background: $asphalt;
+    }
+    ol {
+      margin: 10px 0;
+      li {
+        &:before {
+          content: counters(li, ".") " ";
+        }
+      }
+    }
+  }
+}
+
+//--ANCHORS STYLES
+a {
+  color: $ocean;
+  text-decoration: none;
+  background-color: transparent;
+  background-image: linear-gradient(180deg, transparent 84%, rgba($sky, 0.5) 0);
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+  &:hover {
+    background-image: linear-gradient(180deg, transparent 84%, rgba($sky, 0.5) 0);
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
+p a,
+span a,
+li a,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+.solo-link {
+  padding-bottom: 2px;
+  overflow: hidden;
+  background-image: linear-gradient(180deg, transparent 84%, rgba($sky, 0.5) 0);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease;
+  &:hover {
+    text-decoration: none;
+    background-image: linear-gradient(180deg, transparent 84%, rgba($sky, 0.5) 0);
+    background-size: 100% 100%;
+    cursor: pointer;
+  }
+}
+
+//--EXTERNAL-LINK STYLE
+.external-link {
+  position: relative;
+  &:after {
+    content: "\f193";
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 18px;
+    font-family: Material-Design-Iconic-Font;
+    transform: rotateY(-180deg);
+  }
+}
+
+//--SOLO LINK STYLE
+.solo-link {
+  position: relative;
+  font-weight: $fw-bold;
+  text-transform: uppercase;
+  vertical-align: middle;
+  clear: both;
+  .zmdi {
+    margin-left: 5px;
+  }
+}
+
+//--SPACER STYLE
+hr {
+  display: block;
+  border: 0;
+  border-top: 1px solid $air;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//--QUOTATIONS
+blockquote {
+  margin: 2.5rem 0;
+  position: relative;
+}
+
+.stand-alone-quote {
+  margin: 0 15%;
+  padding-top: 90px;
+  text-align: center;
+  & > p {
+    font-size: 24px;
+    line-height: 42px;
+    font-weight: $fw-bold;
+    color: $stone;
+    @include respond-below(sm) {
+      font-size: 22px;
+      line-height: 32px;
+    }
+  }
+  .blockquote-footer,
+  .blockquote-footer p {
+    font-size: $description-fs;
+    line-height: $description-lh;
+    font-weight: $fw-normal;
+    letter-spacing: $ls-base;
+    color: $asphalt;
+    margin-top: -5px;
+  }
+}
+
+.stand-alone-quote::before {
+  font-family: Material-Design-Iconic-Font;
+  content: "\f1b2";
+  position: absolute;
+  color: $mist;
+  font-size: 150px;
+  line-height: 64px;
+  text-align: center;
+  top: 35px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include respond-below(sm) {
+    font-size: 100px;
+  }
+}
+
+.paragraph-quote {
+  // margin: 0;
+  padding: 0;
+  border-left: 4px solid;
+  border-left-color: $mist;
+  padding-left: 1.25rem;
+  & > p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: $fw-bold;
+    &:first-of-type {
+      padding-top: 3px;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+      padding-bottom: 5px;
+    }
+    @include respond-below(sm) {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+  }
+  .blockquote-footer,
+  .blockquote-footer p {
+    font-size: $description-fs;
+    line-height: $description-lh;
+    font-weight: $fw-normal;
+    letter-spacing: $ls-base;
+  }
+  .blockquote-footer {
+    p {
+      margin-bottom: 0;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+//--CUSTOM PARAGRAPH FONT-SIZES
+.fs-14,
+.fs-14 p {
+  font-size: 0.875rem;
+  line-height: 1.625rem;
+}
+
+.fs-18,
+.fs-18 p {
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+}
+
+.fs-20,
+.fs-20 p {
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
+.fs-22,
+.fs-22 p {
+  font-size: 1.375rem;
+  line-height: 2rem;
+}
+
+.fs-24,
+.fs-24 p {
+  font-size: 1.5rem;
+  line-height: 2.625rem;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-bold {
+  font-weight: $fw-bold;
+}
+
+.font-style-normal {
+  font-style: normal;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.border {
+  border: 1px solid $air;
+}
+
+//--IMG STYLE
+img {
+  display: block;
+}

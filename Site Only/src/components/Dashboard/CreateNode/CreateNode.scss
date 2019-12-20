@@ -1,0 +1,29 @@
+@import "../../../assets/scss/variables.scss";
+
+.create-node-box {
+  box-shadow: 0 0 20px rgba(92, 98, 117, 0.1);
+  &__header {
+    background-color: $yellow;
+    color: $white;
+    padding: 30px;
+    i {
+      margin-right: 17px;
+      font-size: 1.4375rem;
+      line-height: 1.4375rem;
+    }
+    span {
+      font-size: $fs-lg;
+      line-height: $fs-lg;
+    }
+  }
+  &__main {
+    padding: 30px;
+    p {
+      font-size: $fs-sm;
+      margin-bottom: 0;
+    }
+    .btn {
+      margin-bottom: 0;
+    }
+  }
+}
