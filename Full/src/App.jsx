@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {
     // BrowserRouter as Router,
-    HashRouter,
+    BrowserRouter,
     Route,
     Switch,
     withRouter,
@@ -215,7 +215,7 @@ class App extends Component {
                     active={this.state.initialLoading}
                     spinner
                     text="Loading...">
-                    <HashRouter basename="/">
+                    <BrowserRouter basename="/">
                         <Navigation />
                         <Header />
                         <Switch>
@@ -356,7 +356,7 @@ class App extends Component {
                             )}
                         </Switch>
                         <BottomBar />
-                    </HashRouter>
+                    </BrowserRouter>
                     <ToastContainer
                         position="top-right"
                         autoClose={5000}
