@@ -1,0 +1,465 @@
+<!--LOCATIONS-PAGE-->
+<template id="locations">
+
+    <!--header row-->
+    <div class="row pb-50">
+        <header class="col-12 style-guide-header">
+            <h1>Locations</h1>
+        </header>
+    </div>
+    <!--header row end-->
+
+    <div class="row">
+        <div class="col-12">
+            <p class="p-big mb-0">
+                We use <a href="https://snazzymaps.com/style/13/neutral-blue" class="external-link" target="_blank">neutral
+                    blue style</a> on snazzy maps for styling the maps on our website.
+            </p>
+        </div>
+    </div>
+
+    <div class="row py-50">
+        <div class="col-12" id="locations-3-section">
+            <h2>3 Locations</h2>
+        </div>
+    </div>
+
+    <div class="row overflow-hidden pb-50">
+        <div class="col-12 p-0">
+            <div id="_3-locations">
+
+                <div id="map" class="map"></div>
+
+                <div class="locations p-0 col-12 col-md-4 col-lg-4">
+                    <div class="location d-flex align-items-center active" data-latitude="51.525765" data-longitude="-0.083604"
+                        data-name="London">
+                        <div class="col-12 col-lg-7 col-xl-6">
+                            <p class="h4">London</p>
+                            <span><a class="fs-18 text-stone" href="tel:+44 203 870 2445"><span class="text-bold">+44
+                                        203 870 2445</span></a></span>
+                            <address class="font-style-normal">
+                                <p>86-90 Paul Street,<br>
+                                    London EC2A 4NE<br>
+                                    UK
+                                </p>
+                            </address>
+                        </div>
+                    </div>
+                    <div class="location d-flex align-items-center" data-latitude="1.278711" data-longitude="103.848486"
+                        data-name="Singapore">
+                        <div class="col-12 col-lg-7 col-xl-6">
+                            <p class="h4">Singapore</p>
+                            <span><a class="fs-18 text-stone" href="tel:+65 755 237 4083"><span class="text-bold">+65
+                                        755 237 4083</span></a></span>
+                            <address class="font-style-normal">
+                                <p>138 Robinson Road, <br>
+                                    #29-04 Oxley Tower, <br>
+                                    Singapore 068906
+                                </p>
+                            </address>
+                        </div>
+                    </div>
+                    <div class="location d-flex align-items-center" data-latitude="42.692450" data-longitude="23.319161"
+                        data-name="Sofia">
+                        <div class="col-12 col-lg-7 col-xl-6">
+                            <p class="h4">Sofia</p>
+                            <span><a class="fs-18 text-stone" href="tel:+359 2 980 37 19"><span class="text-bold">+359
+                                        2 980 37 19</span></a></span>
+                            <address class="font-style-normal">
+                                <p>
+                                    7-9 Uzundzhovska St.,<br>
+                                    Sofia 1000 <br>
+                                    Bulgaria
+                                </p>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="owl-carousel-subsection">
+                <!-- <div class="owl-carousel-navigation">
+                    <button id="contactCarouselPrev" class="prev" type="button" role="presentation">
+                        <span aria-label="Previous">‹</span>
+                    </button>
+                    <div id="counter-contact" class="counter-items"></div>
+                    <button id="contactCarouselNext" class="next" type="button" role="presentation">
+                        <span aria-label="Next">›</span>
+                    </button>
+                </div> -->
+                <div class="bg-night">
+                    <div class="carousel-controls">
+                        <div class="carousel-nav">
+                            <button class="prev" id="contactCarouselPrev" type="button" role="presentation">
+                                <span aria-label="Previous">‹</span>
+                            </button>
+                            <span id="counter-contact" class="counter-items"> <span>1</span> /3</span>
+                            <button class="next" id="contactCarouselNext" type="button" role="presentation">
+                                <span aria-label="Next">›</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-carousel owl-carousel-contact">
+                    <div class="item" data-latitude="51.525765" data-longitude="-0.083604" data-name="London">
+                        <div class="col-12 col-lg-7 col-xl-6">
+                            <p class="h4">London</p>
+                            <span><a class="fs-18 text-stone" href="tel:+44 203 870 2445"><span class="text-bold">+44
+                                        203 870 2445</span></a></span>
+                            <address class="font-style-normal">
+                                <p>86-90 Paul Street,<br>
+                                    London EC2A 4NE<br>
+                                    UK
+                                </p>
+                            </address>
+                        </div>
+                    </div>
+                    <div class="item" data-latitude="1.278711" data-longitude="103.848486" data-name="Singapore">
+                        <div class="col-12 col-lg-7 col-xl-6">
+                            <p class="h4">Singapore</p>
+                            <span><a class="fs-18 text-stone" href="tel:+65 755 237 4083"><span class="text-bold">+65
+                                        755 237 4083</span></a></span>
+                            <address class="font-style-normal">
+                                <p>138 Robinson Road, <br>
+                                    #29-04 Oxley Tower, <br>
+                                    Singapore 068906
+                                </p>
+                            </address>
+                        </div>
+                    </div>
+                    <div class="item" data-latitude="42.692450" data-longitude="23.319161" data-name="Sofia">
+                        <div class="col-12 col-lg-7 col-xl-6">
+                            <p class="h4">Sofia</p>
+                            <span><a class="fs-18 text-stone" href="tel:+359 2 980 37 19"><span class="text-bold">+359
+                                        2 980 37 19</span></a></span>
+                            <address class="font-style-normal">
+                                <p>
+                                    7-9 Uzundzhovska St.,<br>
+                                    Sofia 1000 <br>
+                                    Bulgaria
+                                </p>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="row">
+        <!--col-12-->
+        <div class="col-12">
+
+            <!--HTML highlight-->
+            <div class="highlight highlight-html">
+
+                <!--standard-label-->
+                <div class="standard-label asphalt pb-16">HTML</div>
+                <!--standard-label end-->
+
+                <!-- HTML generated using hilite.me -->
+                <div style="background: #ffffff; overflow:auto;width:auto;border: none;padding:1.5rem;background: #E4EFF5">
+                    <pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;row overflow-hidden&quot;</span><span style="color: #007700">&gt;</span>
+    <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;col-12 p-0&quot;</span><span style="color: #007700">&gt;</span>
+        <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;_3-locations&quot;</span><span style="color: #007700">&gt;</span>
+            <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;map&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;map&quot;</span><span style="color: #007700">&gt;&lt;/div&gt;</span>
+            <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;locations p-0 col-12 col-md-4 col-lg-4&quot;</span><span style="color: #007700">&gt;</span>
+                <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;location d-flex align-items-center active&quot;</span> <span style="color: #0000CC">data-latitude=</span><span style="background-color: #fff0f0">&quot;51.525765&quot;</span> <span style="color: #0000CC">data-longitude=</span><span style="background-color: #fff0f0">&quot;-0.083604&quot;</span> <span style="color: #0000CC">data-name=</span><span style="background-color: #fff0f0">&quot;London&quot;</span><span style="color: #007700">&gt;</span>
+                    <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;col-12 col-lg-7 col-xl-6&quot;</span><span style="color: #007700">&gt;</span>
+                        <span style="color: #007700">&lt;p</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;h4&quot;</span><span style="color: #007700">&gt;</span>London<span style="color: #007700">&lt;/p&gt;</span>
+                        <span style="color: #007700">&lt;span&gt;&lt;a</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;fs-18 text-stone&quot;</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;tel:+44 203 870 2445&quot;</span><span style="color: #007700">&gt;&lt;span</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;text-bold&quot;</span><span style="color: #007700">&gt;</span>+44 203 870 2445<span style="color: #007700">&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;</span>
+                        <span style="color: #007700">&lt;address</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;font-style-normal&quot;</span><span style="color: #007700">&gt;</span>
+                            <span style="color: #007700">&lt;p&gt;</span>86-90 Paul Street,<span style="color: #007700">&lt;br&gt;</span>
+                            London EC2A 4NE<span style="color: #007700">&lt;br&gt;</span>
+                            UK<span style="color: #007700">&lt;/p&gt;</span>
+                        <span style="color: #007700">&lt;/address&gt;</span>
+                    <span style="color: #007700">&lt;/div&gt;</span>
+                <span style="color: #007700">&lt;/div&gt;</span>
+                <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;location d-flex align-items-center&quot;</span> <span style="color: #0000CC">data-latitude=</span><span style="background-color: #fff0f0">&quot;1.278711&quot;</span> <span style="color: #0000CC">data-longitude=</span><span style="background-color: #fff0f0">&quot;103.848486&quot;</span> <span style="color: #0000CC">data-name=</span><span style="background-color: #fff0f0">&quot;Singapore&quot;</span><span style="color: #007700">&gt;</span>
+                    <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;col-12 col-lg-7 col-xl-6&quot;</span><span style="color: #007700">&gt;</span>
+                        <span style="color: #007700">&lt;p</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;h4&quot;</span><span style="color: #007700">&gt;</span>Singapore<span style="color: #007700">&lt;/p&gt;</span>
+                        <span style="color: #007700">&lt;span&gt;&lt;a</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;fs-18 text-stone&quot;</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;tel:+65 755 237 4083&quot;</span><span style="color: #007700">&gt;&lt;span</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;text-bold&quot;</span><span style="color: #007700">&gt;</span>+65 755 237 4083<span style="color: #007700">&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;</span>
+                        <span style="color: #007700">&lt;address</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;font-style-normal&quot;</span><span style="color: #007700">&gt;</span>
+                            <span style="color: #007700">&lt;p&gt;</span>138 Robinson Road, <span style="color: #007700">&lt;br&gt;</span>
+                            #29-04 Oxley Tower, <span style="color: #007700">&lt;br&gt;</span>
+                            Singapore 068906<span style="color: #007700">&lt;/p&gt;</span>
+                        <span style="color: #007700">&lt;/address&gt;</span>
+                    <span style="color: #007700">&lt;/div&gt;</span>
+                <span style="color: #007700">&lt;/div&gt;</span>
+                <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;location d-flex align-items-center&quot;</span> <span style="color: #0000CC">data-latitude=</span><span style="background-color: #fff0f0">&quot;42.692450&quot;</span> <span style="color: #0000CC">data-longitude=</span><span style="background-color: #fff0f0">&quot;23.319161&quot;</span> <span style="color: #0000CC">data-name=</span><span style="background-color: #fff0f0">&quot;Sofia&quot;</span><span style="color: #007700">&gt;</span>
+                    <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;col-12 col-lg-7 col-xl-6&quot;</span><span style="color: #007700">&gt;</span>
+                        <span style="color: #007700">&lt;p</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;h4&quot;</span><span style="color: #007700">&gt;</span>Sofia<span style="color: #007700">&lt;/p&gt;</span>
+                        <span style="color: #007700">&lt;span&gt;&lt;a</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;fs-18 text-stone&quot;</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;tel:+359 2 980 37 19&quot;</span><span style="color: #007700">&gt;&lt;span</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;text-bold&quot;</span><span style="color: #007700">&gt;</span>+359 2 980 37 19<span style="color: #007700">&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;</span>
+                        <span style="color: #007700">&lt;address</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;font-style-normal&quot;</span><span style="color: #007700">&gt;</span>
+                            <span style="color: #007700">&lt;p&gt;</span>7-9 Uzundzhovska St.,<span style="color: #007700">&lt;br&gt;</span>
+                            Sofia 1000 <span style="color: #007700">&lt;br&gt;</span>
+                            Bulgaria<span style="color: #007700">&lt;/p&gt;</span>
+                        <span style="color: #007700">&lt;/address&gt;</span>
+                    <span style="color: #007700">&lt;/div&gt;</span>
+                <span style="color: #007700">&lt;/div&gt;</span>
+            <span style="color: #007700">&lt;/div&gt;</span>
+        <span style="color: #007700">&lt;/div&gt;</span>
+
+        <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;owl-carousel-subsection&quot;</span><span style="color: #007700">&gt;</span>
+            <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;owl-carousel-navigation&quot;</span><span style="color: #007700">&gt;</span>
+                <span style="color: #007700">&lt;button</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;contactCarouselPrev&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;prev&quot;</span> <span style="color: #0000CC">type=</span><span style="background-color: #fff0f0">&quot;button&quot;</span> <span style="color: #0000CC">role=</span><span style="background-color: #fff0f0">&quot;presentation&quot;</span><span style="color: #007700">&gt;</span>
+                    <span style="color: #007700">&lt;span</span> <span style="color: #0000CC">aria-label=</span><span style="background-color: #fff0f0">&quot;Previous&quot;</span><span style="color: #007700">&gt;</span>‹<span style="color: #007700">&lt;/span&gt;</span>
+                <span style="color: #007700">&lt;/button&gt;</span>
+                <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;counter-contact&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;counter-items&quot;</span><span style="color: #007700">&gt;&lt;/div&gt;</span>
+                <span style="color: #007700">&lt;button</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;contactCarouselNext&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;next&quot;</span> <span style="color: #0000CC">type=</span><span style="background-color: #fff0f0">&quot;button&quot;</span> <span style="color: #0000CC">role=</span><span style="background-color: #fff0f0">&quot;presentation&quot;</span><span style="color: #007700">&gt;</span>
+                    <span style="color: #007700">&lt;span</span> <span style="color: #0000CC">aria-label=</span><span style="background-color: #fff0f0">&quot;Next&quot;</span><span style="color: #007700">&gt;</span>›<span style="color: #007700">&lt;/span&gt;</span>
+                <span style="color: #007700">&lt;/button&gt;</span>
+            <span style="color: #007700">&lt;/div&gt;</span>
+            <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;owl-carousel owl-carousel-contact&quot;</span><span style="color: #007700">&gt;</span>
+                <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;item&quot;</span> <span style="color: #0000CC">data-latitude=</span><span style="background-color: #fff0f0">&quot;51.525765&quot;</span> <span style="color: #0000CC">data-longitude=</span><span style="background-color: #fff0f0">&quot;-0.083604&quot;</span> <span style="color: #0000CC">data-name=</span><span style="background-color: #fff0f0">&quot;London&quot;</span><span style="color: #007700">&gt;</span>
+                    <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;col-12 col-lg-7 col-xl-6&quot;</span><span style="color: #007700">&gt;</span>
+                        <span style="color: #007700">&lt;p</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;h4&quot;</span><span style="color: #007700">&gt;</span>London<span style="color: #007700">&lt;/p&gt;</span>
+                        <span style="color: #007700">&lt;span&gt;&lt;a</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;fs-18 text-stone&quot;</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;tel:+44 203 870 2445&quot;</span><span style="color: #007700">&gt;&lt;span</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;text-bold&quot;</span><span style="color: #007700">&gt;</span>+44 203 870 2445<span style="color: #007700">&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;</span>
+                        <span style="color: #007700">&lt;address</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;font-style-normal&quot;</span><span style="color: #007700">&gt;</span>
+                            <span style="color: #007700">&lt;p&gt;</span>86-90 Paul Street,<span style="color: #007700">&lt;br&gt;</span>
+                            London EC2A 4NE<span style="color: #007700">&lt;br&gt;</span>
+                            UK<span style="color: #007700">&lt;/p&gt;</span>
+                        <span style="color: #007700">&lt;/address&gt;</span>
+                    <span style="color: #007700">&lt;/div&gt;</span>
+                <span style="color: #007700">&lt;/div&gt;</span>
+                <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;item&quot;</span> <span style="color: #0000CC">data-latitude=</span><span style="background-color: #fff0f0">&quot;1.278711&quot;</span> <span style="color: #0000CC">data-longitude=</span><span style="background-color: #fff0f0">&quot;103.848486&quot;</span> <span style="color: #0000CC">data-name=</span><span style="background-color: #fff0f0">&quot;Singapore&quot;</span><span style="color: #007700">&gt;</span>
+                    <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;col-12 col-lg-7 col-xl-6&quot;</span><span style="color: #007700">&gt;</span>
+                        <span style="color: #007700">&lt;p</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;h4&quot;</span><span style="color: #007700">&gt;</span>Singapore<span style="color: #007700">&lt;/p&gt;</span>
+                        <span style="color: #007700">&lt;span&gt;&lt;a</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;fs-18 text-stone&quot;</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;tel:+65 755 237 4083&quot;</span><span style="color: #007700">&gt;&lt;span</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;text-bold&quot;</span><span style="color: #007700">&gt;</span>+65 755 237 4083<span style="color: #007700">&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;</span>
+                        <span style="color: #007700">&lt;address</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;font-style-normal&quot;</span><span style="color: #007700">&gt;</span>
+                            <span style="color: #007700">&lt;p&gt;</span>138 Robinson Road, <span style="color: #007700">&lt;br&gt;</span>
+                            #29-04 Oxley Tower, <span style="color: #007700">&lt;br&gt;</span>
+                            Singapore 068906<span style="color: #007700">&lt;/p&gt;</span>
+                        <span style="color: #007700">&lt;/address&gt;</span>
+                    <span style="color: #007700">&lt;/div&gt;</span>
+                <span style="color: #007700">&lt;/div&gt;</span>
+                <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;item&quot;</span> <span style="color: #0000CC">data-latitude=</span><span style="background-color: #fff0f0">&quot;42.692450&quot;</span> <span style="color: #0000CC">data-longitude=</span><span style="background-color: #fff0f0">&quot;23.319161&quot;</span> <span style="color: #0000CC">data-name=</span><span style="background-color: #fff0f0">&quot;Sofia&quot;</span><span style="color: #007700">&gt;</span>
+                    <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;col-12 col-lg-7 col-xl-6&quot;</span><span style="color: #007700">&gt;</span>
+                        <span style="color: #007700">&lt;p</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;h4&quot;</span><span style="color: #007700">&gt;</span>Sofia<span style="color: #007700">&lt;/p&gt;</span>
+                        <span style="color: #007700">&lt;span&gt;&lt;a</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;fs-18 text-stone&quot;</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;tel:+359 2 980 37 19&quot;</span><span style="color: #007700">&gt;&lt;span</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;text-bold&quot;</span><span style="color: #007700">&gt;</span>+359 2 980 37 19<span style="color: #007700">&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;</span>
+                        <span style="color: #007700">&lt;address</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;font-style-normal&quot;</span><span style="color: #007700">&gt;</span>
+                            <span style="color: #007700">&lt;p&gt;</span>7-9 Uzundzhovska St.,<span style="color: #007700">&lt;br&gt;</span>
+                            Sofia 1000 <span style="color: #007700">&lt;br&gt;</span>
+                            Bulgaria<span style="color: #007700">&lt;/p&gt;</span>
+                        <span style="color: #007700">&lt;/address&gt;</span>
+                    <span style="color: #007700">&lt;/div&gt;</span>
+                <span style="color: #007700">&lt;/div&gt;</span>
+            <span style="color: #007700">&lt;/div&gt;</span>
+        <span style="color: #007700">&lt;/div&gt;</span>
+    <span style="color: #007700">&lt;/div&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre>
+                </div>
+                <!-- HTML generated using hilite.me end-->
+            </div>
+            <!--HTML highlight end-->
+        </div>
+        <!--col-12 end-->
+    </div>
+
+    <!--spacer-->
+    <div class="row ">
+        <div class="col-12">
+            <hr class="ds-hr">
+        </div>
+    </div>
+    <!--spacer end-->
+
+    <div class="row pb-50">
+        <div class="col-12" id="locations-2-section">
+            <h2>2 Locations</h2>
+        </div>
+    </div>
+
+    <div class="row overflow-hidden pb-50">
+        <div class="col-12 p-0">
+            <div id="_2-locations">
+
+                <div id="mapTwo" class="map"></div>
+
+                <div class="locations p-0 col-12 col-md-4 col-lg-4">
+                    <div class="location d-flex align-items-center active" data-latitude="51.525765" data-longitude="-0.083604"
+                        data-name="London">
+                        <div class="col-12 col-lg-7 col-xl-6">
+                            <p class="h4">London</p>
+                            <span><a class="fs-18 text-stone" href="tel:+44 203 870 2445"><span class="text-bold">+44
+                                        203 870 2445</span></a></span>
+                            <address class="font-style-normal">
+                                <p>86-90 Paul Street,<br>
+                                    London EC2A 4NE<br>
+                                    UK
+                                </p>
+                            </address>
+                        </div>
+                    </div>
+                    <div class="location d-flex align-items-center" data-latitude="42.692450" data-longitude="23.319161"
+                        data-name="Sofia">
+                        <div class="col-12 col-lg-7 col-xl-6">
+                            <p class="h4">Sofia</p>
+                            <span><a class="fs-18 text-stone" href="tel:+359 2 980 37 19"><span class="text-bold">+359
+                                        2 980 37 19</span></a></span>
+                            <address class="font-style-normal">
+                                <p>
+                                    7-9 Uzundzhovska St.,<br>
+                                    Sofia 1000 <br>
+                                    Bulgaria
+                                </p>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="owl-carousel-subsection">
+                <!-- <div class="owl-carousel-navigation">
+                    <button id="contactCarouselPrevTwo" class="prev" type="button" role="presentation">
+                        <span aria-label="Previous">‹</span>
+                    </button>
+                    <div id="counter-contact-two" class="counter-items"></div>
+                    <button id="contactCarouselNextTwo" class="next" type="button" role="presentation">
+                        <span aria-label="Next">›</span>
+                    </button>
+                </div> -->
+
+                <div class="bg-night">
+                    <div class="carousel-controls">
+                        <div class="carousel-nav">
+                            <button class="prev" id="contactCarouselPrevTwo" type="button" role="presentation">
+                                <span aria-label="Previous">‹</span>
+                            </button>
+                            <span id="counter-contact-two" class="counter-items"> <span>1</span> /2</span>
+                            <button class="next" id="contactCarouselNextTwo" type="button" role="presentation">
+                                <span aria-label="Next">›</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-carousel owl-carousel-contact-two">
+                    <div class="item" data-latitude="51.525765" data-longitude="-0.083604" data-name="London2">
+                        <div class="col-12 col-lg-7 col-xl-6">
+                            <p class="h4">London</p>
+                            <span><a class="fs-18 text-stone" href="tel:+44 203 870 2445"><span class="text-bold">+44
+                                        203 870 2445</span></a></span>
+                            <address class="font-style-normal">
+                                <p>86-90 Paul Street,<br>
+                                    London EC2A 4NE<br>
+                                    UK
+                                </p>
+                            </address>
+                        </div>
+                    </div>
+                    <div class="item" data-latitude="42.692450" data-longitude="23.319161" data-name="Sofia2">
+                        <div class="col-12 col-lg-7 col-xl-6">
+                            <p class="h4">Sofia</p>
+                            <span><a class="fs-18 text-stone" href="tel:+359 2 980 37 19"><span class="text-bold">+359
+                                        2 980 37 19</span></a></span>
+                            <address class="font-style-normal">
+                                <p>
+                                    7-9 Uzundzhovska St.,<br>
+                                    Sofia 1000 <br>
+                                    Bulgaria
+                                </p>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row pb-50">
+        <!--col-12-->
+        <div class="col-12">
+
+            <!--HTML highlight-->
+            <div class="highlight highlight-html">
+
+                <!--standard-label-->
+                <div class="standard-label asphalt pb-16">HTML</div>
+                <!--standard-label end-->
+
+                <!-- HTML generated using hilite.me -->
+                <div style="background: #ffffff; overflow:auto;width:auto;border: none;padding:1.5rem;background: #E4EFF5">
+                    <pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;row overflow-hidden&quot;</span><span style="color: #007700">&gt;</span>
+    <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;col-12 p-0&quot;</span><span style="color: #007700">&gt;</span>
+        <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;_2-locations&quot;</span><span style="color: #007700">&gt;</span>
+            <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;mapTwo&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;map&quot;</span><span style="color: #007700">&gt;&lt;/div&gt;</span>
+            <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;locations p-0 col-12 col-md-4 col-lg-4&quot;</span><span style="color: #007700">&gt;</span>
+                <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;location d-flex align-items-center active&quot;</span> <span style="color: #0000CC">data-latitude=</span><span style="background-color: #fff0f0">&quot;51.525765&quot;</span> <span style="color: #0000CC">data-longitude=</span><span style="background-color: #fff0f0">&quot;-0.083604&quot;</span> <span style="color: #0000CC">data-name=</span><span style="background-color: #fff0f0">&quot;London&quot;</span><span style="color: #007700">&gt;</span>
+                    <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;col-12 col-lg-7 col-xl-6&quot;</span><span style="color: #007700">&gt;</span>
+                        <span style="color: #007700">&lt;p</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;h4&quot;</span><span style="color: #007700">&gt;</span>London<span style="color: #007700">&lt;/p&gt;</span>
+                        <span style="color: #007700">&lt;span&gt;&lt;a</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;fs-18 text-stone&quot;</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;tel:+44 203 870 2445&quot;</span><span style="color: #007700">&gt;&lt;span</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;text-bold&quot;</span><span style="color: #007700">&gt;</span>+44 203 870 2445<span style="color: #007700">&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;</span>
+                        <span style="color: #007700">&lt;address</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;font-style-normal&quot;</span><span style="color: #007700">&gt;</span>
+                            <span style="color: #007700">&lt;p&gt;</span>86-90 Paul Street,<span style="color: #007700">&lt;br&gt;</span>
+                            London EC2A 4NE<span style="color: #007700">&lt;br&gt;</span>
+                            UK<span style="color: #007700">&lt;/p&gt;</span>
+                        <span style="color: #007700">&lt;/address&gt;</span>
+                    <span style="color: #007700">&lt;/div&gt;</span>
+                <span style="color: #007700">&lt;/div&gt;</span>
+                <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;location d-flex align-items-center&quot;</span> <span style="color: #0000CC">data-latitude=</span><span style="background-color: #fff0f0">&quot;42.692450&quot;</span> <span style="color: #0000CC">data-longitude=</span><span style="background-color: #fff0f0">&quot;23.319161&quot;</span> <span style="color: #0000CC">data-name=</span><span style="background-color: #fff0f0">&quot;Sofia&quot;</span><span style="color: #007700">&gt;</span>
+                    <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;col-12 col-lg-7 col-xl-6&quot;</span><span style="color: #007700">&gt;</span>
+                        <span style="color: #007700">&lt;p</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;h4&quot;</span><span style="color: #007700">&gt;</span>Sofia<span style="color: #007700">&lt;/p&gt;</span>
+                        <span style="color: #007700">&lt;span&gt;&lt;a</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;fs-18 text-stone&quot;</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;tel:+359 2 980 37 19&quot;</span><span style="color: #007700">&gt;&lt;span</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;text-bold&quot;</span><span style="color: #007700">&gt;</span>+359 2 980 37 19<span style="color: #007700">&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;</span>
+                        <span style="color: #007700">&lt;address</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;font-style-normal&quot;</span><span style="color: #007700">&gt;</span>
+                            <span style="color: #007700">&lt;p&gt;</span>7-9 Uzundzhovska St.,<span style="color: #007700">&lt;br&gt;</span>
+                            Sofia 1000 <span style="color: #007700">&lt;br&gt;</span>
+                            Bulgaria<span style="color: #007700">&lt;/p&gt;</span>
+                        <span style="color: #007700">&lt;/address&gt;</span>
+                    <span style="color: #007700">&lt;/div&gt;</span>
+                <span style="color: #007700">&lt;/div&gt;</span>
+            <span style="color: #007700">&lt;/div&gt;</span>
+        <span style="color: #007700">&lt;/div&gt;</span>
+
+        <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;owl-carousel-subsection&quot;</span><span style="color: #007700">&gt;</span>
+            <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;owl-carousel-navigation&quot;</span><span style="color: #007700">&gt;</span>
+                <span style="color: #007700">&lt;button</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;contactCarouselPrevTwo&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;prev&quot;</span> <span style="color: #0000CC">type=</span><span style="background-color: #fff0f0">&quot;button&quot;</span> <span style="color: #0000CC">role=</span><span style="background-color: #fff0f0">&quot;presentation&quot;</span><span style="color: #007700">&gt;</span>
+                    <span style="color: #007700">&lt;span</span> <span style="color: #0000CC">aria-label=</span><span style="background-color: #fff0f0">&quot;Previous&quot;</span><span style="color: #007700">&gt;</span>‹<span style="color: #007700">&lt;/span&gt;</span>
+                <span style="color: #007700">&lt;/button&gt;</span>
+            <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;counter-contact-two&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;counter-items&quot;</span><span style="color: #007700">&gt;&lt;/div&gt;</span>
+                <span style="color: #007700">&lt;button</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;contactCarouselNextTwo&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;next&quot;</span> <span style="color: #0000CC">type=</span><span style="background-color: #fff0f0">&quot;button&quot;</span> <span style="color: #0000CC">role=</span><span style="background-color: #fff0f0">&quot;presentation&quot;</span><span style="color: #007700">&gt;</span>
+                    <span style="color: #007700">&lt;span</span> <span style="color: #0000CC">aria-label=</span><span style="background-color: #fff0f0">&quot;Next&quot;</span><span style="color: #007700">&gt;</span>›<span style="color: #007700">&lt;/span&gt;</span>
+                <span style="color: #007700">&lt;/button&gt;</span>
+            <span style="color: #007700">&lt;/div&gt;</span>
+            <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;owl-carousel owl-carousel-contact-two&quot;</span><span style="color: #007700">&gt;</span>
+                <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;item&quot;</span> <span style="color: #0000CC">data-latitude=</span><span style="background-color: #fff0f0">&quot;51.525765&quot;</span> <span style="color: #0000CC">data-longitude=</span><span style="background-color: #fff0f0">&quot;-0.083604&quot;</span> <span style="color: #0000CC">data-name=</span><span style="background-color: #fff0f0">&quot;London2&quot;</span><span style="color: #007700">&gt;</span>
+                    <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;col-12 col-lg-7 col-xl-6&quot;</span><span style="color: #007700">&gt;</span>
+                        <span style="color: #007700">&lt;p</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;h4&quot;</span><span style="color: #007700">&gt;</span>London<span style="color: #007700">&lt;/p&gt;</span>
+                        <span style="color: #007700">&lt;span&gt;&lt;a</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;fs-18 text-stone&quot;</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;tel:+44 203 870 2445&quot;</span><span style="color: #007700">&gt;&lt;span</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;text-bold&quot;</span><span style="color: #007700">&gt;</span>+44 203 870 2445<span style="color: #007700">&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;</span>
+                        <span style="color: #007700">&lt;address</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;font-style-normal&quot;</span><span style="color: #007700">&gt;</span>
+                            <span style="color: #007700">&lt;p&gt;</span>86-90 Paul Street,<span style="color: #007700">&lt;br&gt;</span>
+                            London EC2A 4NE<span style="color: #007700">&lt;br&gt;</span>
+                            UK<span style="color: #007700">&lt;/p&gt;</span>
+                        <span style="color: #007700">&lt;/address&gt;</span>
+                    <span style="color: #007700">&lt;/div&gt;</span>
+                <span style="color: #007700">&lt;/div&gt;</span>
+                <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;item&quot;</span> <span style="color: #0000CC">data-latitude=</span><span style="background-color: #fff0f0">&quot;42.692450&quot;</span> <span style="color: #0000CC">data-longitude=</span><span style="background-color: #fff0f0">&quot;23.319161&quot;</span> <span style="color: #0000CC">data-name=</span><span style="background-color: #fff0f0">&quot;Sofia2&quot;</span><span style="color: #007700">&gt;</span>
+                    <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;col-12 col-lg-7 col-xl-6&quot;</span><span style="color: #007700">&gt;</span>
+                        <span style="color: #007700">&lt;p</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;h4&quot;</span><span style="color: #007700">&gt;</span>Sofia<span style="color: #007700">&lt;/p&gt;</span>
+                        <span style="color: #007700">&lt;span&gt;&lt;a</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;fs-18 text-stone&quot;</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;tel:+359 2   980 37 19&quot;</span><span style="color: #007700">&gt;&lt;span</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;text-bold&quot;</span><span style="color: #007700">&gt;</span>+359 2 980 37 19<span style="color: #007700">&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;</span>
+                        <span style="color: #007700">&lt;address</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;font-style-normal&quot;</span><span style="color: #007700">&gt;</span>
+                            <span style="color: #007700">&lt;p&gt;</span>7-9 Uzundzhovska St.,<span style="color: #007700">&lt;br&gt;</span>
+                            Sofia 1000 <span style="color: #007700">&lt;br&gt;</span>
+                            Bulgaria<span style="color: #007700">&lt;/p&gt;</span>
+                        <span style="color: #007700">&lt;/address&gt;</span>
+                    <span style="color: #007700">&lt;/div&gt;</span>
+                <span style="color: #007700">&lt;/div&gt;</span>
+            <span style="color: #007700">&lt;/div&gt;</span>
+        <span style="color: #007700">&lt;/div&gt;</span>
+    <span style="color: #007700">&lt;/div&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre>
+                </div>
+                <!-- HTML generated using hilite.me end-->
+            </div>
+            <!--HTML highlight end-->
+        </div>
+        <!--col-12 end-->
+    </div>
+</template>
+<!--LOCATIONS-PAGE END-->
+
+<script src="./location.js"></script>

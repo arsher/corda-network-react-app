@@ -1,0 +1,34 @@
+@import "./../../../../assets/scss/variables.scss";
+
+.sponsor-role {
+  .card-body {
+    padding: 30px 30px 40px 30px;
+    i {
+      font-size: 2.5rem;
+      color: $cadet-grey;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    > p {
+      padding: 0 20px;
+    }
+    div.p-small {
+      background: $ghost-white;
+      padding: 25px 20px;
+      margin-bottom: 25px;
+      border-radius: 5px;
+      p {
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .h-splitter {
+      width: 100%;
+      height: 1px;
+      background: $ghost-white;
+      margin: 20px 0 40px 0;
+    }
+  }
+}

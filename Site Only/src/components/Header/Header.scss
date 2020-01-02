@@ -1,0 +1,95 @@
+@import "./../../assets/scss/variables.scss";
+@import "./../../industria-ui/scss/mixins/media-queries";
+
+.header {
+  height: 70px;
+  background: $ghost-white;
+  border-bottom: 1px solid #d5dceb;
+  @include respond-below(md) {
+    margin-top: 65px;
+  }
+  @include respond-below(sm) {
+    height: auto;
+  }
+  .nav-right {
+    margin-right: 15px;
+    z-index: 21;
+    @include respond-below(sm) {
+      margin: 0;
+      padding: 15px 0 10px;
+      margin-left: auto;
+    }
+    .nav-link,
+    .user-name {
+      text-transform: uppercase;
+      font-weight: $fw-bold;
+      font-size: $fs-sm;
+      padding: 7px 0;
+      color: $cadet-grey;
+      margin-left: 40px;
+    }
+    .nav-link {
+      background-image: linear-gradient(180deg, transparent 87%, $red 0);
+      background-size: 0 100%;
+      background-repeat: no-repeat;
+      transition: background-size 0.4s ease, color 0.2s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        color: $red;
+      }
+      // &:first-of-type {
+      //   margin-right: 40px;
+      // }
+      &.selected {
+        color: $red;
+        background-image: linear-gradient(180deg, transparent 87%, $red 0);
+        background-size: 100% 100%;
+        transition: background-size 0.5s ease;
+      }
+      &.logout-link {
+        margin-left: 30px;
+        &::before {
+          content: "\F5FD";
+          display: inline-block;
+          font-family: "Material Design Icons";
+          font-size: 1.25rem;
+          position: relative;
+          top: 2px;
+          margin-right: 7px;
+        }
+      }
+    }
+    .user-name::before {
+      content: "\F013";
+      display: inline-block;
+      font-family: "Material Design Icons";
+      font-size: 1.25rem;
+      position: relative;
+      top: 2px;
+      margin-right: 6px;
+    }
+  }
+  &.transparent {
+    height: 0;
+    border-bottom: 0;
+    & > div.row {
+      height: 70px;
+      > div {
+        z-index: 3;
+      }
+    }
+    .nav-link,
+    .user-name {
+      color: $black-coral;
+    }
+  }
+  @include respond-below(sm) {
+    > .row > div.box--flex {
+      flex-direction: column;
+      > div:nth-of-type(1) {
+        order: 2;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "./../../assets/scss/variables.scss";
+
+.label {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  line-height: initial;
+  border-radius: 15px;
+  padding: 3px 14px;
+  font-weight: 500;
+  height: max-content;
+  color: $white;
+  white-space: nowrap;
+  &--success {
+    background: $green;
+  }
+  &--error {
+    background: $red;
+  }
+  &--pending {
+    background: $yellow;
+  }
+  &--preprod,
+  &--prod,
+  &--both {
+    background: $cadet-grey;
+  }
+}

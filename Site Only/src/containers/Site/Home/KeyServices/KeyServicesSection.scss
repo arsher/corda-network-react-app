@@ -1,0 +1,148 @@
+@import "./../../../../assets/scss/variables.scss";
+@import "./../../../../industria-ui/scss/mixins/media-queries";
+
+#vertical-tab-nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 150px 0 130px;
+  @include respond-below(sm) {
+    padding: 50px 0 40px;
+  }
+  h1 {
+    flex: 0 0 100%;
+    margin-bottom: 50px;
+    &:before {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 72px;
+      background: $red;
+      margin-bottom: 40px;
+    }
+  }
+  .tabs-nav {
+    padding-top: 3px;
+    @include respond-below(md) {
+      display: none;
+    }
+    ul {
+      margin: 0;
+      .tab {
+        font-size: 1rem;
+        line-height: 22px;
+        text-transform: uppercase;
+        color: $onyx;
+        padding-left: 0;
+        margin-bottom: 35px;
+        font-weight: 500;
+        cursor: pointer;
+        &:before {
+          display: none;
+        }
+        &:after {
+          content: "\F142";
+          display: inline-block;
+          font-family: "Material Design Icons";
+          font-size: 22px;
+          padding-bottom: 3px;
+          vertical-align: middle;
+          padding-left: 0;
+          font-weight: normal;
+          color: $onyx;
+          cursor: pointer;
+          opacity: 0;
+          transition: padding-left 0.2s ease, color 0.2s ease-in-out;
+          @include respond-below(md) {
+            content: "\F140";
+            opacity: 1;
+          }
+        }
+        &.selected {
+          color: $red;
+          &::after {
+            padding-left: 4px;
+            color: $red;
+            opacity: 1;
+          }
+        }
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+  }
+  .tabs-content {
+    .tab-content {
+      display: none;
+    }
+    .tab-heading {
+      display: none;
+      @include respond-below(md) {
+        color: $onyx;
+        margin: 0;
+        padding: 0;
+        display: block;
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-weight: $fw-bold;
+        cursor: pointer;
+        transition: color 0.2s ease-in-out;
+        &:hover {
+          color: $red;
+          &:after {
+            color: $red;
+          }
+        }
+      }
+      &::after {
+        content: "\F140";
+        display: inline-block;
+        font-family: "Material Design Icons";
+        font-size: 22px;
+        padding-bottom: 3px;
+        vertical-align: middle;
+        padding-left: 5px;
+        font-weight: normal;
+        color: $onyx;
+        cursor: pointer;
+        transition: color 0.2s ease-in-out;
+      }
+      &.selected {
+        color: $red;
+        &::after {
+          color: $red;
+        }
+      }
+    }
+    p {
+      font-size: 1.125rem;
+      color: $onyx;
+      line-height: 30px;
+    }
+    ul {
+      li {
+        font-size: 1.125rem;
+        line-height: 30px;
+        font-weight: $fw-normal;
+        padding-left: 30px;
+        color: $onyx;
+        &::before {
+          content: "\02022";
+          top: 0;
+          left: 18px;
+          width: 0;
+          height: 0;
+        }
+        > p {
+          padding: 0;
+          font-size: 1.125rem;
+          color: $onyx;
+          line-height: 30px;
+        }
+        ul {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+@import "../../../assets/scss/variables.scss";
+
+.active-networks {
+  .h-splitter {
+    margin: 30px 0;
+  }
+  .h-splitter.first {
+    margin: 0 0 30px 0;
+  }
+  .network {
+    .type {
+      padding: 0 0 13px;
+      .name {
+        color: $onyx;
+        font-size: 1.25rem;
+        font-weight: $fw-bold;
+      }
+      .label--success,
+      .label--warning {
+        line-height: 0.6875rem;
+      }
+    }
+    .date,
+    .author {
+      font-size: 0.875rem;
+      line-height: 0.875rem;
+      color: $black-coral;
+      padding-bottom: 17px;
+    }
+    .view {
+      color: $cadet-grey;
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      &:hover {
+        cursor: pointer;
+      }
+      a {
+        color: inherit;
+        background-image: none;
+      }
+    }
+    .signup {
+      a {
+        padding-bottom: 17px;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        color: $cadet-grey;
+        font-weight: $fw-bold;
+        text-decoration: none;
+        background-image: none;
+        &:hover {
+          text-decoration: none;
+          color: $cadet-grey;
+        }
+      }
+    }
+    p {
+      font-size: 0.875rem;
+      color: $black-coral;
+    }
+    .production-pending {
+      font-size: 1.125rem;
+      color: $yellow;
+      margin-bottom: 15px;
+    }
+  }
+  .upgrade-link {
+    padding: 0.875rem 1.75rem;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid $red;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 0.3125rem;
+    background: $red;
+    color: $white;
+    box-shadow: 0 0 10px 0 rgba(224, 16, 23, 0.3);
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+    font-family: "Rubik", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 1.1rem;
+    &:hover {
+      background-image: none;
+    }
+  }
+}

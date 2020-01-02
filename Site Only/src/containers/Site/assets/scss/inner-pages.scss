@@ -1,0 +1,307 @@
+@import "./../../../../assets/scss/variables.scss";
+@import "./../../../../industria-ui//scss/mixins/media-queries";
+
+.inner-page {
+  padding-bottom: 90px;
+  min-height: calc(100vh - 70px);
+  width: 100%;
+  @include respond-below(sm) {
+    padding-bottom: 40px;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  ul,
+  ol,
+  blockquote,
+  table,
+  pre {
+    padding: 0 calc(16.66667% + 15px);
+    @include respond-below(sm) {
+      padding: 0 15px;
+    }
+  }
+
+  h1 {
+    background: $ghost-white;
+    margin-bottom: 95px;
+    padding-top: 100px;
+    padding-bottom: 95px;
+    @include respond-below(sm) {
+      padding-top: 45px;
+      padding-bottom: 45px;
+      margin-bottom: 45px;
+    }
+    &:before {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 72px;
+      background: $red;
+      margin-bottom: 40px;
+    }
+  }
+
+  h2 {
+    margin-bottom: 12px;
+    margin-top: 45px;
+  }
+
+  h3 {
+    margin-top: 30px;
+  }
+
+  h4 {
+    margin-top: 25px;
+  }
+
+  h5 {
+    margin-top: 20px;
+  }
+
+  a {
+    color: $red;
+    word-break: break-word;
+    background-image: linear-gradient(180deg, transparent 93%, $red 0);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.4s ease;
+    &:hover {
+      background-image: linear-gradient(180deg, transparent 93%, $red 0);
+      background-size: 100% 100%;
+    }
+  }
+
+  > p {
+    font-size: 1.125rem;
+    color: $onyx;
+    line-height: 30px;
+  }
+
+  ul {
+    li {
+      font-size: 1.125rem;
+      line-height: 30px;
+      font-weight: $fw-normal;
+      padding-left: 30px;
+      color: $onyx;
+      &::before {
+        content: "\02022";
+        top: 0;
+        left: 18px;
+        width: 0;
+        height: 0;
+      }
+      > p {
+        padding: 0;
+        font-size: 1.125rem;
+        color: $onyx;
+        line-height: 30px;
+      }
+      ul {
+        padding: 0;
+      }
+    }
+  }
+
+  ol {
+    li {
+      font-size: 1.125rem;
+      line-height: 30px;
+      font-weight: $fw-normal;
+      padding-left: 30px;
+      color: $onyx;
+      &::before {
+        content: counter(li) ".";
+        counter-increment: li;
+        margin-right: 0.5rem;
+        margin-left: 15px;
+        color: $onyx;
+      }
+      &::after {
+        display: none;
+      }
+      > p {
+        padding: 0;
+        font-size: 1.125rem;
+        color: $onyx;
+        line-height: 30px;
+        display: inline;
+      }
+      ul {
+        padding: 0 0 0 20px;
+        margin: 10px 0;
+        li {
+          padding-left: 46px;
+          &::before {
+            content: "\02022";
+            counter-increment: none !important;
+          }
+        }
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  blockquote {
+    margin: 25px 0;
+    p {
+      padding: 0;
+      color: $onyx;
+      border-left: 4px solid;
+      border-left-color: $lavander-grey;
+      padding-left: 1.25rem;
+      margin-bottom: 0;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    margin: 30px calc(16.66667% + 15px) 16px;
+    @include respond-below(sm) {
+      display: block;
+      overflow-x: auto;
+      padding: 0;
+      margin: 30px 15px;
+      font-size: 0.75em;
+    }
+    thead {
+      background: $ghost-white;
+      th {
+        padding: 25px 15px;
+        font-size: 0.8125rem;
+        font-weight: $fw-bold;
+        color: $black-coral;
+        text-transform: uppercase;
+      }
+    }
+    tbody {
+      tr {
+        border-bottom: 1px solid $ghost-white;
+      }
+      td {
+        padding: 20px 15px;
+        color: $black-coral;
+        overflow-wrap: break-word;
+        word-break: inherit;
+        &:first-of-type {
+          font-weight: $fw-bold;
+        }
+      }
+    }
+  }
+
+  pre {
+    border-radius: 5px;
+    background: $onyx;
+    margin: 0 calc(16.66667% + 15px) 30px;
+    padding: 30px 20px;
+    @include respond-below(sm) {
+      margin: 0 15px 30px;
+    }
+    code {
+      color: $white;
+    }
+  }
+}
+
+hr {
+  width: calc(100% - (33.33334% + 30px));
+  margin: 0 auto;
+  margin-top: 35px;
+  border-top: 1px solid $ghost-white;
+}
+
+.concepts,
+.articles,
+.board-election,
+.guidelines,
+.process,
+.notary-services,
+.network-params-update,
+.certificate-policy {
+  &-content {
+    h1 {
+      padding-bottom: 30px;
+      margin-bottom: 0;
+      & + p {
+        background: $ghost-white;
+        padding-bottom: 95px;
+        @include respond-below(sm) {
+          padding-bottom: 45px;
+        }
+      }
+    }
+    h2:first-of-type {
+      margin-top: 100px;
+      @include respond-below(sm) {
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
+.events {
+  &-content {
+    padding-top: 95px;
+    @include respond-below(sm) {
+      padding-top: 45px;
+    }
+  }
+}
+
+.environments {
+  &-content {
+    h1:not(:first-of-type) {
+      background: $white;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-bottom: 16px;
+      &::before {
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+.certificate-practices {
+  &-content {
+    h1 {
+      padding-bottom: 30px;
+      margin-bottom: 0;
+      ~ p:nth-of-type(1),
+      ~ p:nth-of-type(2) {
+        background: $ghost-white;
+        margin: 0;
+      }
+      ~ p:nth-of-type(2) {
+        padding-bottom: 95px;
+      }
+    }
+    h2:first-of-type {
+      margin-top: 100px;
+    }
+  }
+}
+
+._loading_overlay_wrapper {
+  ._loading_overlay_overlay {
+    background: $ghost-white !important;
+    color: $cadet-grey;
+    ._loading_overlay_content {
+      margin: calc(50vh - 70px) auto;
+      @include respond-below(md) {
+        margin: calc(50vh - 118px) auto;
+      }
+      ._loading_overlay_spinner svg circle {
+        stroke: $cadet-grey !important;
+      }
+    }
+  }
+}

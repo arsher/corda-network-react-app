@@ -1,0 +1,42 @@
+@import "./../../assets/scss/variables.scss";
+
+.terms-of-use-agreement {
+  min-height: calc(100vh - 120px);
+  margin-top: -40px;
+  .back-btn {
+    height: 60px;
+    line-height: 60px;
+    &:hover {
+      .mdi-chevron-left {
+        color: $red;
+        font-size: 1.4rem;
+      }
+    }
+    .mdi-chevron-left {
+      color: $cadet-grey;
+      font-size: 1.4rem;
+    }
+  }
+  .terms {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    margin: 0 0 60px;
+    background: $white;
+    box-shadow: 0 0 20px 0 rgba(92, 98, 117, 0.1);
+    &__wrapper {
+      max-height: 100%;
+      overflow-y: auto;
+      padding: 38px 30px 15px;
+      h3:first-of-type {
+        border-bottom: 1px solid $ghost-white;
+        margin: 0 auto;
+        padding-bottom: 22px;
+        margin-bottom: 35px;
+      }
+      p {
+        padding: 0;
+      }
+    }
+  }
+}

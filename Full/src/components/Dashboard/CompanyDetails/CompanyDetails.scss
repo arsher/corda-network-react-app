@@ -1,0 +1,16 @@
+@import "../../../assets/scss/variables.scss";
+
+.company-details {
+  padding: 0px 30px 30px 30px !important;
+  .field {
+    padding: 20px !important;
+    line-height: 1.5rem;
+    border-radius: 5px;
+    div {
+      flex: 0 1 50%;
+    }
+  }
+  .field.odd {
+    background-color: $ghost-white;
+  }
+}

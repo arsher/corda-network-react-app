@@ -1,0 +1,32 @@
+@import "./../../assets/scss/variables.scss";
+
+.networks {
+  min-height: calc(100vh - 120px);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  .create-node-buttons {
+    margin-top: -36px;
+    .btn {
+      margin-bottom: 40px;
+      &-set-up {
+        border: 3px solid $lavander-grey;
+        color: $cadet-grey;
+      }
+    }
+  }
+  .card {
+    margin-bottom: 0;
+  }
+  &-container {
+    ._loading_overlay_wrapper {
+      width: 100%;
+      ._loading_overlay_overlay {
+        min-height: calc(100vh - 150px);
+        ._loading_overlay_content {
+          padding-top: 0 !important;
+          margin: calc(50vh - 140px) auto;
+        }
+      }
+    }
+  }
+}

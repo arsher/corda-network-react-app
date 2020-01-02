@@ -1,0 +1,68 @@
+//--Body colors
+body {
+  color: $onyx;
+  background-color: $white;
+}
+
+//--Heading colors
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $onyx;
+}
+
+//--Anchor color
+a {
+  color: $onyx;
+}
+
+//--Text color styles
+.onyx,
+.text-onyx {
+  color: $onyx !important;
+}
+
+.black-coral,
+.text-black-coral {
+  color: $black-coral !important;
+}
+
+.cadet-grey,
+.text-cadet-grey {
+  color: $cadet-grey !important;
+}
+
+.ghost-white,
+.text-ghost-white {
+  color: $ghost-white !important;
+}
+
+.ghost-white-light,
+.text-ghost-white-light {
+  color: $ghost-white-light !important;
+}
+
+.onyx-dark,
+.text-onyx-dark {
+  color: $onyx-dark !important;
+}
+
+.text-red {
+  color: $red !important;
+}
+
+//--BACKGROUND-COLORS
+.bg-black-coral {
+  background-color: $black-coral;
+}
+
+.bg-ghost-white {
+  background-color: $ghost-white;
+}
+
+.bg-onyx {
+  background-color: $onyx;
+}

@@ -1,0 +1,111 @@
+.footer {
+  .simple-onsite-bar,
+  .social-media-onsite-bar,
+  .campaign-bar {
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 30px;
+    .footer-copyright {
+      display: flex;
+      align-items: center;
+      order: 1;
+      @include respond-below(sm) {
+        order: 2;
+        justify-content: center;
+        margin-top: 10px;
+        font-size: 12px;
+      }
+    }
+    .footer-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      order: 2;
+      @include respond-below(sm) {
+        flex-wrap: wrap;
+        justify-content: center;
+        order: 1;
+      }
+    }
+    @include respond-below(sm) {
+      padding: 20px 5px;
+      height: auto;
+    }
+  }
+  .social-media-onsite-bar, 
+  .campaign-bar {
+    .footer-links {
+      order: 3;
+      span {
+        @include respond-below(md) {
+          font-size: 14px;
+        }
+      }
+      @include respond-below(sm) {
+        flex-wrap: wrap;
+        justify-content: center;
+        order: 1;
+      }
+    }
+    .footer-copyright {
+      @include respond-below(sm) {
+        order: 3;
+      }
+      @include respond-below(md) {
+        font-size: 12px;
+      }
+    }
+  }
+  .social-media-onsite-bar {
+    .footer-media {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      order: 2;
+      span a {
+        margin: 0;
+        padding: 0;
+        height: auto;
+        .zmdi {
+          vertical-align: middle;
+          color: $sky;
+          @include respond-below(md) {
+            font-size: 1rem !important;
+          }
+        }
+      }
+      @include respond-below(sm) {
+        flex-wrap: wrap;
+        justify-content: center;
+        order: 2;
+        margin-top: 10px;
+      }
+    }
+  }
+  .campaign-bar {
+    .footer-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      order: 2;
+      svg, .svg {
+        width: 160px;
+        height: auto;
+        fill: $sky;
+        margin: 5px 0;
+      }
+      @include respond-below(sm) {
+        flex-wrap: wrap;
+        justify-content: center;
+        order: 2;
+        margin-top: 10px;
+      }
+    }
+  }
+  span:not(:first-child) a {
+    margin-left: 20px;
+  }
+}

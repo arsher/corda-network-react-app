@@ -1,0 +1,75 @@
+@import "./../../assets/scss/variables.scss";
+@import "./../../industria-ui/scss/mixins/media-queries";
+
+.footer {
+  h5 {
+    margin-bottom: 30px;
+    @include respond-below(sm) {
+      width: 100%;
+      margin-bottom: 20px;
+      margin-top: 35px;
+    }
+  }
+  h5.h5-community {
+    @include respond-below(lg) {
+      &:first-of-type {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .follow {
+    display: flex;
+    flex-direction: column;
+    .link-with-icon {
+      display: flex;
+      align-items: center;
+      color: $cadet-grey;
+      margin: 15px 0;
+      &::before {
+        display: inline-block;
+        font-family: "Material Design Icons";
+        font-size: 1.375rem;
+        margin-right: 20px;
+      }
+    }
+    .medium::before {
+      content: "\F35A";
+    }
+    .twitter::before {
+      content: "\F544";
+    }
+    .linkedin::before {
+      content: "\F33B";
+    }
+    .rss::before {
+      content: "\F46B";
+    }
+    @include respond-below(sm) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      .link-with-icon {
+        width: 50%;
+        margin-top: 0;
+      }
+    }
+    display: none;
+  }
+  .h-splitter {
+    width: 100%;
+    height: 1px;
+    background: #282e3b;
+    margin: 40px 0;
+    @include respond-below(sm) {
+      margin: 30px 0;
+    }
+  }
+  @include respond-below(sm) {
+    > div {
+      padding-top: 15px !important;
+      padding-bottom: 50px !important;
+      .community p:first-of-type {
+        margin-bottom: 20px !important;
+      }
+    }
+  }
+}

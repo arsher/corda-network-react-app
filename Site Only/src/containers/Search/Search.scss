@@ -1,0 +1,256 @@
+@import "./../../assets/scss/variables.scss";
+
+.search-results {
+  min-height: calc(100vh - 120px);
+  #___gcse_0 {
+    padding-top: 80px;
+    .gsc-control-cse {
+      background: $white;
+      border: 0;
+      padding: 0;
+      font-family: $ff-base;
+      form.gsc-search-box {
+        margin: 0;
+        table.gsc-search-box {
+          margin: 0;
+          .gsc-input {
+            padding-right: 30px;
+            &-box {
+              background: $ghost-white;
+              border-color: $ghost-white;
+              border-radius: 0.3125rem;
+              .gsib_a {
+                padding: 11px 10px;
+                .gsc-input {
+                  font-family: $ff-base;
+                  padding: 10px !important;
+                  background: $ghost-white;
+                  color: $onyx;
+                  font-size: $fs-sm;
+                  font-weight: $fw-bold;
+                }
+              }
+              .gsib_b {
+                padding: 0 20px;
+                .gsst_b {
+                  padding: 0;
+                  a {
+                    padding: 0;
+                    background-image: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    span {
+                      color: $cadet-grey;
+                    }
+                    &:hover {
+                      span {
+                        color: $red;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .gsc-search-button {
+            background: $ghost-white;
+            border-radius: 0.3125rem;
+            cursor: pointer;
+            button {
+              outline: 0;
+              margin: 0;
+              padding: 10px 21px;
+              svg {
+                display: none;
+              }
+              &:after {
+                content: "\F349";
+                display: inline-block;
+                font-family: "Material Design Icons";
+                font-size: 2.1875rem;
+                font-weight: $fw-normal;
+                color: $cadet-grey;
+              }
+              &:focus {
+                box-shadow: none;
+              }
+              &:hover {
+                &::after {
+                  color: $red;
+                }
+              }
+            }
+          }
+        }
+      }
+      .gsc-results-wrapper-visible {
+        .gsc-above-wrapper-area {
+          border: 0;
+          padding: 0;
+          .gsc-result-info-container {
+            .gsc-result-info {
+              font-size: $fs-sm;
+              color: $cadet-grey;
+              padding: 22px 0 0 0;
+            }
+          }
+          .gsc-orderby-container {
+            display: none;
+          }
+        }
+        .gsc-wrapper {
+          .gsc-webResult,
+          .gsc-results {
+            width: 100%;
+            .gsc-result {
+              border-bottom: 1px solid $ghost-white;
+              padding: 35px 0;
+              .gs-result {
+                & > div {
+                  padding: 0;
+                }
+                .gsc-thumbnail-inside {
+                  .gs-title {
+                    color: $black-coral;
+                    text-decoration: none;
+                    font-size: $fs-lg;
+                    padding-bottom: 10px;
+                    a {
+                      color: $black-coral;
+                      background-image: none;
+                      text-decoration: none;
+                      b {
+                        color: $black-coral;
+                        font-size: $fs-lg;
+                        text-decoration: none;
+                      }
+                      &:hover {
+                        color: $red;
+
+                        b {
+                          color: $red;
+                        }
+                      }
+                    }
+                  }
+                }
+                .gsc-url-top {
+                  div.gs-visibleUrl {
+                    color: $cadet-grey;
+                    font-size: $fs-sm;
+                    padding-bottom: 22px;
+                  }
+                }
+                .gsc-table-result {
+                  display: flex;
+                  align-items: center;
+                  .gs-snippet {
+                    margin: 0;
+                    font-size: 14px;
+                    line-height: 26px;
+                  }
+                }
+              }
+              .gs-no-results-result {
+                // padding: 100px 0 0 0;
+
+                .gs-snippet {
+                  width: 100%;
+                  margin: 0;
+                  background-color: transparent !important;
+                  border: none !important;
+                  color: $black-coral;
+                  font-size: 1.25rem;
+                  font-weight: $fw-bold;
+                }
+              }
+              &:first-of-type {
+                margin-top: 65px;
+                &::before {
+                  content: "";
+                  width: 72px;
+                  height: 3px;
+                  background: $red;
+                  position: absolute;
+                  top: 18px;
+                  left: 0;
+                }
+              }
+            }
+            .gsc-expansionArea {
+              .gsc-result:first-of-type {
+                margin-top: 0;
+              }
+            }
+            .gsc-cursor-box {
+              margin: 0;
+              text-align: center;
+              margin-top: 40px;
+              margin-bottom: 100px;
+              .gsc-cursor {
+                color: $cadet-grey;
+                fill: $cadet-grey;
+                display: flex;
+                justify-content: center;
+                &-page {
+                  font-size: $fs-sm;
+                  font-weight: $fw-bold;
+                  color: $cadet-grey;
+                  width: 35px;
+                  height: 35px;
+                  border-radius: 50%;
+                  background: transparent;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  margin-right: 0;
+                  &:hover {
+                    text-decoration: none;
+                  }
+                  &:focus {
+                    border: 0;
+                    outline: 0;
+                  }
+                }
+                &-current-page {
+                  background: $ghost-white;
+                  color: $black-coral;
+                }
+              }
+            }
+            .gcsc-more-maybe-branding-root {
+              display: none;
+            }
+          }
+        }
+      }
+      .gs-spelling {
+        font-size: 1.25rem;
+        color: $black-coral;
+        font-weight: $fw-bold;
+        a {
+          text-decoration: none;
+          background-image: none;
+          color: $red;
+          i {
+            font-style: normal !important;
+          }
+        }
+        &-original {
+          font-size: 1rem;
+          font-weight: $fw-normal;
+          color: $cadet-grey;
+          margin-top: 1rem;
+          a {
+            color: $cadet-grey;
+            font-weight: $fw-bold;
+          }
+        }
+      }
+    }
+  }
+  .row.bg-white {
+    min-height: 500px;
+  }
+}

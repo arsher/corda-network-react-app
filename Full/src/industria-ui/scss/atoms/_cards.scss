@@ -1,0 +1,102 @@
+.card {
+  background-color: $air;
+  box-shadow: 0 0 10px 0 rgba(56, 140, 196, 0.15);
+  color: $stone;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  .card-body {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 20px;
+    .card-title {
+      display: block;
+      text-transform: uppercase;
+      font-weight: $fw-bold;
+      color: $night;
+      margin-bottom: 10px;
+    }
+    .card-text {
+      color: $stone;
+    }
+  }
+
+  .card-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    object-fit: cover;
+    @include respond-below(lg) {
+      height: 150px;
+    }
+    img {
+      position: relative;
+      display: block;
+      border: 0;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  svg {
+    max-width: 50px;
+    max-height: 50px;
+    fill: $stone;
+    margin-bottom: 10px;
+  }
+
+  &.interactive-card {
+    box-shadow: unset;
+    &:hover {
+      box-shadow: 0 0 10px 0 rgba(56, 140, 196, 0.15);
+    }
+    .card-body {
+      h2.card-title {
+        text-transform: capitalize;
+        margin-top: 10px;
+        a {
+          color: $night;
+          &:hover {
+            color: $ocean;
+          }
+        }
+      }
+    }
+    svg {
+      fill: $ocean;
+      margin-bottom: 0;
+    }
+  }
+
+  &.interactive-card.single-row-card {
+    .card-body {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &.interactive-card.image-card {
+    text-align: center;
+    a.card-image {
+      .overlay {
+        z-index: 1;
+      }
+      &:hover .overlay {
+        z-index: 0;
+      }
+    }
+    &:hover {
+      a.card-image {
+        transform: scale(1.1);
+        transition: transform 1s ease-out;
+        .overlay {
+          display: none;
+        }
+      }
+    }
+  }
+}

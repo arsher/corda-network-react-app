@@ -1,0 +1,101 @@
+// Fonts
+$ff-sans-serif: "Titillium Web", sans-serif !default;
+$ff-sans-serif-2: "Ubuntu", sans-serif !default;
+$ff-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+$ff-base: $ff-sans-serif !default;
+$ff-headings: $ff-sans-serif-2 !default;
+
+//Font sizes
+$fs-base: 1rem !default; // Assumes the browser default, typically `16px`
+$fs-lg: ($fs-base * 1.25) !default;
+$fs-sm: ($fs-base * 0.875) !default;
+$h2-font-size: 1rem;
+
+//Font weight
+$fw-light: 300 !default;
+$fw-normal: 400 !default;
+$fw-bold: 600 !default;
+$fw-bolder: 700 !default;
+
+$fw-base: $fw-normal !default;
+
+//Line height
+$lh-base: 1.5 !default;
+
+//Letter spacing
+$ls-base: 0.2px !default;
+
+//Colors
+$white: #fff !default;
+$black: #000 !default;
+
+$night: #1f435b !default;
+$stone: #3f6075 !default;
+$ocean: #388cc4 !default;
+$sky: #78bde8 !default;
+$asphalt: #79a6c4 !default;
+$mist: #afc6d6 !default;
+$air: #e4eff5 !default;
+
+$blue: #388cc4 !default;
+$red: #f43659 !default;
+$yellow: #ffb400 !default;
+$green: #00bb9a !default;
+
+$primary: $blue !default;
+$secondary: $air !default;
+$success: $green !default;
+$warning: $yellow !default;
+$error: $red !default;
+
+//Headings
+$headings-mt: 0 !default;
+$headings-mb: 0.5rem !default;
+
+$headings-ls: -0.01rem !default;
+
+$h1-hero-fs: $fs-base * 3.125 !default;
+$h1-fs: $fs-base * 2.8125 !default;
+$h2-fs: $fs-base * 2.1875 !default;
+$h3-fs: $fs-base * 1.75 !default;
+$h4-fs: $fs-base * 1.375 !default;
+$h5-fs: $fs-base * 1.1875 !default;
+
+$h1-hero-lh: 4.1875rem !default;
+$h1-lh: 3.5625rem !default;
+$h2-lh: 3.125rem !default;
+$h3-lh: 2.625rem !default;
+$h4-lh: 1.8125rem !default;
+$h5-lh: 1.6875rem !default;
+
+//Paragraphs
+$p-mt: 0 !default;
+$p-mb: 1.25rem !default;
+$p-fs: $fs-base !default;
+$p-lh: 1.75 !default;
+
+$p-big-fs: $fs-base * 1.125 !default;
+$p-big-lh: 1.875rem !default;
+
+//Section Label
+$section-label-fs: $fs-base * 1.25 !default;
+$section-label-lh: 1.5rem !default;
+
+//Standard Label
+$standard-label-fs: $fs-base !default;
+$standard-label-lh: 1.25rem !default;
+
+//Descriptions
+$description-fs: $fs-base * 0.875 !default;
+$description-lh: 1.625rem !default;
+
+//Quotations
+$stand-alone-quote-fs: $fs-base * 1.5 !default;
+$stand-alone-quote-lh: 2.625rem !default;
+
+$quote-icon-fs: $fs-base * 9.375 !default;
+
+//Toggle
+$toggle-btn-width: 60px !default;
+$toggle-btn-height: 30px !default;

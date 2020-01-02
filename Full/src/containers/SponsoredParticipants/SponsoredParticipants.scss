@@ -1,0 +1,23 @@
+@import "./../../assets/scss/variables.scss";
+
+.sponsored-participants {
+  &-step {
+    padding-top: 60px;
+    &-text {
+      padding-top: 28px;
+      i {
+        font-size: 2.5rem;
+        color: $cadet-grey;
+      }
+      p {
+        padding-top: 10px;
+        a {
+          color: $red;
+        }
+      }
+    }
+    .legal-entity {
+      margin-bottom: 0;
+    }
+  }
+}

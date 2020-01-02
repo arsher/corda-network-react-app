@@ -1,0 +1,92 @@
+@import "./../../../../assets/scss/variables.scss";
+@import "./../../../../industria-ui/scss/mixins/media-queries";
+
+// Header styles {height: 0; > div.row: height: 70px}
+.hero-section {
+  min-height: 100vh;
+  padding-top: 70px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-image: url("./../../assets/images/jj-ying-7JX0-bfiuxQ-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include respond-below(sm) {
+    padding-top: 85px;
+  }
+  h1 {
+    &::after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 72px;
+      background: $red;
+      margin: 50px 0;
+      @include respond-below(sm) {
+        margin: 25px 0;
+      }
+    }
+  }
+  p {
+    font-size: 1.125rem;
+    color: $onyx;
+    line-height: 1.75rem;
+  }
+  a {
+    font-family: $ff-base;
+    font-size: 0.875rem;
+    font-weight: $fw-bold;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 1.1;
+  }
+  a[href*="register"] {
+    padding: 0.875rem 1.75rem;
+    margin: 20px 0;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    border: 2px solid $primary;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 0.3125rem;
+    background: $primary;
+    color: $white;
+    box-shadow: 0 0 10px 0 rgba(224, 16, 23, 0.3);
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+    &:focus {
+      box-shadow: 0 0 10px 0 rgba(224, 16, 23, 0.3);
+    }
+    &:hover {
+      background: #ff383f;
+      border-color: #ff383f;
+      box-shadow: 0 0 10px 0 rgba(224, 16, 23, 0.3);
+    }
+  }
+  a[href*="#about"] {
+    color: $red;
+    display: flex;
+    align-items: center;
+    &::after {
+      content: "\F045";
+      display: inline-block;
+      font-family: "Material Design Icons";
+      font-size: 25px;
+      color: $red;
+      margin-left: 10px;
+    }
+  }
+  .popup {
+    position: fixed;
+    right: 15px;
+    bottom: 30px;
+    z-index: 1;
+    @include respond-below(sm) {
+      right: 0;
+      bottom: 15px;
+      opacity: 0.9;
+    }
+  }
+}

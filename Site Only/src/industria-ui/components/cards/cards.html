@@ -1,0 +1,342 @@
+<!--CARDS-PAGE-->
+<template id="cards">
+    <!--header row-->
+    <div class="row pb-50">
+        <header class="col-12 style-guide-header">
+            <h1>Cards</h1>
+        </header>
+    </div>
+    <!--header row end-->
+
+    <!--read-only cards section row-->
+    <div class="row" id="read-only-cards-section">
+
+        <!--col-4-->
+        <div class="col-12 col-md-12 col-lg-4">
+            <h2>Read-only Cards</h2>
+        </div>
+        <!--col-4 end-->
+
+        <!--col-8-->
+        <div class="col-12 col-md-12 col-lg-8">
+            <div class="p-big">
+                <p>The read-only card is used as a container for non-interactive content. You can
+                    use
+                    multiple cards for <span class="text-bold">listing services, features, steps,</span> etc. The
+                    only exception is
+                    forms. You can use a white card for a form container. All Read-only cards
+                    should
+                    have a <span class="text-bold">constant drop shadow,</span> regardless of the position of the
+                    cursor. </p>
+                <p class="mb-0">The content you could include is <span class="text-bold">icon/logo/image, title,
+                        text.</span>
+                    Read-only cards
+                    should never be used as Interactive cards to list blog articles, news, etc.
+                    Never
+                    nest cards. You can list from 2 up to 4 cards on one row. The cards on one row
+                    should be <span class="text-bold">equal hight.</span></p>
+            </div>
+        </div>
+        <!--col-8 end-->
+    </div>
+    <!--read-only cards section row end-->
+
+    <!--spacer-->
+    <div class="row ">
+        <div class="col-12">
+            <hr class="ds-hr">
+        </div>
+    </div>
+    <!--spacer end-->
+
+    <!--content row-->
+    <div class="row pb-50">
+        <!--col-12-->
+        <div class="col-12">
+            <h3>Content</h3>
+        </div>
+        <!--col-12 end-->
+    </div>
+
+    <div class="row ">
+        <div class="col-12 col-md-6 col-lg-4">
+            <p class="standard-label asphalt">plain card</p>
+            <div class="card">
+                <div class="card-body">
+                    <span class="card-title">Finance</span>
+                    <p class="card-text">The financial services industry formed the earliest and most
+                        demanding use cases
+                        for
+                        the enterprise blockchain and the distributed ledger technology.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <p class="standard-label asphalt">icon card</p>
+            <div class="card">
+                <div class="card-body">
+                    <img class="svg" src="../../images/Finance.svg#Capa_1" title="Industria Technology logotype" />
+                    <span class="card-title">
+                        Finance
+                    </span>
+                    <p class="card-text">
+                        The financial services industry formed the earliest and most demanding use
+                        cases
+                        for the enterprise blockchain and the distributed ledger technology.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <p class="standard-label asphalt">image card</p>
+            <div class="card">
+                <div class="card-image">
+                    <img src="./images/london.jpg" alt="London">
+                </div>
+                <div class="card-body">
+                    <span class="card-title">
+                        Finance
+                    </span>
+                    <p class="card-text">
+                        The financial services industry formed the earliest and most demanding use
+                        cases
+                        for the enterprise blockchain and the distributed ledger technology.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--content row end-->
+
+    <!--spacer-->
+    <div class="row ">
+        <div class="col-12">
+            <hr class="ds-hr">
+        </div>
+    </div>
+    <!--spacer end-->
+
+    <!--colors and drop shadows row-->
+    <div class="row pb-50">
+        <!--col-12-->
+        <div class="col-12">
+            <h3>Colors and Drop Shadows</h3>
+        </div>
+        <!--col-12 end-->
+    </div>
+
+    <div class="row ">
+        <div class="col-12 col-md-6 col-lg-3">
+            <p class="standard-label asphalt">white bg</p>
+            <div class="color-block cb-cards bg-white border mb-0">
+                <div class="card color-block-inner">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <p class="standard-label asphalt">air bg</p>
+            <div class="color-block cb-cards bg-air mb-0">
+                <div class="card color-block-inner">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <p class="standard-label asphalt">ocean bg</p>
+            <div class="color-block cb-cards bg-ocean mb-0">
+                <div class="card color-block-inner">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <p class="standard-label asphalt">night bg</p>
+            <div class="color-block cb-cards bg-night mb-0">
+                <div class="card color-block-inner">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--colors and drop shadows row end-->
+
+    <!--spacer-->
+    <div class="row ">
+        <div class="col-12">
+            <hr class="ds-hr">
+        </div>
+    </div>
+    <!--spacer end-->
+
+    <!--interactive cards section row-->
+    <div class="row" id="interactive-cards-section">
+
+        <!--col-4-->
+        <div class="col-12 col-md-12 col-lg-4">
+            <h2>Interactive Cards</h2>
+        </div>
+        <!--col-4 end-->
+
+        <!--col-8-->
+        <div class="col-12 col-md-12 col-lg-8">
+            <div class="p-big">
+                <p>We use interactive cards for listing <span class="text-bold">blog articles, news, job offers,
+                        etc.</span>
+                    All
+                    Interactive cards should have <span class="text-bold">drop shadow only on hover.</span> This will
+                    enhance the
+                    interactivity and will highlight the selected card.</p>
+                <p>The content you can include is <span class="text-bold">icon/logo/image, title, text, link button,
+                        labels and
+                        any other type of content.</span> Images in those card should be clickable.
+                    Never nest
+                    cards. You can list from 2 up to 4 cards on one row. The cards on one row <span
+                        class="text-bold">should
+                        be
+                        equal hight.</span> Interactive cards are usually used in a carousel.</p>
+                <p class="mb-0">The card container is the only required element in a card. All other elements shown
+                    here are optional. Card layouts can vary to support the types of content they
+                    contain. The following elements are commonly found among that variety.</p>
+            </div>
+        </div>
+        <!--col-8 end-->
+    </div>
+    <!--interactive cards section row end-->
+
+    <!--spacer-->
+    <div class="row ">
+        <div class="col-12">
+            <hr class="ds-hr">
+        </div>
+    </div>
+    <!--spacer end-->
+
+    <!--interactive cards content row-->
+    <div class="row pb-50">
+        <!--col-12-->
+        <div class="col-12">
+            <h3>Content</h3>
+        </div>
+        <!--col-12 end-->
+    </div>
+
+    <div class="row ">
+        <div class="col-12 col-md-6 col-lg-4">
+            <p class="standard-label asphalt">Single row Card</p>
+            <div class="card interactive-card single-row-card">
+                <div class="card-body">
+                    <h2 class="card-title h4">
+                        <a href="#" target="_blank">Card Title</a>
+                    </h2>
+                    <a class="solo-link external-link" href="#" target="_blank">read more</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <p class="standard-label asphalt">icon card</p>
+            <div class="card interactive-card">
+                <div class="card-body">
+                    <img class="svg" src="../../images/Finance.svg#Capa_1" title="Industria Technology logotype" />
+                    <h2 class="card-title h4">
+                        <a href="#" target="_blank">Venim ad Minim Veniam, Quis Nostrud </a>
+                    </h2>
+                    <p class="card-text">
+                        The financial services industry formed the earliest and most demanding use
+                        cases
+                        for the enterprise blockchain and the distributed ledger technology.
+                    </p>
+                    <p>
+                        <a class="solo-link" href="#" target="_blank">read more</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <p class="standard-label asphalt">image card</p>
+            <div class="card interactive-card image-card">
+                <a class="card-image" href="#" target="_blank">
+                    <div class="overlay overlay-image--blue"></div>
+                    <img src="./images/london.jpg" alt="London">
+                </a>
+                <div class="card-body">
+                    <span class="standard-label asphalt">27 jan 2019</span>
+                    <h2 class="card-title h4">
+                        <a href="#" target="_blank">Venim ad Minim Veniam, Quis Nostrud </a>
+                    </h2>
+                    <p class="card-text">
+                        The financial services industry formed the earliest and most demanding use
+                        cases
+                        for the enterprise blockchain and the distributed ledger technology.
+                    </p>
+                    <p>
+                        <a class="solo-link" href="#" target="_blank">read more</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--interactive cards content row end-->
+
+    <!--spacer-->
+    <div class="row ">
+        <div class="col-12">
+            <hr class="ds-hr">
+        </div>
+    </div>
+    <!--spacer end-->
+
+    <!--colors and drop shadows row-->
+    <div class="row pb-50">
+        <!--col-12-->
+        <div class="col-12">
+            <h3>Colors and Drop Shadows</h3>
+        </div>
+        <!--col-12 end-->
+    </div>
+
+    <div class="row pb-50">
+        <div class="col-12 col-md-6 col-lg-3">
+            <p class="standard-label asphalt">white bg</p>
+            <div class="color-block cb-cards bg-white border mb-0">
+                <div class="card interactive-card color-block-inner"
+                    style="box-shadow: 0 0 10px 0 rgba(56, 140, 196, 0.15);">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <p class="standard-label asphalt">air bg</p>
+            <div class="color-block cb-cards bg-air mb-0">
+                <div class="card interactive-card color-block-inner"
+                    style="box-shadow: 0 0 30px 0 rgba(56, 140, 196, 0.15);">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <p class="standard-label asphalt">ocean bg</p>
+            <div class="color-block cb-cards bg-ocean mb-0">
+                <div class="card interactive-card color-block-inner"
+                    style="box-shadow: 0 0 30px 0 rgba(63, 96, 117, 0.3);">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <p class="standard-label asphalt">night bg</p>
+            <div class="color-block cb-cards bg-night mb-0">
+                <div class="card interactive-card color-block-inner"
+                    style="box-shadow: 0 0 30px 0 rgba(23, 49, 66, 0.4);">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--colors and drop shadows row end-->
+</template>
+<!--CARDS-PAGE END-->
+
+<script src="./cards.js"></script>

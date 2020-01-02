@@ -1,0 +1,37 @@
+@import "../../assets/scss/variables.scss";
+@import "./../../industria-ui/scss/mixins/media-queries";
+
+.register {
+  min-height: calc(100vh - 120px);
+  @include respond-below(md) {
+    border-top: 2px solid $ghost-white;
+    margin-top: -2px;
+  }
+  h1 {
+    font-size: 2.1875rem;
+  }
+  .form-wrapper {
+    padding: 55px 100px 60px 100px;
+    box-shadow: 0 0 20px 0 rgba(92, 98, 117, 0.1);
+    @include respond-below(md) {
+      padding: 25px 20px 30px 20px;
+      margin: 30px 0 20px;
+    }
+  }
+  .register-info {
+    i {
+      font-size: 2.5rem;
+      color: $cadet-grey;
+    }
+    a {
+      color: $cadet-grey;
+      transition: color 0.2s ease-in-out;
+      &:hover {
+        color: $red;
+      }
+    }
+    @include respond-below(md) {
+      margin-bottom: 30px;
+    }
+  }
+}

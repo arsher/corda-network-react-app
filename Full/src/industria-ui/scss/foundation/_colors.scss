@@ -1,0 +1,1244 @@
+//--Body colors
+body {
+  color: $stone;
+  background-color: $white;
+}
+
+//--Heading colors
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: $night;
+}
+
+//--Anchor color
+a {
+  color: $ocean;
+}
+
+//--Text color styles
+.night,
+.text-night {
+  color: $night;
+}
+
+.stone,
+.text-stone {
+  color: $stone !important;
+}
+
+.ocean,
+.text-ocean {
+  color: $ocean !important;
+}
+
+.sky,
+.text-sky {
+  color: $sky !important;
+}
+
+.asphalt,
+.text-asphalt {
+  color: $asphalt !important;
+}
+
+.mist,
+.text-mist {
+  color: $mist !important;
+}
+
+.air,
+.text-air {
+  color: $air !important;
+}
+
+//--BACKGROUND-COLORS
+.bg-night {
+  background-color: $night;
+}
+
+.bg-stone {
+  background-color: $stone;
+}
+
+.bg-ocean {
+  background-color: $ocean;
+}
+
+.bg-asphalt {
+  background-color: $asphalt;
+}
+
+.bg-air {
+  background-color: $air;
+}
+
+.bg-sky {
+  background-color: $sky;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.bg-success {
+  background-color: $success;
+}
+
+.bg-warning {
+  background-color: $warning;
+}
+
+.bg-error {
+  background-color: $error;
+}
+
+//--ELEMENTS-ON-NIGHT-BACKGROUND
+.bg-night {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    color: $white;
+  }
+
+  .subtitle,
+  .standard-label,
+  .description,
+  .description p,
+  .blockquote-footer,
+  .blockquote-footer p {
+    color: $mist;
+  }
+
+  .section-label {
+    color: $mist;
+    &::before {
+      background: $mist;
+    }
+  }
+
+  ul {
+    color: $white;
+    li {
+      color: $white;
+      &:before {
+        background: $sky;
+      }
+    }
+  }
+
+  ol {
+    color: $white;
+    li {
+      color: $white;
+      &:before {
+        color: $sky;
+      }
+      &:after {
+        background: $sky;
+      }
+    }
+  }
+
+  .stand-alone-quote {
+    & > p {
+      color: $white;
+    }
+    &::before {
+      color: $asphalt;
+    }
+  }
+
+  .paragraph-quote {
+    border-left-color: $asphalt;
+    & > p {
+      color: $white;
+    }
+  }
+
+  a {
+    color: $sky;
+    background-image: linear-gradient(180deg, transparent 84%, rgba($sky, 0.7) 0);
+    &:hover {
+      background-image: linear-gradient(180deg, transparent 84%, rgba($sky, 0.7) 0);
+    }
+    &[role="button"] {
+      background-image: none;
+    }
+  }
+
+  p a,
+  span a,
+  li a,
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  .solo-link {
+    color: $sky;
+    background-image: linear-gradient(180deg, transparent 84%, rgba($sky, 0.7) 0);
+    &:hover {
+      background-image: linear-gradient(180deg, transparent 84%, rgba($sky, 0.7) 0);
+    }
+  }
+
+  .border {
+    border-color: $stone;
+  }
+
+  hr {
+    border-top: 1px solid $stone;
+  }
+
+  .btn-primary {
+    background: $white;
+    color: $ocean;
+    border-color: $white;
+    &:focus {
+      box-shadow: 0 0 0.5rem 0 $sky;
+    }
+    &:hover {
+      background: $white;
+      color: $ocean;
+      border-color: $white;
+      box-shadow: 0 0.125rem 0.625rem 0 rgba(10, 28, 41, 0.7);
+    }
+    &:active {
+      box-shadow: 0 0.0625rem 0.25rem 0 rgba(10, 28, 41, 0.8);
+    }
+    &[disabled="disabled"],
+    &:disabled,
+    &.disabled {
+      color: $asphalt;
+      border-color: $asphalt;
+    }
+    &.btn-circle,
+    &.btn-circle--lg {
+      background: $white;
+      color: $ocean;
+      border: 0;
+      &:hover {
+        color: $ocean;
+        background: $white;
+      }
+    }
+  }
+
+  .btn-secondary {
+    color: $white;
+    background: $sky;
+    border-color: $sky;
+    &:focus {
+      box-shadow: 0 0 0.75rem 0 rgba(120, 189, 232, 0.9);
+    }
+    &:hover {
+      box-shadow: 0 0.125rem 0.625rem 0 rgba(2, 10, 15, 0.4);
+    }
+    &:active {
+      box-shadow: 0 0.0625rem 0.25rem 0 rgba(2, 10, 15, 0.6);
+    }
+    &[disabled="disabled"],
+    &:disabled,
+    &.disabled {
+      color: $asphalt;
+      border-color: $asphalt;
+    }
+    &.btn-circle,
+    &.btn-circle--lg {
+      background: $sky;
+      color: $white;
+      border: 0;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  .btn-circle {
+    color: $white;
+  }
+
+  .btn-circle:hover {
+    color: rgba($color: $white, $alpha: 0.85);
+  }
+
+  .btn-download {
+    color: $white;
+    border-color: $sky;
+    .file-size {
+      color: $air;
+    }
+    &:focus {
+      box-shadow: 0 0 0.75rem 0 rgba(120, 189, 232, 0.9);
+    }
+    &:hover {
+      background: $sky;
+    }
+    &:active {
+      background: $sky;
+      box-shadow: inset 0 0.0625rem 0.1875rem 0 rgba(56, 140, 196, 0.5);
+    }
+  }
+
+  .card {
+    background-color: $white;
+    box-shadow: 0 2px 10px 0 rgba(23, 49, 66, 0.4);
+    &.interactive-card:hover {
+      box-shadow: 0 0 30px 0 rgba(23, 49, 66, 0.4);
+    }
+  }
+
+  .accordion {
+    background-color: $white;
+    .zmdi {
+      color: $ocean;
+    }
+    &.active {
+      box-shadow: 0 -30px 30px -30px rgba(23, 49, 66, 0.4), 30px 0 30px -30px rgba(23, 49, 66, 0.4),
+        -30px 0 30px -30px rgba(23, 49, 66, 0.4);
+      + .panel {
+        box-shadow: -30px 0 30px -30px rgba(23, 49, 66, 0.4), 30px 0 30px -30px rgba(23, 49, 66, 0.4),
+          0 30px 30px -30px rgba(23, 49, 66, 0.4);
+      }
+    }
+    &:not(.active):hover {
+      box-shadow: 0 2px 10px 0 rgba(23, 49, 66, 0.4);
+    }
+  }
+
+  .panel {
+    border-color: $air;
+    background-color: $white;
+    p {
+      color: $stone;
+    }
+  }
+
+  .block-with-svg svg,
+  svg {
+    fill: $mist;
+  }
+
+  .svg-block-border--bottom {
+    border-color: $mist !important;
+  }
+
+  .svg-block-border--right {
+    border-color: $mist !important;
+  }
+
+  .svg-block-border--left {
+    border-color: $mist !important;
+  }
+
+  .tabs-slider {
+    .section-tabs-label {
+      .zmdi {
+        color: $mist;
+      }
+      &::before {
+        background: $mist;
+      }
+    }
+    .tabs-nav {
+      border-color: $stone;
+    }
+    .tabs {
+      .selected-tab {
+        border-color: $ocean;
+        background-color: $ocean;
+        box-shadow: 0 1px 20px 0 rgba(23, 49, 66, 0.56);
+      }
+      .tab {
+        color: $white;
+        @include respond-below(sm) {
+          background-color: $stone;
+        }
+        &.selected {
+          color: $white;
+          @include respond-below(sm) {
+            background-color: $ocean;
+          }
+        }
+      }
+    }
+  }
+}
+
+//--ELEMENTS-ON-OCEAN-BACKGROUND
+.bg-ocean {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  .subtitle {
+    color: $white;
+  }
+
+  .standard-label,
+  .description,
+  .description p,
+  .blockquote-footer,
+  .blockquote-footer p {
+    color: $air;
+  }
+
+  .section-label {
+    color: $air;
+    &::before {
+      background: $air;
+    }
+  }
+
+  ul {
+    color: $white;
+    li {
+      color: $white;
+      &:before {
+        background: $mist;
+      }
+    }
+  }
+
+  ol {
+    color: $white;
+    li {
+      color: $white;
+      &:before {
+        color: $mist;
+      }
+      &:after {
+        background: $mist;
+      }
+    }
+  }
+
+  .stand-alone-quote {
+    & > p {
+      color: $white;
+    }
+    &::before {
+      color: $sky;
+    }
+  }
+
+  .paragraph-quote {
+    border-left-color: $sky;
+    & > p {
+      color: $white;
+    }
+  }
+
+  a {
+    color: $white;
+    background-image: linear-gradient(180deg, transparent 84%, rgba($sky, 1) 0);
+    &:hover {
+      background-image: linear-gradient(180deg, transparent 84%, rgba($sky, 1) 0);
+    }
+  }
+
+  p a,
+  span a,
+  li a,
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  .solo-link {
+    color: $white;
+    background-image: linear-gradient(180deg, transparent 84%, rgba($sky, 1) 0);
+    &:hover {
+      background-image: linear-gradient(180deg, transparent 84%, rgba($sky, 1) 0);
+    }
+  }
+
+  .border {
+    border-color: #3d96d1;
+  }
+
+  hr {
+    border-top: 1px solid #3d96d1;
+  }
+
+  .btn-primary {
+    background: $white;
+    color: $ocean;
+    border-color: $white;
+    &:focus {
+      box-shadow: 0 0 0.5rem 0 $white;
+    }
+    &:hover {
+      background: $white;
+      color: $ocean;
+      border-color: $white;
+      box-shadow: 0 0.125rem 0.625rem 0 rgba(28, 98, 145, 0.4);
+    }
+    &:active {
+      box-shadow: 0 0.0625rem 0.25rem 0 rgba(28, 98, 145, 0.6);
+    }
+    &[disabled="disabled"],
+    &:disabled,
+    &.disabled {
+      color: $sky;
+      border-color: $sky;
+    }
+    &.btn-circle,
+    &.btn-circle--lg {
+      background: $white;
+      color: $ocean;
+      border: 0;
+      &:hover {
+        background: $white;
+        color: $ocean;
+      }
+    }
+  }
+
+  .btn-secondary {
+    color: $white;
+    background: $sky;
+    border-color: $sky;
+    &:focus {
+      box-shadow: 0 0 0.75rem 0 rgba(120, 189, 232, 0.9);
+    }
+    &:hover {
+      box-shadow: 0 0.125rem 0.625rem 0 rgba(28, 98, 145, 0.4);
+    }
+    &:active {
+      box-shadow: 0 0.0625rem 0.25rem 0 rgba(28, 98, 145, 0.6);
+    }
+    &[disabled="disabled"],
+    &:disabled,
+    &.disabled {
+      color: $sky;
+      border-color: $sky;
+    }
+    &.btn-circle,
+    &.btn-circle--lg {
+      background: $sky;
+      color: $white;
+      border: 0;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  .btn-circle:hover {
+    color: rgba($color: $white, $alpha: 0.85);
+  }
+
+  .btn-download {
+    color: $white;
+    border-color: $sky;
+    .file-size {
+      color: $air;
+    }
+    &:focus {
+      box-shadow: 0 0 0.75rem 0 rgba(120, 189, 232, 0.9);
+    }
+    &:hover {
+      background: $sky;
+    }
+    &:active {
+      background: $sky;
+      box-shadow: inset 0 0.0625rem 0.1875rem 0 rgba(56, 140, 196, 0.5);
+    }
+  }
+
+  .card {
+    background-color: $white;
+    box-shadow: 0 2px 10px 0 rgba(63, 96, 117, 0.3);
+    &.interactive-card:hover {
+      box-shadow: 0 0 30px 0 rgba(63, 96, 117, 0.3);
+    }
+  }
+
+  .accordion {
+    background-color: $white;
+    .zmdi {
+      color: $ocean;
+    }
+    &.active {
+      box-shadow: 0 -30px 30px -30px rgba(63, 96, 117, 0.3), 30px 0 30px -30px rgba(63, 96, 117, 0.3),
+        -30px 0 30px -30px rgba(63, 96, 117, 0.3);
+      + .panel {
+        box-shadow: -30px 0 30px -30px rgba(63, 96, 117, 0.3), 30px 0 30px -30px rgba(63, 96, 117, 0.3),
+          0 30px 30px -30px rgba(63, 96, 117, 0.3);
+      }
+    }
+    &:not(.active):hover {
+      box-shadow: 0 2px 10px 0 rgba(63, 96, 117, 0.3);
+    }
+  }
+
+  .panel {
+    border-color: $air;
+    background-color: $white;
+    p {
+      color: $stone;
+    }
+  }
+
+  .block-with-svg svg,
+  svg {
+    fill: $white;
+  }
+
+  .svg-block-border--bottom {
+    border-color: $air !important;
+  }
+
+  .svg-block-border--right {
+    border-color: $air !important;
+  }
+
+  .svg-block-border--left {
+    border-color: $air !important;
+  }
+
+  .tabs-slider {
+    .section-tabs-label {
+      .zmdi {
+        color: $air;
+      }
+      &::before {
+        background: $air;
+      }
+    }
+    .tabs-nav {
+      border-color: $sky;
+    }
+    .tabs {
+      .selected-tab {
+        border-color: $night;
+        background-color: $night;
+        box-shadow: 0 1px 20px 0 rgba(63, 96, 117, 0.36);
+      }
+      .tab {
+        color: $white;
+        @include respond-below(sm) {
+          background-color: $sky;
+        }
+        &.selected {
+          color: $white;
+          @include respond-below(sm) {
+            background-color: $night;
+          }
+        }
+      }
+    }
+  }
+}
+
+//--ELEMENTS-ON-AIR-BACKGROUND
+.bg-air {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: $night;
+  }
+
+  p,
+  .subtitle {
+    color: $stone;
+  }
+
+  .section-label {
+    color: $stone;
+    &::before {
+      background: $stone;
+    }
+  }
+
+  .standard-label,
+  .description,
+  .description p,
+  .blockquote-footer,
+  .blockquote-footer p {
+    color: $asphalt;
+  }
+
+  ul {
+    color: $stone;
+    li {
+      &:before {
+        background: $asphalt;
+      }
+    }
+  }
+
+  ol {
+    color: $stone;
+    li {
+      &:before {
+        color: $asphalt;
+      }
+      &:after {
+        background: $asphalt;
+      }
+    }
+  }
+
+  .stand-alone-quote {
+    & > p {
+      color: $stone;
+    }
+    &::before {
+      color: $asphalt;
+    }
+  }
+
+  .paragraph-quote {
+    border-left-color: $asphalt;
+    & > p {
+      color: $stone;
+    }
+  }
+
+  a {
+    color: $ocean;
+    background-image: linear-gradient(180deg, transparent 84%, rgba($ocean, 0.5) 0);
+    &:hover {
+      background-image: linear-gradient(180deg, transparent 84%, rgba($ocean, 0.5) 0);
+    }
+  }
+
+  p a,
+  span a,
+  li a,
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  .solo-link {
+    color: $ocean;
+    background-image: linear-gradient(180deg, transparent 84%, rgba($ocean, 0.5) 0);
+    &:hover {
+      background-image: linear-gradient(180deg, transparent 84%, rgba($ocean, 0.5) 0);
+    }
+  }
+
+  .border {
+    border-color: $white;
+  }
+
+  hr {
+    border-top: 1px solid $white;
+  }
+
+  .btn-primary {
+    background: $ocean;
+    color: $white;
+    border-color: $ocean;
+    &:focus {
+      box-shadow: 0 0 0.625rem 0 rgba(64, 159, 222, 0.9);
+    }
+    &:hover {
+      background: #409fde;
+      border-color: #409fde;
+      box-shadow: 0 0.125rem 0.625rem 0 rgba(56, 140, 196, 0.4);
+    }
+    &:active {
+      box-shadow: 0 0.0625rem 0.25rem 0 rgba(56, 140, 196, 0.6);
+    }
+    &[disabled="disabled"],
+    &:disabled,
+    &.disabled {
+      color: $asphalt;
+      border-color: $asphalt;
+    }
+    &.btn-circle,
+    &.btn-circle--lg {
+      background: $ocean;
+      color: $white;
+      border: 0;
+      &:hover {
+        color: $white;
+        background: #409fde;
+      }
+    }
+  }
+
+  .btn-secondary {
+    background: $white;
+    color: $ocean;
+    border-color: $white;
+    &:focus {
+      box-shadow: 0 0 0.625rem 0 rgba(121, 166, 196, 0.55);
+    }
+    &:hover {
+      box-shadow: 0 0.125rem 0.625rem 0 rgba(121, 166, 196, 0.4);
+    }
+    &:active {
+      box-shadow: 0 0.125rem 0.25rem 0 rgba(121, 166, 196, 0.45);
+    }
+    &[disabled="disabled"],
+    &:disabled,
+    &.disabled {
+      color: $asphalt;
+      border-color: $asphalt;
+    }
+    &.btn-circle,
+    &.btn-circle--lg {
+      background: $white;
+      color: $ocean;
+      border: 0;
+      &:hover {
+        color: $ocean;
+      }
+    }
+  }
+
+  .btn-circle:hover {
+    color: #409fde;
+  }
+
+  .btn-download {
+    color: $ocean;
+    border-color: $white;
+    .file-size {
+      color: $asphalt;
+    }
+    &:focus {
+      box-shadow: 0 0 0.625rem 0 rgba(121, 166, 196, 0.45);
+    }
+    &:hover {
+      background: $white;
+      .file-size {
+        color: $ocean;
+      }
+    }
+    &:active {
+      background: $white;
+      box-shadow: inset 0 0.0625rem 0.1875rem 0 rgba(121, 166, 196, 0.3);
+      .file-size {
+        color: $ocean;
+      }
+    }
+  }
+
+  .card {
+    background-color: $white;
+    box-shadow: 0 0 10px 0 rgba(56, 140, 196, 0.15);
+    &.interactive-card:hover {
+      box-shadow: 0 0 30px 0 rgba(56, 140, 196, 0.15);
+    }
+  }
+
+  .accordion {
+    background-color: $white;
+    .zmdi {
+      color: $ocean;
+    }
+    &.active {
+      box-shadow: 0 -30px 30px -30px rgba(56, 140, 196, 0.15), 30px 0 30px -30px rgba(56, 140, 196, 0.15),
+        -30px 0 30px -30px rgba(56, 140, 196, 0.15);
+      + .panel {
+        box-shadow: -30px 0 30px -30px rgba(56, 140, 196, 0.15), 30px 0 30px -30px rgba(56, 140, 196, 0.15),
+          0 30px 30px -30px rgba(56, 140, 196, 0.15);
+      }
+    }
+    &:not(.active):hover {
+      box-shadow: 0 0 10px 0 rgba(56, 140, 196, 0.15);
+    }
+  }
+
+  .panel {
+    border-color: $air;
+    background-color: $white;
+    p {
+      color: $stone;
+    }
+  }
+
+  .block-with-svg svg,
+  svg {
+    fill: $asphalt;
+  }
+
+  .svg-block-border--bottom {
+    border-color: $mist !important;
+  }
+
+  .svg-block-border--right {
+    border-color: $mist !important;
+  }
+
+  .svg-block-border--left {
+    border-color: $mist !important;
+  }
+
+  .tabs-slider {
+    .section-tabs-label {
+      .zmdi {
+        color: $stone;
+      }
+      &::before {
+        background: $stone;
+      }
+    }
+    .tabs-nav {
+      border-color: $mist;
+    }
+    .tabs {
+      .selected-tab {
+        border-color: $ocean;
+        background-color: $ocean;
+        box-shadow: 0 2px 10px 0 rgba(56, 140, 196, 0.4);
+      }
+      .tab {
+        color: $ocean;
+        @include respond-below(sm) {
+          background-color: $white;
+          color: $night;
+        }
+        &.selected {
+          color: $white;
+          @include respond-below(sm) {
+            background-color: $night;
+          }
+        }
+      }
+    }
+  }
+}
+
+//--ELEMENTS-ON-WHITE-BACKGROUND
+.bg-white {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: $night;
+  }
+
+  p {
+    color: $stone;
+  }
+
+  .subtitle,
+  .standard-label,
+  .description,
+  .description p,
+  .blockquote-footer,
+  .blockquote-footer p {
+    color: $asphalt;
+  }
+
+  .section-label {
+    color: $asphalt;
+    &::before {
+      background: $asphalt;
+    }
+  }
+
+  ul {
+    color: $stone;
+    li {
+      &:before {
+        background: $asphalt;
+      }
+    }
+  }
+
+  ol {
+    color: $stone;
+    li {
+      &:before {
+        color: $asphalt;
+      }
+      &:after {
+        background: $asphalt;
+      }
+    }
+  }
+
+  .stand-alone-quote {
+    & > p {
+      color: $stone;
+    }
+    &::before {
+      color: $mist;
+    }
+  }
+
+  .paragraph-quote {
+    border-left-color: $mist;
+    & > p {
+      color: $stone;
+    }
+  }
+
+  a {
+    color: $ocean;
+    background-image: linear-gradient(180deg, transparent 84%, rgba($sky, 0.5) 0);
+    &:hover {
+      background-image: linear-gradient(180deg, transparent 84%, rgba($sky, 0.5) 0);
+    }
+  }
+
+  p a,
+  span a,
+  li a,
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  .solo-link {
+    color: $ocean;
+    background-image: linear-gradient(180deg, transparent 84%, rgba($sky, 0.5) 0);
+    &:hover {
+      background-image: linear-gradient(180deg, transparent 84%, rgba($sky, 0.5) 0);
+    }
+  }
+
+  .border {
+    border-color: $air;
+  }
+
+  hr {
+    border-top: 1px solid $air;
+  }
+
+  .btn-primary {
+    background: $ocean;
+    color: $white;
+    border-color: $ocean;
+    &:focus {
+      box-shadow: 0 0 0.625rem 0 rgba(64, 159, 222, 0.9);
+    }
+    &:hover {
+      background: #409fde;
+      border-color: #409fde;
+      box-shadow: 0 0.125rem 0.625rem 0 rgba(56, 140, 196, 0.4);
+    }
+    &:active {
+      box-shadow: 0 0.0625rem 0.25rem 0 rgba(56, 140, 196, 0.6);
+    }
+    &[disabled="disabled"],
+    &:disabled,
+    &.disabled {
+      color: $mist;
+      border-color: $mist;
+    }
+    &.btn-circle,
+    &.btn-circle--lg {
+      background: $ocean;
+      border: 0;
+      &:hover {
+        color: $white;
+        background: #409fde;
+      }
+    }
+  }
+
+  .btn-secondary {
+    color: $ocean;
+    background: $air;
+    border-color: $air;
+    &:focus {
+      box-shadow: 0 0 0.625rem 0 rgba(121, 166, 196, 0.55);
+    }
+    &:hover {
+      box-shadow: 0 0.125rem 0.625rem 0 rgba(121, 166, 196, 0.4);
+    }
+    &:active {
+      box-shadow: 0 0.0625rem 0.25rem 0 rgba(121, 166, 196, 0.45);
+    }
+    &[disabled="disabled"],
+    &:disabled,
+    &.disabled {
+      color: $mist;
+      border-color: $mist;
+    }
+    &.btn-circle,
+    &.btn-circle--lg {
+      background: $air;
+      border: 0;
+      &:hover {
+        color: $ocean;
+      }
+    }
+  }
+
+  .btn-circle:hover {
+    color: #409fde;
+  }
+
+  .btn-circle.mist:hover {
+    color: #8daec5 !important;
+  }
+
+  .btn-download {
+    color: $ocean;
+    border-color: $air;
+    .file-size {
+      color: $asphalt;
+    }
+    &:focus {
+      box-shadow: 0 0 0.625rem 0 rgba(121, 166, 196, 0.25);
+    }
+    &:hover {
+      background: $air;
+      .file-size {
+        color: $ocean;
+      }
+    }
+    &:active {
+      background: $air;
+      box-shadow: inset 0 0.0625rem 0.1875rem 0 rgba(121, 166, 196, 0.2);
+      .file-size {
+        color: $ocean;
+      }
+    }
+  }
+
+  .card {
+    background-color: $air;
+    box-shadow: 0 0 10px 0 rgba(56, 140, 196, 0.15);
+    &.interactive-card:hover {
+      box-shadow: 0 0 10px 0 rgba(56, 140, 196, 0.15);
+    }
+  }
+
+  .accordion {
+    background-color: $air;
+    .zmdi {
+      color: $ocean;
+    }
+    &.active {
+      box-shadow: 0 -10px 10px -10px rgba(56, 140, 196, 0.15), 10px 0 10px -10px rgba(56, 140, 196, 0.15),
+        -10px 0 10px -10px rgba(56, 140, 196, 0.15);
+      + .panel {
+        box-shadow: -10px 0 10px -10px rgba(56, 140, 196, 0.15), 10px 0 10px -10px rgba(56, 140, 196, 0.15),
+          0 10px 10px -10px rgba(56, 140, 196, 0.15);
+      }
+    }
+    &:not(.active):hover {
+      box-shadow: 0 0 10px 0 rgba(56, 140, 196, 0.15);
+    }
+  }
+
+  .panel {
+    border-color: $white;
+    background-color: $air;
+    p {
+      color: $stone;
+    }
+  }
+
+  .block-with-svg svg,
+  svg,
+  .svg {
+    fill: $mist;
+  }
+
+  .svg-block-border--bottom {
+    border-color: $air;
+  }
+
+  .svg-block-border--right {
+    border-color: $air;
+  }
+
+  .svg-block-border--left {
+    border-color: $air;
+  }
+
+  .tabs-slider {
+    .section-tabs-label {
+      .zmdi {
+        color: $asphalt;
+      }
+      &::before {
+        background: $mist;
+      }
+    }
+    .tabs-nav {
+      border-color: $air;
+    }
+    .tabs {
+      .selected-tab {
+        border-color: $ocean;
+        background-color: $ocean;
+        box-shadow: 0 2px 10px 0 rgba(56, 140, 196, 0.4);
+      }
+      .tab {
+        color: $ocean;
+        @include respond-below(sm) {
+          background-color: $air;
+        }
+        &.selected {
+          color: $white;
+          @include respond-below(sm) {
+            background-color: $ocean;
+          }
+        }
+      }
+    }
+  }
+}
+
+//--OVERLAY STYLES
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
+}
+
+.color-bg-overlay {
+  background: linear-gradient(to bottom, rgba(50, 122, 171, 1) 0%, rgba(61, 176, 240, 1) 100%);
+}
+
+.overlay-image--blue {
+  background: linear-gradient(
+    135deg,
+    rgba(50, 122, 171, 0.6) 0%,
+    rgba(50, 122, 171, 0.6) 1%,
+    rgba(56, 140, 196, 0.6) 45%,
+    rgba(61, 176, 240, 0.6) 100%
+  );
+  // background-color: rgba($ocean, 0.95);
+}
+
+.overlay-image--night {
+  background: rgba($night, 0.7);
+}
+
+//--BORDER COLORS
+.border-1--stone {
+  border: 1px solid $stone;
+}
+
+.border-1--light-blue {
+  border: 1px solid #3d96d1;
+}
+
+.border-1--white {
+  border: 1px solid $white;
+}
+
+.border-1--air {
+  border: 1px solid $air;
+}

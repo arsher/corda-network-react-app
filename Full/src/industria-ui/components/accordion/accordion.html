@@ -1,0 +1,254 @@
+<!--ACCORDION-PAGE-->
+<template id="accordion">
+    <!--header row-->
+    <div class="row pb-50">
+        <header class="col-12 style-guide-header">
+            <h1>Accordion</h1>
+        </header>
+    </div>
+    <!--header row end-->
+
+    <!--accordion overview row-->
+    <div class="row " id="accordion-overview-section">
+        <!--col-4-->
+        <div class="col-12 col-md-12 col-lg-4">
+            <h2>Overview</h2>
+        </div>
+        <!--col-4 end-->
+        <!--col-8-->
+        <div class="col-12 col-md-12 col-lg-8">
+            <div class="p-big">
+                <p>Accordions are most ideal when the audience only requires a few key pieces of
+                    content on a single page. By hiding most of the content, users can spend their time
+                    more efficiently focused on the few topics that matter.</p>
+                <p>Also, accordions should be seen as a way to present support information. Key,
+                    required/must have content should never be placed in a content. Make sure that it
+                    is always readily available, visible to users as they are picking their path.</p>
+                <p>Accordions become problematic when they become a substitution for overall best
+                    practices for content length. Accordions are quickly abandoned when users realize
+                    that they are just a dumping ground for long passages of content.</p>
+                <p class="mb-50">Don’t nest accordions, don’t place accordions in cards. Don’t hide CTAs in
+                    accordions.</p>
+            </div>
+        </div>
+        <!--col-8 end-->
+    </div>
+    <!--accordion overview row end-->
+
+    <!--accordion example row-->
+    <div class="row pt-50 pb-50 bg-air border-left-2--white">
+        <!--col-4-->
+        <div class="col-12 col-md-12 col-lg-4" id="accordion-example-section">
+            <h2>Example</h2>
+        </div>
+        <!--col-4 end-->
+        <!--col-8-->
+        <div class="col-12 col-md-12 col-lg-8">
+            <div class="accordion active">
+                <p class="link-wrapper">
+                    <a>Blockchain Leads to Dramatic Efficiencies in Your Business</a>
+                </p>
+                <i class="zmdi zmdi-close-circle-o"></i>
+                <i class="zmdi zmdi-plus-circle-o d-none"></i>
+            </div>
+            <div class="panel first-panel" id="panel1">
+                <p>
+                    Direct transactions between businesses create new efficiencies and
+                    dramatically
+                    reduce
+                    operational costs. Businesses from different industries gain better
+                    liquidity and
+                    capital management, fraud is minimized with verifiable linked records,
+                    and
+                    settlement
+                    time for transactions is dramatically reduced. These occur with the
+                    ability
+                    to
+                    verify
+                    the counterparties and properties of transactions for risk reduction.
+                </p>
+            </div>
+            <div class="accordion">
+                <p class="link-wrapper">
+                    <a>You can Grow and Transform the Business</a>
+                </p>
+                <i class="zmdi zmdi-close-circle-o d-none"></i>
+                <i class="zmdi zmdi-plus-circle-o"></i>
+            </div>
+            <div class="panel" id="panel2" style="display: none;">
+                <p>
+                    As an enterprise blockchain platform Corda also enables new revenue
+                    opportunities
+                    and
+                    is in the centre of your digital transformation. Transactions that were
+                    once out of
+                    reach for the businesses will now become possible. For example, a
+                    direct
+                    connection
+                    to
+                    business partners opens new markets and expands the possibilities to
+                    grow
+                    or evolve
+                    a
+                    business. There is also an opportunity for the creation of new business
+                    networks
+                    that
+                    were not existent or impossible to create without the trust that
+                    blockchain
+                    technology
+                    provides.
+                </p>
+            </div>
+            <div class="accordion">
+                <p class="link-wrapper">
+                    <a>Corda is a Platform You Can Build Upon</a>
+                </p>
+                <i class="zmdi zmdi-close-circle-o d-none"></i>
+                <i class="zmdi zmdi-plus-circle-o"></i>
+            </div>
+            <div class="panel" id="panel3" style="display: none;">
+                <p>
+                    By implementing Corda in your ecosystem, we provide a platform for
+                    businesses to
+                    work
+                    together. It is an open source technology platform and also available
+                    as
+                    Corda
+                    Enterprise. As a component of an overall technology stack, it forms the
+                    foundation
+                    of
+                    next-generation IT infrastructure.
+                </p>
+                <p>
+                    Operating as a shared platform, the enterprise blockchain enables a
+                    wide
+                    set of use
+                    cases and stakeholders. INDUSTRIA is also actively working to integrate
+                    Corda with
+                    the
+                    legacy system, industrial Internet of Things (IoT) frameworks, deep
+                    learning AI
+                    platforms and another broad set of solutions. We set focus on
+                    simplicity of
+                    development
+                    and interoperability.
+                </p>
+            </div>
+        </div>
+        <!--col-8 end-->
+    </div>
+    <!--accordion example row end-->
+
+    <!--accordion colors and drop shadows row-->
+    <div class="row  pt-50 pb-50" id="accordion-colors-section">
+        <!--col-12-->
+        <div class="col-12">
+            <h2>Colors and Drop Shadows</h2>
+        </div>
+        <!--col-12 end-->
+    </div>
+
+    <div class="row mb-50">
+        <div class="col-12 col-md-6 col-lg-3">
+            <p class="standard-label asphalt">white bg</p>
+            <div class="color-block cb-accordion bg-white border">
+
+                <div class="acc-example">
+                    <p>
+                        Closed
+                    </p>
+                </div>
+
+                <div class="acc-example" style="box-shadow: 0 0 10px 0 rgba(56,140,196,0.15);">
+                    <p>
+                        Hover
+                    </p>
+                </div>
+
+                <div class="acc-example active" style="box-shadow: 0 0 10px 0 rgba(56,140,196,0.15);">
+                    <p>
+                        Open
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <p class="standard-label asphalt">air bg</p>
+            <div class="color-block cb-accordion bg-air">
+
+                <div class="acc-example">
+                    <p>
+                        Closed
+                    </p>
+                </div>
+
+                <div class="acc-example" style="box-shadow: 0 0 10px 0 rgba(56,140,196,0.15);">
+                    <p>
+                        Hover
+                    </p>
+                </div>
+
+                <div class="acc-example active" style="box-shadow: 0 0 30px 0 rgba(56,140,196,0.15);">
+                    <p>
+                        Open
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+            <p class="standard-label asphalt">ocean bg</p>
+            <div class="color-block cb-accordion bg-ocean">
+
+                <div class="acc-example">
+                    <p>
+                        Closed
+                    </p>
+                </div>
+
+                <div class="acc-example" style="box-shadow: 0 2px 10px 0 rgba(63,96,117,0.3);">
+                    <p>
+                        Hover
+                    </p>
+                </div>
+
+                <div class="acc-example active" style="box-shadow: 0 0 30px 0 rgba(63,96,117,0.3);">
+                    <p>
+                        Open
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+            <p class="standard-label asphalt">night bg</p>
+            <div class="color-block cb-accordion bg-night">
+
+                <div class="acc-example">
+                    <p>
+                        Closed
+                    </p>
+                </div>
+
+                <div class="acc-example" style="box-shadow: 0 2px 10px 0 rgba(23,49,66,0.4);">
+                    <p>
+                        Hover
+                    </p>
+                </div>
+
+                <div class="acc-example active" style="box-shadow: 0 0 30px 0 rgba(23,49,66,0.4);">
+                    <p>
+                        Open
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--accordion colors and drop shadows row end-->
+</template>
+<!--ACCORDION-PAGE END-->
+
+<script src="./accordion.js"></script>

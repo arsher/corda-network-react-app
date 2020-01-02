@@ -1,0 +1,32 @@
+@import "./../../../assets/scss/variables.scss";
+
+.identity-checks {
+  .card {
+    &-body {
+      padding: 25px 30px 40px;
+      i {
+        font-size: 2.5rem;
+        color: $cadet-grey;
+      }
+      p a {
+        color: $red;
+      }
+      .form-group {
+        padding: 0 70px 6px;
+      }
+      .h-splitter {
+        width: 100%;
+        height: 1px;
+        background: $ghost-white;
+        margin: 20px 0 40px 0;
+      }
+    }
+    .solo-link {
+      color: $cadet-grey;
+      transition: color 0.2s ease-in-out;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+}
