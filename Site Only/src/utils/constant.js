@@ -5,4 +5,4 @@ export const SPECIAL_CHARS_REGEX = /['|"|=|$|,|\\]+/;
 export const VALID_CITY_REGEX = /^[a-zA-Z]{3,30}$/i;
 export const VALID_PHONE_REGEX = /^[0-9\-]{1,16}$/im;
 export const MARKDOWN_SOURCE_BASE_URL =
-    'https://raw.githubusercontent.com/corda-network/corda-network.github.io/master';
+    'https://raw.githubusercontent.com/corda-network/corda-network.github.io/change/site-handover';
