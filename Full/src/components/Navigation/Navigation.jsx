@@ -115,7 +115,7 @@ class Navigation extends React.Component {
                                     <div className="col-11 offset-1">
                                         <form
                                             className="search-form w-100"
-                                            action="/#/search">
+                                            action="/search">
                                             <div className="form-group w-100">
                                                 <input
                                                     type="text"
