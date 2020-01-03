@@ -25,7 +25,7 @@ const page = (WrappedComponent) => {
                 .then((response) => response.text())
                 .then((text) => {
                     this.setState({
-                        pageText: text.replace(/\(\//g, '(/#/'),
+                        pageText: text,
                         loading: false,
                     });
                 });

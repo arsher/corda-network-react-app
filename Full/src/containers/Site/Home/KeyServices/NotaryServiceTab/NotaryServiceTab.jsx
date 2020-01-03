@@ -20,7 +20,7 @@ export default class NotaryServiceTab extends React.Component {
             .then((response) => response.text())
             .then((text) => {
                 this.setState({
-                    pageText: text.replace(/\(\//g, '(/#/'),
+                    pageText: text,
                 });
             });
     }
