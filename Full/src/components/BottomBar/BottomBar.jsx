@@ -38,7 +38,7 @@ class BottomBar extends React.Component {
                                 className="solo-link link-secondary mr-30">
                                 info@corda.network
                             </a>
-                            <Link className="solo-link link-secondary" to="">
+                            <Link className="solo-link link-secondary" to="/policy/gdpr">
                                 Privacy and Terms
                             </Link>
                         </div>
