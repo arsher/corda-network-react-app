@@ -23,7 +23,7 @@ class HeroSection extends React.Component {
             .then((response) => response.text())
             .then((text) => {
                 this.setState({
-                    pageText: text.replace(/\(\//g, '(/#/'),
+                    pageText: text,
                 });
             })
             .then(() => {
