@@ -6,7 +6,6 @@ commitHash=$2
 triggeredBy=$3
 
 srcFolder='Site Only'
-
 LGREEN='\033[1;32m'
 NC='\033[0m' # No Color
 
@@ -32,9 +31,8 @@ then
   exit 1
 fi
 
-
-docker build -t $DOCKER_REGISTRY_TARGETTAG "./$srcFolder/."
-docker push $DOCKER_REGISTRY_TARGETTAG
+docker build -t "$DOCKER_REGISTRY_NAME.azurecr.io/$DOCKER_IMAGE_NAME:$DOCKER_REGISTRY_TARGETTAG" "./$srcFolder/."
+docker push "$DOCKER_REGISTRY_NAME.azurecr.io/$DOCKER_IMAGE_NAME:$DOCKER_REGISTRY_TARGETTAG"
 
 # Log out of Azure (our subscription only) as well as kubectl
 az logout --subscription $K8_DEPLOY_SUB
