@@ -14,7 +14,7 @@ echo "${LGREEN}This is building from the $srcFolder source code\n${NC}"
 
 echo "Deploy of $buildCounter at revision $commitHash by $triggeredBy" at $(date)
 
-az logout --subscription $K8_DEPLOY_SUB
+# az logout --subscription $K8_DEPLOY_SUB
 # Login to Azure for our subscription
 az login --service-principal --username $DOCKER_REGISTRY_USERNAME --password $DOCKER_REGISTRY_PASSWORD --tenant $K8_DEPLOY_TENANT
 
