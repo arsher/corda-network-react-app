@@ -36,5 +36,3 @@ docker push "$DOCKER_REGISTRY_NAME.azurecr.io/$DOCKER_IMAGE_NAME:$DOCKER_REGISTR
 
 # Log out of Azure (our subscription only) as well as kubectl
 az logout --subscription $K8_DEPLOY_SUB
-
-exit 1
