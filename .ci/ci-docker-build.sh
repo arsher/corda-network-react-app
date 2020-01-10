@@ -7,15 +7,17 @@ triggeredBy=$3
 
 srcFolder='Site Only'
 
-LGREEN='\033[0;31m'
+LGREEN='\033[1;32m'
 NC='\033[0m' # No Color
 
-echo -e "${LGREEN}This is building from the $srcFolder source code\n${NC}"
+echo "${LGREEN}This is building from the $srcFolder source code\n${NC}"
 
 echo "Deploy of $buildCounter at revision $commitHash by $triggeredBy" at $(date)
 
 # Login to Azure for our subscription
 az login --service-principal --username $K8_DEPLOY_USER --password $K8_DEPLOY_PASSWORD --tenant $K8_DEPLOY_TENANT
+
+az acr login -n $DOCKER_REGISTRY_NAME
 if [ $? -ne 0 ]
 then
   echo "Failed to log in to Azure." >&2
