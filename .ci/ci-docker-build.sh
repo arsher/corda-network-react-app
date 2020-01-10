@@ -15,7 +15,7 @@ then
   exit 1
 fi
 
-docker build -t $DOCKER_REGISTRY_TARGETTAG
+docker build -t $DOCKER_REGISTRY_TARGETTAG .
 docker push $DOCKER_REGISTRY_TARGETTAG
 
 # Log out of Azure (our subscription only) as well as kubectl
