@@ -17,12 +17,20 @@ echo "Deploy of $buildCounter at revision $commitHash by $triggeredBy" at $(date
 # Login to Azure for our subscription
 az login --service-principal --username $K8_DEPLOY_USER --password $K8_DEPLOY_PASSWORD --tenant $K8_DEPLOY_TENANT
 
-az acr login -n $DOCKER_REGISTRY_NAME
 if [ $? -ne 0 ]
 then
   echo "Failed to log in to Azure." >&2
   exit 1
 fi
+
+az acr login -n $DOCKER_REGISTRY_NAME
+
+if [ $? -ne 0 ]
+then
+  echo "Failed to log in to Azure Container Registry." >&2
+  exit 1
+fi
+
 
 docker build -t $DOCKER_REGISTRY_TARGETTAG "./$srcFolder/."
 docker push $DOCKER_REGISTRY_TARGETTAG
