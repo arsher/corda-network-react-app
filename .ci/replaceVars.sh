@@ -1,7 +1,7 @@
 cat $1 | \
 sed "s/{dockerRegistry}/$DOCKER_REGISTRY_ADDRESS/" | \
 sed "s~{dockerImageName}~$DOCKER_IMAGE_NAME~" | \
-sed "s/{dockerImageTag}/$DOCKER_REGISTRY_TARGETTAG/" | \
+sed "s/{dockerImageTag}/$DOCKER_REGISTRY_TARGETTAG/"
 
 #used ~ for dockerImageTag as a separator because the name might contain /
 # namespace: testnet
