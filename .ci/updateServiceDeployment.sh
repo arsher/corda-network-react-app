@@ -25,8 +25,8 @@ fi
 defaultManifest=".ci/kubernetes-deploy-staging.yaml"
 manifest=${1:-$defaultManifest} 
 
-chmod +x .ci/common/kubernetes/replaceVars.sh
-.ci/common/kubernetes/replaceVars.sh $manifest | kubectl apply -f -
+chmod +x .ci/replaceVars.sh
+.ci/replaceVars.sh $manifest | kubectl apply -f -
 
 # Log out of Azure (our subscription only) as well as kubectl
 az logout --subscription $K8_DEPLOY_SUB
