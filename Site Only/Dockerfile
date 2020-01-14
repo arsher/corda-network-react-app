@@ -15,4 +15,4 @@ RUN rm -f package-lock.json
 RUN npm rebuild node-sass --force
 RUN npm install && npm run build 
 
-ENTRYPOINT npm run start
+ENTRYPOINT node server
